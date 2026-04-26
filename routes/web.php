@@ -8,6 +8,7 @@ Route::view('wholesale', 'wholesale')->name('wholesale');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('meetCesar', 'meetCesar')->name('meetCesar');
 Route::view('contact', 'contact')->name('contact');
+Route::view('aboutUs','aboutUs')->name('aboutUs');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
