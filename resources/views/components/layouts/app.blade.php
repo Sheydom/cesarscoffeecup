@@ -11,7 +11,7 @@
 </head>
 
 <body class="min-h-screen flex bg-[#FCF9F2]">
-    <main class='flex flex-1'>{{ $slot }}</main>
+    <main class='flex flex-1 flex-col'>{{ $slot }}</main>
     @livewireScripts
     @fluxScripts
 </body>

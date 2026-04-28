@@ -26,15 +26,15 @@
 
             {{-- Dark overlay --}}
 
-            <div x-show="open" @click="open = false" x-transition.opacity class="fixed inset-0 bg-black/50 z-40"></div>
+             {{-- <div x-show="open" @click="open = false" x-transition.opacity class="fixed inset-0 bg-black/50 z-40"></div>  --}}
 
             {{-- Sliding sidebar --}}
 
-            <aside x-show="open" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-                x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-x-0"
-                x-transition:leave-end="-translate-x-full"
-                class="fixed top-0 left-0 h-full w-72 bg-white z-50 shadow-xl p-6">
+            <aside x-show="open" x-transition:enter="transition ease-out duration-300 "
+                x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0"
+                x-transition:leave="transition ease-in duration-300 " x-transition:leave-start="translate-x-0"
+                x-transition:leave-end="-translate-x-full opacity-0"
+                class="fixed top-0 left-0 h-full w-72 bg-[#FCF9F2] z-50  p-6">
 
                 <button @click="open = false" class="mb-6 ">
 
@@ -50,28 +50,29 @@
 
                 <nav class="flex flex-col gap-4 text-lg">
 
-                    <a href="{{ route('home') }}">Home</a>
-
-                    <a href="{{ route('wholesale') }}">Wholesale</a>
-
-                    <a href="{{ route('coRoasting') }}">Co-Roasting</a>
-
-                    <a href="{{ route('meetCesar') }}">Meet Cesar</a>
-                    <a href="{{ route('contact') }}">Contact</a>
-                    <a href="{{ route('aboutUs') }}">About Us</a>
+                    <a class=" hover:bg-accent/10 rounded p-2" href="{{ route('home') }} "wire:navigate.hover>Home</a>
+                    <a class="hover:bg-accent/10 rounded p-2"
+                        href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting</a>
+                    <a class="hover:bg-accent/10 rounded p-2"
+                        href="{{ route('meetCesar') }} "wire:navigate.hover>Roasting Hire</a>
+                    <a class="hover:bg-accent/10 rounded p-2" href="{{ route('aboutUs') }}"wire:navigate.hover>About
+                        Us</a>
+                    <a class="hover:bg-accent/10 rounded p-2"
+                        href="{{ route('contact') }}"wire:navigate.hover>Contact</a>
 
                 </nav>
 
                 <div class=" gap-4 flex justify-center w-full  text-black mt-16 mb-6 absolute bottom-0 left-0">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/latinamilesaway/">
+                    <a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
+                        rel="noopener noreferrer" href="https://www.instagram.com/latinamilesaway/">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black   md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                             <path fill="currentColor"
                                 d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                         </svg>
-                    </a><a target="_blank" rel="noopener noreferrer"
-                        href="https://www.facebook.com/profile.php?id=61586298837478">
+                    </a><a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
+                        rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61586298837478">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black    md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -79,7 +80,8 @@
                                 d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z" />
                         </svg>
                     </a>
-                    </a><a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@latinamilesaway">
+                    </a><a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
+                        rel="noopener noreferrer" href="https://www.tiktok.com/@latinamilesaway">
                         <svg class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black   md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->

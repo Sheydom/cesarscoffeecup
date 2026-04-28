@@ -5,6 +5,7 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
 @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -44,6 +45,7 @@
 }
 
 @theme {
+    --font-bodoni: "Bodoni Moda", serif;
     --font-sans:
         "Gotham", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -52,6 +54,7 @@
     --color-secondary: #3e2723;
     --color-tertiary: #d7c4a3;
     --color-neutral: #f5f2eb;
+    --color-coffeDark: #3e291b;
 
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
