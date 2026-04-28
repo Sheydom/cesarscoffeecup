@@ -55,6 +55,7 @@
     --color-tertiary: #d7c4a3;
     --color-neutral: #f5f2eb;
     --color-coffeDark: #3e291b;
+    --color-pastel: #e8ddc8;
 
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
