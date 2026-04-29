@@ -1,4 +1,4 @@
-<section class="p-5 mt-10 bg-neutral">
+<section class="p-5 mt-10 bg-neutral mb-10">
     <div><img class="object-cover mb-10" src="{{ asset('images/cesarProfilePhoto.webp') }}" alt="Cesar Profil Photo">
 
         <div calss="flex flex-col">

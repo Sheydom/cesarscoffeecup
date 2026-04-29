@@ -4,4 +4,5 @@
     <x-home.services />
     <x-home.howItWorks />
     <x-home.trust />
+    <x-home.contactForm />
 </x-layouts.app>
