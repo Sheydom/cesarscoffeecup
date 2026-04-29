@@ -78,6 +78,9 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+    p {
+        @apply leading-relaxed;
+    }
 }
 
 [data-flux-field]:not(ui-radio, ui-checkbox) {
