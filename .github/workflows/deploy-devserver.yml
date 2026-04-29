@@ -17,5 +17,5 @@ jobs:
           cd ~/deploy/caddy/sites/cesarscoffeecup
           git pull origin main
           docker compose up -d --build
-          docker exec coffe_app bash -lc "cd /var/www && php artisan optimize:clear"
+          docker exec cesarscoffecup bash -lc "cd /var/www && php artisan optimize:clear"
           npm run build
