@@ -1,0 +1,15 @@
+services:
+  cesarscoffeecup:
+    build: .
+    container_name: cesarscoffeecup
+    restart: unless-stopped
+
+    volumes:
+      - .:/var/www
+
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
