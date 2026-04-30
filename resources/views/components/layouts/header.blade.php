@@ -30,7 +30,7 @@
 
             {{-- Sliding sidebar --}}
 
-            <aside x-show="open" x-transition:enter="transition ease-out duration-300 "
+            <aside x-show="open" x-cloak x-transition:enter="transition ease-out duration-300 "
                 x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0"
                 x-transition:leave="transition ease-in duration-300 " x-transition:leave-start="translate-x-0"
                 x-transition:leave-end="-translate-x-full opacity-0"
