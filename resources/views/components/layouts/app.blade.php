@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body class="min-h-full flex bg-[#FCF9F2]">
+<body class="min-h-full flex overflow-x-hidden bg-[#FCF9F2]">
     <main class='flex flex-1 flex-col'>{{ $slot }}</main>
     @livewireScripts
     @fluxScripts
