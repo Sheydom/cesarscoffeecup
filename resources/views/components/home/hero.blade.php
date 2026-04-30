@@ -1,4 +1,4 @@
-<section id="hero" class="relative flex flex-col items-center justify-end">
+<section id="hero" class="relative flex flex-col items-center justify-end overflow-hidden">
     <img class=" object-cover overflow-hidden " src="{{ asset('images/hero.jpg') }}" alt="coffePlantage">
     <div class=" absolute inset-0 bg-accent/35"></div>
     <div class="z-10 mb-10 absolute flex flex-col  items-center  text-white w-[90%] ">
