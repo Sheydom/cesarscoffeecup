@@ -6,12 +6,12 @@
         <a class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Privacy Policy</a>
         <a
             class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Terms and Conditions</a>
-        <a
-            {{-- class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Sustainibility</a> --}}
+        {{-- <a
+            class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Sustainibility</a> --}}
         <a
             class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Contact</a>
-        <a
-            {{-- class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Legal</a> --}}
+        {{-- <a
+            class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out">Legal</a> --}}
     </div>
     <div class="flex flex-col text-center">© 2026 All rights reserved <br> Website developed by Dominic Knabe </div>
 </section>
