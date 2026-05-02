@@ -46,14 +46,14 @@
 
                 <nav class="flex flex-col gap-4 text-lg">
 
-                    <a class=" hover:bg-accent/10 rounded p-2" href="{{ route('home') }} "wire:navigate.hover>Home</a>
-                    <a class="hover:bg-accent/10 rounded p-2"
+                    <a class=" hover:bg-accent/10 rounded p-2 {{request()->routeIs('home')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}" href="{{ route('home') }} "wire:navigate.hover>Home</a>
+                    <a class="hover:bg-accent/10 rounded p-2 {{request()->routeIs('coRoasting')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"
                         href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting</a>
-                    <a class="hover:bg-accent/10 rounded p-2"
+                    <a class="hover:bg-accent/10 rounded p-2 {{request()->routeIs('hireRoaster')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"
                         href="{{ route('hireRoaster') }} "wire:navigate.hover>Hire a Roaster</a>
-                    <a class="hover:bg-accent/10 rounded p-2" href="{{ route('aboutUs') }}"wire:navigate.hover>About
+                    <a class="hover:bg-accent/10 rounded p-2 {{request()->routeIs('aboutUs')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}" href="{{ route('aboutUs') }}"wire:navigate.hover>About
                         Us</a>
-                    <a class="hover:bg-accent/10 rounded p-2"
+                    <a class="hover:bg-accent/10 rounded p-2 {{request()->routeIs('contact')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"
                         href="{{ route('contact') }}"wire:navigate.hover>Contact</a>
 
                 </nav>
@@ -95,15 +95,15 @@
         </div>
     </div>
 
-    <div class="hidden sm:block">
-        <a href="{{ route('home') }}">Home</a>
-        <a href="{{ route('coRoasting') }}">Co-Roasting</a>
-        <a href="{{route('hireRoaster')}}">Hire a Roaster</a>
-        <a href="{{route('aboutUs')}}">About Us</a>
-        <a href="{{ route('contact') }}">Contact</a>
-    </div>
     <div class="h-10 flex items-center">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
+    </div>
+    <div class="hidden sm:flex sm:gap-4 md:gap-10 sm:justify-around sm:items-center">
+        <a href="{{ route('home') }}"class="{{request()->routeIs('home')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}" wire:navigate.hover>Home</a>
+        <a href="{{ route('coRoasting') }}" class="{{request()->routeIs('coRoasting')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"wire:navigate.hover>Co-Roasting</a>
+        <a href="{{route('hireRoaster')}}"class="{{request()->routeIs('hireRoaster')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"wire:navigate.hover>Hire a Roaster</a>
+        <a href="{{route('aboutUs')}}"class="{{request()->routeIs('aboutUs')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"wire:navigate.hover>About Us</a>
+        <a href="{{ route('contact') }}"class="{{request()->routeIs('contact')?'text-primary underline underline-primary font-bold scale-105':'text-black/30 hover:text-primary transition duration-300 ease-in-out'}}"wire:navigate.hover>Contact</a>
     </div>
     <div class="h-10 flex items-center">
         <svg class="h-10 w-10 shrink-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
