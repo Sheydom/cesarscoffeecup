@@ -1,3 +1,3 @@
 <x-layouts.app>
-    <x-header/>
+    <x-layouts.header/>
 </x-layouts.app>
