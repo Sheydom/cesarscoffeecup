@@ -1,23 +1,53 @@
-<section class="px-5 mt-10">
-    <div class="mb-10">
+<section class="px-5 mt-10 flex flex-col justify-center">
+    <div class="mb-10 sm:mx-auto  sm:text-center sm:w-max">
         <h1 class="text-4xl mb-5 text-primary">Choose how you want to work with us</h1>
-        <div class="w-15 h-0.5 border border-coffeDark"></div>
+        <div class="w-15 h-0.5 border border-coffeDark sm:self-start"></div>
     </div>
-    <div class="bg-primary flex flex-col gap-5 text-white p-5 mb-10">
-        <p class="text-xs">PREFERRED CHOICE</p>
-        <h2 class="text-2xl font-bodoni italic font-bold">Start Your Coffee Brand</h2>
-        <p>The complete turnkey solution for entrepreneurs. We handle the logistics while you focus on the blend.</p>
-        <button class="p-5 bg-white text-primary" >GET STARTED</button>
+    <div class=" md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-[350px_350px_350px]  lg:justify-center  ">
+        <div class=" bg-neutral border-2 border-coffeDark flex flex-col justify-between text-white p-5 mb-10 drop-shadow sm:mb-0 sm:p-10 sm:drop-shadow-xl">
+            <div class="mb-5">
+                <div class=" flex justify-end ">
+                    <p class=" text-xs p-1 px-2 text-end text-white bg-[#C9A227] w-max rounded-full">MOST POPULAR</p>
+                </div>
+                <h2 class="text-3xl mb-5 font-bodoni  text-coffeDark">Co-Roasting</h2>
+                <p class="text-black">Use our Loring S7 Nighthawk and S15 Falcon roasters with expert guidance from our
+                    team. Develop your profiles, build your skills, and produce a coffee that's entirely yours.</p>
+            </div>
+            <button class="p-5 border  border-black bg-white text-coffeDark">BOOK A SESSION</button>
+        </div>
+        <div class="bg-neutral flex flex-col justify-between text-white p-5 mb-10 drop-shadow sm:mb-0 sm:p-10 sm:drop-shadow-xl">
+            <div class="mb-5">
+                <div class=" flex justify-end ">
+                    <p class=" text-xs p-1 px-2 text-end text-black  w-max ">Professional</p>
+                </div>
+                <h2 class="text-3xl mb-5 font-bodoni  text-coffeDark">Roaster-Hire</h2>
+                <p class="text-black">Already know how to roast? Hire our machines independently after completing a
+                    short induction. Bring your own beans or use ours.</p>
+            </div>
+            <button class="p-5 border  border-black bg-white text-primary">HIRE A ROASTER</button>
+        </div>
+        {{-- <div class="bg-primary flex flex-col justify-between text-white p-5 drop-shadow sm:mb-0 sm:p-10 sm:drop-shadow-xl">
+            <div class="mb-5">
+                <div class=" flex justify-end ">
+                    <p class=" text-xs p-1 px-2 text-end text-black  w-max ">Professional</p>
+                </div>
+                <h2 class="text-3xl mb-5 font-bodoni">Wholesale Coffee Supply</h2>
+                <p>A consistent, high-quality coffee supply tailored to your business. Stable flavour profiles,
+                    year-round availability, and reliable Melbourne delivery — so your offering never drops.</p>
+            </div>
+            <button class="p-5 bg-white text-primary">GET STARTED</button>
+        </div> --}}
+        <div class="bg-neutral flex flex-col justify-between text-white p-5 drop-shadow sm:mb-0 sm:p-10 sm:drop-shadow-xl">
+            <div class="mb-5">
+                <div class=" flex justify-end ">
+                    <p class=" text-xs p-1 px-2 text-end bg-black text-[#C9A227] w-max rounded-full">MOST VALUE</p>
+                </div>
+                <h2 class="text-3xl mb-5 font-bodoni  text-coffeDark">Start Your Coffee Brand</h2>
+                <p class="text-black">A complete solution — beans, roasting, packaging and hands-on support. Perfect for
+                    businesses or cafés starting from scratch. No experience required.</p>
+            </div>
+            <button class="p-5 border  border-black bg-white text-primary">HIRE A ROASTER</button>
+        </div>
     </div>
-    <div class="bg-neutral flex flex-col gap-5 text-white p-5 mb-10">
-        <h2 class="text-2xl font-bodoni font-bold text-primary">Co-Roasting</h2>
-        <p class="text-black">Roast alongside our experts. Perfect for smaller batches and experimental profiles.</p>
-        <button class="p-5 border  border-black bg-white text-primary" >BOOK A SESSION</button>
-    </div>
-    <div class="bg-neutral flex flex-col gap-5 text-white p-5">
-        <h2 class="text-2xl font-bodoni font-bold text-primary">Roaster-Hire</h2>
-        <p class="text-black">Acces our high-end roasting facility independently. Full control over your production.</p>
-        <button class="p-5 border  border-black bg-white text-primary" >HIRE A ROASTER</button>
-    </div>
-   
+
 </section>
