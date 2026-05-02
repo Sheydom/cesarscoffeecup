@@ -100,7 +100,7 @@
     <div class="h-10 flex items-center md:text-xl">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
-    <div class="hidden sm:flex sm:gap-4 md:gap-10 md:text-xl sm:justify-around sm:items-center">
+    <div class="hidden sm:flex sm:gap-4 md:gap-10 lg:text-xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="{{ request()->routeIs('home') ? 'text-primary underline' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover>Home</a>
         <a href="{{ route('coRoasting') }}"
