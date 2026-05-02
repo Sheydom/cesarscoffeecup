@@ -1,52 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import "tailwindcss";
-@import "../../vendor/livewire/flux/dist/flux.css";
-
-@source '../views';
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
-@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-[x-cloak] {
-    display: none !important;
-}
-
-@font-face {
-    font-family: "Gotham";
-
-    src: url("/fonts/gotham/Gotham-Book.woff2") format("woff2");
-
-    font-weight: 400;
-
-    font-style: normal;
-
-    font-display: swap;
-}
-@font-face {
-    font-family: "Gotham";
-
-    src: url("/fonts/gotham/Gotham-Medium.woff2") format("woff2");
-
-    font-weight: 500;
-
-    font-style: normal;
-
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Gotham";
-
-    src: url("/fonts/gotham/Gotham-Bold.woff2") format("woff2");
-
-    font-weight: 700;
-
-    font-style: normal;
-
-    font-display: swap;
-}
 
 @theme {
     --font-bodoni: "Bodoni Moda", serif;
@@ -66,6 +18,9 @@
     --color-accent-foreground: var(--color-white);
 }
 
+@import "tailwindcss";
+@import "../../vendor/livewire/flux/dist/flux.css";
+
 @layer theme {
     .dark {
         --color-accent: var(--color-white);
@@ -84,6 +39,9 @@
     }
     p {
         @apply leading-relaxed;
+    }
+    a {
+        @apply cursor-pointer;
     }
 }
 

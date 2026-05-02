@@ -20,10 +20,6 @@
                 </svg>
 
             </button>
-
-
-
-
             {{-- Dark overlay --}}
 
              {{-- <div x-show="open" @click="open = false" x-transition.opacity class="fixed inset-0 bg-black/50 z-40"></div>  --}}

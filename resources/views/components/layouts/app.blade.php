@@ -9,7 +9,9 @@
 </head>
 
 <body class="min-h-full overflow-x-hidden bg-[#FCF9F2]">
+    <x-layouts.header />
     <main class='flex flex-1 flex-col'>{{ $slot }}</main>
+    <x-layouts.footer/>
     @livewireScripts
     @fluxScripts
 </body>
