@@ -50,7 +50,7 @@
                     <a class="hover:bg-accent/10 rounded p-2"
                         href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting</a>
                     <a class="hover:bg-accent/10 rounded p-2"
-                        href="{{ route('meetCesar') }} "wire:navigate.hover>Roasting Hire</a>
+                        href="{{ route('hireRoaster') }} "wire:navigate.hover>Hire a Roaster</a>
                     <a class="hover:bg-accent/10 rounded p-2" href="{{ route('aboutUs') }}"wire:navigate.hover>About
                         Us</a>
                     <a class="hover:bg-accent/10 rounded p-2"

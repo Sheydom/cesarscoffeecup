@@ -4,9 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 Route::view('products', 'products')->name('products');
-Route::view('wholesale', 'wholesale')->name('wholesale');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
-Route::view('meetCesar', 'meetCesar')->name('meetCesar');
+Route::view('hireRoaster', 'hireRoaster')->name('hireRoaster');
 Route::view('contact', 'contact')->name('contact');
 Route::view('aboutUs','aboutUs')->name('aboutUs');
 
