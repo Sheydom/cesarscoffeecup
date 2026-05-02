@@ -1,5 +1,5 @@
 <section id="hero" class="relative flex flex-col items-center   overflow-hidden sm:justify-center">
-    <img class="flex object-cover min-h-120 w-full  md:max-h-180" src="{{ asset('images/hero.jpg') }}" alt="coffePlantage">
+    <img class="flex object-cover min-h-110 w-full  md:max-h-180" src="{{ asset('images/hero.jpg') }}" alt="coffePlantage">
     <div
         class=" absolute inset-0 bg-linear-to-b from-black/60 to-black/1  sm:bg-linear-to-l sm:from-black/1 sm:to-black/90 ">
     </div>
