@@ -97,10 +97,9 @@
 
     <div class="hidden sm:block">
         <a href="{{ route('home') }}">Home</a>
-        <a href="{{ route('products') }}">Products</a>
-        <a href="{{ route('wholesale') }}">Wholesale</a>
         <a href="{{ route('coRoasting') }}">Co-Roasting</a>
-        <a href="{{ route('meetCesar') }}">Meet Cesar</a>
+        <a href="{{route('hireRoaster')}}">Hire a Roaster</a>
+        <a href="{{route('aboutUs')}}">About Us</a>
         <a href="{{ route('contact') }}">Contact</a>
     </div>
     <div class="h-10 flex items-center">
