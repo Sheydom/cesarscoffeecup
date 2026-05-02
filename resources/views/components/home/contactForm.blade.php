@@ -1,16 +1,10 @@
 <section class="p-5">
     <div class="flex flex-col mb-10">
-        <h2 class="text-4xl font-bodoni mb-10">Book a visit</h2>
+        <h2 class="text-4xl font-bodoni mb-10">Come and see for yourself</h2>
         <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility. Let's discuss your vision
             over a fresh brewand walk through how we can bring your brand to life.</p>
     </div>
-    <div class="flex mb-10 p-5 gap-5 border-t-neutral border-b-neutral border-t-2 border-b-2">
-        <img class="h-15 w-15 object-cover" src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}" alt="">
-        <div class="flex flex-col">
-            <p class="text-2xl font-bodoni italic">Meet Cesar</p>
-            <p class="text-coffeDark text-xs">FOUNDER & MASTER ROASTER</p>
-        </div>
-    </div>
+ 
     <div class="flex gap-5 items-start">
         <svg class="shrink-0 w-7 h-7 text-coffeDark" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"><!--!Font Awesome Pro v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.-->
@@ -27,7 +21,7 @@
         </svg>
         <p>hello@cesarscoffeecup.com.au</p>
     </div>
-    <form class=" action="">
+    <form class="bg-neutral rounded p-5" action="">
         <div class="flex flex-col mb-5"><label for="">Full Name</label><input
                 class="p-2.5 bg-neutral border-b-2 border-black" type="text" placeholder="e.g Julian Smith"></div>
         <div class="flex flex-col mb-5"><label for="">Email Address</label><input
