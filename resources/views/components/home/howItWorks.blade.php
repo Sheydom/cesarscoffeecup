@@ -1,9 +1,9 @@
-<section class="p-5 bg-primary mt-10 md:p-15">
-    <p class="text-center  text-[#C9A227]">From First Visit to Your Own Coffee Brand</p>
-    <h2 class="text-7xl text-center  text-white mb-10">How it works</h2>
+<section class="p-5 bg-primary mt-10 lg:p-15">
+    <h2 class="text-4xl lg:text-7xl text-center  text-white ">How it works</h2>
+    <p class="text-center  text-tertiary mb-10">From First Visit to Your Own Coffee Brand</p>
 
 
-    <div class="relative md:grid md:grid-cols-[repeat(3,400px)] md:justify-center md:gap-20">
+    <div class="relative md:grid md:grid-cols-[repeat(3,auto)] md:justify-center md:gap-20">
 
         <div class="absolute left-5.5 top-0 bottom-0 w-0.5 bg-pastel/60 md:hidden"></div>
 

@@ -1,6 +1,6 @@
 <section class="px-5 mt-10 flex flex-col justify-center">
     <div class="mb-10 sm:mx-auto  sm:text-center sm:w-max">
-        <h1 class="text-4xl mb-5 text-primary">Choose how you want to work with us</h1>
+        <h2 class="text-4xl mb-5 text-primary">Choose how you want to work with us</h2>
         <div class="w-15 h-0.5 border border-coffeDark sm:self-start"></div>
     </div>
     <div class=" md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-[350px_350px_350px]  lg:justify-center  ">
