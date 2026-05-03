@@ -1,4 +1,4 @@
-<section class="relative flex flex-col items-center gap-3 bg-primary  px-12 py-16 overflow-hidden">
+<section class="relative flex flex-col items-center gap-3 bg-primary  px-5 py-16 overflow-hidden">
 
     
     <div class="absolute inset-0 pointer-events-none"
