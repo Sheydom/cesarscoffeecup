@@ -43,6 +43,9 @@
     a {
         @apply cursor-pointer;
     }
+    button{
+        @apply cursor-pointer;
+    }
 }
 
 [data-flux-field]:not(ui-radio, ui-checkbox) {
