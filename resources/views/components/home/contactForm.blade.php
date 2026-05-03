@@ -21,23 +21,23 @@
         </svg>
         <p>hello@cesarscoffeecup.com.au</p>
     </div>
-    <form class="bg-neutral rounded p-5" action="">
+    <form class="bg-pastel/60 rounded p-5" action="">
         <div class="flex flex-col mb-5"><label for="">Full Name</label><input
-                class="p-2.5 bg-neutral border-b-2 border-black" type="text" placeholder="e.g Julian Smith"></div>
+                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="text" placeholder="e.g Julian Smith"></div>
         <div class="flex flex-col mb-5"><label for="">Email Address</label><input
-                class="p-2.5 bg-neutral border-b-2 border-black" type="email" placeholder="Julian.Smith@gmail.com">
+                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email" placeholder="Julian.Smith@gmail.com">
         </div>
         <div class="flex flex-col mb-5"><label for="">Phone</label><input
-                class="p-2.5 bg-neutral border-b-2 border-black" type="tel" placeholder="+61416323223"></div>
+                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223"></div>
         <div class="flex flex-col mb-5"><label for="">Type of enquiry</label><select
-                class="p-2.5 bg-neutral border-b-2 border-black" type="select" placeholder="e.g Julian Smith">
+                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
                 <option value="">test1</option>
                 <option value="">test2</option>
                 <option value="">test3</option>
                 <option value="">test4</option>
             </select></div>
         <div class="flex flex-col mb-5"><label for="">Your Message</label>
-            <textarea class="resize-none mb-5 p-2.5 bg-neutral border-b-2 border-black" rows="5" cols="40"
+            <textarea class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
                 placeholder="Type here..."></textarea>
             <x-ui.buttonSolid class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
     </form>
