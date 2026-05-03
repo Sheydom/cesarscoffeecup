@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center sm:items-center md:flex-row md:gap-40 ">
         <div class="relative">
             <img class=" object-cover mb-10 md:mb-0" src="{{ asset('images/cesarProfilePhoto.webp') }}" alt="Cesar Profil Photo">
-            <div class=" absolute bottom-10 right-0 z-100  italic text-white bg-primary px-3 py-1 md:p-5 md:-bottom-5 md:-right-5 md:shadow-2xl">Cesar Rodriguez</div>
+            <div class=" absolute bottom-10 right-0 z-100  italic text-white bg-primary px-3 py-1 md:p-5 md:-bottom-5 md:-right-5 md:shadow-2xl">Cesar Mendieta</div>
         </div>
  
         <div class="flex flex-col md:max-w-160  md:justify-center">
