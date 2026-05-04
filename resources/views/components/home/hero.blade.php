@@ -6,7 +6,7 @@
         alt="coffee roasting facility"
     >
 
-    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-transparent sm:bg-linear-to-b sm:from-black/40 sm:via-black/20 sm:to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-transparent sm:bg-linear-to-r sm:from-black/40 sm:via-black/0 sm:to-transparent"></div>
 
     <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
         <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
