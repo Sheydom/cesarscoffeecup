@@ -1,4 +1,4 @@
-<nav class="flex bg-[#FCF9F2] text-black p-2 justify-between w-full font-medium ">
+<nav class="flex bg-[#FCF9F2] text-black p-2 justify-between w-full font-medium md:px-10">
 
     <div class="sm:hidden self-start">
         <div x-data="{ open: false }"class="relative">
@@ -98,7 +98,8 @@
         </div>
     </div>
 
-    <div class="h-10 flex items-center md:text-xl">
+    <div class="h-10 flex gap-2 items-center md:text-xl md:h-20">
+        <img class="w-10 h-10 shrink-0 md:h-20 md:w-20" src="{{asset('images/Cesars_Coffee_Cup_just_face.png')}}" alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
     <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
@@ -113,7 +114,7 @@
         <a href="{{ route('contact') }}"class="{{ request()->routeIs('contact') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover>Contact</a>
     </div>
-    <div class="h-10 flex items-center">
+    <div class="h-10 flex items-center md:h-20">
         <svg class="h-10 w-10 shrink-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path fill="currentColor"
