@@ -1,12 +1,11 @@
 <section id="hero" class="relative overflow-hidden">
 
-    <img
-        class="absolute inset-0 h-full w-full object-cover object-center -scale-x-100"
-        src="{{ asset('images/hero4.jpg') }}"
-        alt="coffee roasting facility"
-    >
+    <img class="absolute inset-0 h-full w-full object-cover object-center -scale-x-100"
+        src="{{ asset('images/hero4.jpg') }}" alt="coffee roasting facility">
 
-    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/0 to-transparent sm:bg-linear-to-r sm:from-black/40 sm:via-black/0 sm:to-transparent"></div>
+    <div
+        class="absolute inset-0 bg-linear-to-b from-black/40 via-black/0 to-transparent sm:bg-linear-to-r sm:from-black/40 sm:via-black/0 sm:to-transparent">
+    </div>
 
     <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
         <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
@@ -17,7 +16,8 @@
             </h1>
 
             <p class="mb-10 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
-                Create, roast, and package your own coffee with flexible co-roasting and roaster hire in our Melbourne facility.
+                Create, roast, and package your own coffee with flexible co-roasting and roaster hire in our Melbourne
+                facility.
             </p>
 
             <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
@@ -39,10 +39,14 @@
         </p>
 
         <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around md:text-xl">
-            <p>Direct from Colombian & global farms</p>
-            <p>Loring & IMF equipment</p>
-            <p>No lock-in contracts</p>
-            <p>Melbourne local delivery</p>
+            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
+                    alt="coffeBeanWhite">Direct from Colombian & global farms</p>
+            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
+                    alt="coffeBeanWhite">Loring & IMF equipment</p>
+            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
+                    alt="coffeBeanWhite">No lock-in contracts</p>
+            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
+                    alt="coffeBeanWhite">Melbourne local delivery</p>
         </div>
     </div>
 
