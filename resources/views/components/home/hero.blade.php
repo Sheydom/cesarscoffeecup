@@ -34,9 +34,16 @@
     </div>
 
     <div class="relative z-10 bg-accent text-center text-xs font-medium uppercase tracking-wide text-white md:text-sm">
-        <p class="p-2 md:hidden">
-            Direct from origin · Melbourne-based
-        </p>
+        <div class="flex justify-center md:hidden">
+            <p class="p-2 flex ">
+                <img class="w-5 h-5 shrink-0" src="{{ asset('images/bean_white.svg') }}" alt="coffeBeanWhite">Direct
+                from
+                origin
+            </p>
+            <p class="p-2 flex "><img class="w-5 h-5 shrink-0" src="{{ asset('images/bean_white.svg') }}"
+                    alt="coffeBeanWhite">Melbourne-based
+            </p>
+        </div>
 
         <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around md:text-xl">
             <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
