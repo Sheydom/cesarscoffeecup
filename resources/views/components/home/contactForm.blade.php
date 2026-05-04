@@ -26,7 +26,7 @@
                 style="border:0;" allowfullscreen="" 
                 referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-    <form class="bg-pastel/60 flex flex-col h-full    rounded p-5 lg:p-10" action="">
+    <form class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10" action="">
         <div class="flex w-full gap-5">
             <div class="flex w-full flex-col mb-5"><label for="">First Name</label><input
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text" placeholder="Julian">
