@@ -40,8 +40,8 @@
                         viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path fill="currentColor"
                             d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
-                    </svg> 
-                    
+                    </svg>
+
 
                 </button>
 
@@ -62,8 +62,16 @@
                 </nav>
 
                 <div class=" gap-4 flex justify-center w-full  text-black mt-16 mb-6 absolute bottom-0 left-0">
+                    </a><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@CesarsCoffeeCup">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black  md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path fill="currentColor"
+                                d="M282 256.2l-95.2-54.1 0 108.2 95.2-54.1zM384 32L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9-28.3 7.7-142.2 7.7-142.2 7.7s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9-7.6-28.6-7.6-88.2-7.6-88.2s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4 28.3-7.7 142.2-7.7 142.2-7.7s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z" />
+                        </svg>
+                    </a>
                     <a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
-                        rel="noopener noreferrer" href="https://www.instagram.com/latinamilesaway/">
+                        rel="noopener noreferrer" href="https://www.instagram.com/cesarscoffeecup/">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black   md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -71,7 +79,7 @@
                                 d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                         </svg>
                     </a><a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
-                        rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61586298837478">
+                        rel="noopener noreferrer" href="https://www.facebook.com/p/Cesarscoffeecup-61558969643906/">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black    md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -80,7 +88,7 @@
                         </svg>
                     </a>
                     </a><a class="transition duration-300 hover:-translate-y-5 ease-in-out" target="_blank"
-                        rel="noopener noreferrer" href="https://www.tiktok.com/@latinamilesaway">
+                        rel="noopener noreferrer" href="https://www.tiktok.com/@cesarscoffeecup">
                         <svg class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black   md:bg-gray-200 md:hover:-translate-y-3 md:hover:text-white md:hover:bg-primary transition duration-200 ease-in-out cursor-pointer"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -99,7 +107,8 @@
     </div>
 
     <div class="h-10 flex gap-2 items-center md:text-xl md:h-20">
-        <img class="w-10 h-10 shrink-0 md:h-20 md:w-20" src="{{asset('images/Cesars_Coffee_Cup_just_face.png')}}" alt="CesarsCoffeeCupLogo">
+        <img class="w-10 h-10 shrink-0 md:h-20 md:w-20" src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}"
+            alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
     <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
