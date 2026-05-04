@@ -1,14 +1,14 @@
 <section id="hero" class="relative overflow-hidden">
 
     <img
-        class="absolute inset-0 h-full w-full object-cover object-center"
-        src="{{ asset('images/hero.jpg') }}"
+        class="absolute inset-0 h-full w-full object-cover object-center -scale-x-100"
+        src="{{ asset('images/hero4.jpg') }}"
         alt="coffee roasting facility"
     >
 
-    <div class="absolute inset-0 bg-linear-to-b from-black/70 via-black/30 to-black/10 sm:bg-linear-to-r sm:from-black/80 sm:via-black/40 sm:to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-transparent sm:bg-linear-to-b sm:from-black/40 sm:via-black/20 sm:to-transparent"></div>
 
-    <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center">
+    <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
         <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
 
             <h1 class="mb-8 max-w-4xl font-bodoni text-5xl italic leading-[0.95] sm:text-6xl lg:text-8xl">
