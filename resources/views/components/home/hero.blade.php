@@ -38,7 +38,7 @@
             Direct from origin · Melbourne-based
         </p>
 
-        <div class="mx-auto hidden max-w-7xl text-xs md:flex md:gap-5 md:justify-around md:text-sm">
+        <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around md:text-xl">
             <p>Direct from Colombian & global farms</p>
             <p>Loring & IMF equipment</p>
             <p>No lock-in contracts</p>
