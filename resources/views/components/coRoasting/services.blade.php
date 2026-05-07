@@ -19,7 +19,7 @@
             <div class="mb-5 ">
 
                 <h2 class="text-3xl mb-5 font-bodoni  text-black">Expert Guidance</h2>
-                <p class="text-black">Our team stays with you throughout the session; you're never left alone.</p>
+                <p class="text-black">Our team stays with you throughout the session. You're never left alone.</p>
             </div>
         </div>
         <div
