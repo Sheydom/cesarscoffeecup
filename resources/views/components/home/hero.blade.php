@@ -22,11 +22,11 @@
 
             <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
                 <x-ui.buttonSolid class="w-full sm:w-auto">
-                    BOOK A FACILITY VISIT
+                   Book a Facility Visit
                 </x-ui.buttonSolid>
 
                 <x-ui.buttonClear class="w-full sm:w-auto">
-                    EXPLORE CO-ROASTING
+                    Explore Co-Roasting
                 </x-ui.buttonClear>
             </div>
 
