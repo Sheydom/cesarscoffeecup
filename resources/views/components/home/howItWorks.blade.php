@@ -14,7 +14,7 @@
             </div>
             <div class="flex flex-col ml-5 ">
                 <span
-                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block">01</span>
+                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block"></span>
                 <h3 class="text-2xl mb-5 text-white font-bodoni italic md:text-3xl">Book your visit</h3>
                 <p class=" text-pastel">Choose your service, pick a date, and pay your deposit online — it only takes
                     two minutes.</p>
@@ -23,12 +23,12 @@
 
         <div class="flex items-start relative z-10 mb-10 md:flex-col">
             <div class="w-12 h-12 shrink-0 rounded-full bg-pastel flex items-center justify-center md:hidden">
-                <span class="text-2xl text-black font-bodoni italic md:text-white/30 ">1</span>
+                <span class="text-2xl text-black font-bodoni italic md:text-white/30 ">2</span>
 
             </div>
             <div class="flex flex-col ml-5 ">
                 <span
-                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block">02</span>
+                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block"></span>
                 <h3 class="text-2xl mb-5 text-white font-bodoni italic md:text-3xl">Explore & Taste</h3>
                 <p class=" text-pastel">Description:
                     Visit our North Williamstown facility at 19 Churchill St, taste our coffee, meet the team, and plan
@@ -38,12 +38,12 @@
 
         <div class="flex items-start relative z-10 mb-10 md:flex-col">
             <div class="w-12 h-12 shrink-0 rounded-full bg-pastel flex items-center justify-center md:hidden">
-                <span class="text-2xl text-black font-bodoni italic md:text-white/30 ">1</span>
+                <span class="text-2xl text-black font-bodoni italic md:text-white/30 ">3</span>
 
             </div>
             <div class="flex flex-col ml-5 ">
                 <span
-                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block">03</span>
+                    class="hidden text-2xl text-black font-bodoni italic md:text-white/30 md:text-8xl md:block"></span>
                 <h3 class="text-2xl mb-5 text-white font-bodoni italic md:text-3xl">Leave With Your Product</h3>
                 <p class=" text-pastel">Your coffee, freshly roasted and packaged — ready to sell, serve, or build your
                     brand around.</p>

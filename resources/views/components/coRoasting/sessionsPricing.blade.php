@@ -10,7 +10,17 @@
             <div class=" mb-5 ">
                 <span class="absolute -top-3 right-5 z-100 text-white bg-bean rounded px-2 text-sm">MOST POPULAR</span>
                 <h2 class="text-3xl mb-5 font-bodoni font-bold  text-black">Intro session</h2>
-                <p class="text-black mb-5">Perfect for first-timers and those developing new products</p>
+                <p class="text-black mb-2">Perfect for first-timers and those developing new products</p>
+                <ul class="ml-5 mb-5 text-black text-xs">
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Acces to Loring S7 Nighthawk or S15 Falcon</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Full guidance from our team</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Roast profile development</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Use of cupping and branding</li>
+                </ul>
                 <p class="text-black"><span class="text-3xl text-bold">$250</span> <span class="text-sm text-black/60">/
                         3 hours</span></p>
             </div>
@@ -21,8 +31,18 @@
             <div class=" mb-5 ">
 
                 <h2 class="text-3xl mb-5 font-bodoni font-bold  text-black">Production Session</h2>
-                <p class="text-black mb-5">Ideal for businesses with established roast profiles</p>
-                <p class="text-black"><span class="text-3xl text-bold">$250</span> <span class="text-sm text-black/60">/
+                <p class="text-black mb-2">Ideal for businesses with established roast profiles</p>
+                <ul class="ml-5 mb-5 text-black text-xs">
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Priority acces to Loring S15 Falcon</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Staff available on callout</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Larger batch capacity</li>
+                    <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
+                            alt="brownBean">Use of cupping, de-stoner and branding</li>
+                </ul>
+                <p class="text-black"><span class="text-3xl text-bold">$450</span> <span class="text-sm text-black/60">/
                         3 hours</span></p>
             </div>
             <x-ui.buttonClear class="border-2! border-bean! text-bean">Book production</x-ui.buttonClear>
