@@ -16,7 +16,7 @@
 
 
 
-    <div class=" gap-4 flex justify-center  text-primary mb-6 md:flex-col md:items-start md:mx-auto">
+    <div class=" gap-4 flex justify-center  text-primary md:flex-col md:items-start md:mx-auto">
         <h2 class="hidden md:block text-2xl text-center">Social Media</h2>
         <div class="gap-4 flex justify-center w-full md:justify-start md:mx-auto">
             </a><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@CesarsCoffeeCup">
@@ -102,11 +102,12 @@
             <li>www.cesarscoffeecup.com</li>
         </ul>
     </div>
-    <div class="flex flex-col text-center text-xs md:w-max md:text-left "><span>© 2026 Cesar's Coffee Cup. All rights
-            reserved.</span> <span>
-            Website developed by
-            Dominic Knabe
-        </span> </div>
+    <div class="flex flex-col text-center text-xs md:text-left md:flex-row ">© 2026 Cesar's Coffee Cup. All
+        rights
+        reserved.<br class="">
+        Website developed by
+        Dominic Knabe
+    </div>
 
 
 
