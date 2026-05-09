@@ -5,7 +5,7 @@
                 <h2 class="text-2xl mb-5 text-primary w-full text-left md:mb-5">
                     Heritage Coffee Roasters
                 </h2>
-                <p class="hidden md:block text-coffeDark text-left">
+                <p class="hidden md:block text-black text-left">
                     Melbourne's premier dedicated B2B <br>
                     roasting facility, empowering the next <br> generation
                     of independent coffee brands.
@@ -61,33 +61,33 @@
                 <div
                     class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
                     <a href="{{ route('home') }}"
-                        class="text-black mx-2.5 md:mx-0 md:text-coffeDark  hover:underline transition duration-300 ease-in-out">Home
+                        class="text-black mx-2.5 md:mx-0   hover:underline transition duration-300 ease-in-out">Home
                     </a>
                     <a href="{{ route('coRoasting') }}"
-                        class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Co-Roasting
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Co-Roasting
                     </a>
                     <a href="{{ route('hireRoaster') }}"
-                        class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Hire
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Hire
                         a Roaster
                     </a>
                     <a href="{{ route('aboutUs') }}"
-                        class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">About
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">About
                         Us
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Contact
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Contact
                     </a>
                 </div>
                 <div
                     class="flex  text-xs md:text-base md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
                     <a
-                        class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 md:text-coffeDark">Privacy
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Privacy
                         Policy</a>
                     <a
-                        class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 md:text-coffeDark">Terms
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Terms
                         & Conditions</a>
                     <a
-                        class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 md:text-coffeDark">Cookies
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Cookies
                         Policy</a>
                 </div>
             </div>
@@ -96,7 +96,7 @@
 
         <div class="hidden md:flex md:flex-col gap-5 text-coffeDark md:items-start md:mx-auto">
             <h2 class="text-2xl text-primary">Contact</h2>
-            <ul class="flex flex-col gap-1 text-coffeDark">
+            <ul class="flex flex-col gap-1 text-black">
                 <li class="flex flex-col"><span>19 Churchill St,</span> <span>North Williamstown</span> <span>VIC
                         3060</span>
                 </li>

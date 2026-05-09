@@ -7,11 +7,13 @@
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     --color-primary: #4b5332;
+    --color-primaryLight: #697546;
     --color-secondary: #3e2723;
     --color-tertiary: #d7c4a3;
     --color-neutral: #f5f2eb;
     --color-coffeDark: #3e291b;
     --color-pastel: #e8ddc8;
+    --color-pastelLight: #fcf9f2;
     --color-bean: #6f4e37;
     --color-gold: #c9a227;
 
