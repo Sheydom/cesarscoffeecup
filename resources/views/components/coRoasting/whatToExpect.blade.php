@@ -1,4 +1,4 @@
-<section class="p-5 bg-primary mt-10 lg:p-15">
+<section class="p-5 bg-primary pt-15 lg:p-15">
     <p class=" text-tertiary mb-5">HOW IT WORKS</p>
     <h2 class="text-4xl lg:text-7xl  text-white mb-10">What to expect on the day</h2>
 
