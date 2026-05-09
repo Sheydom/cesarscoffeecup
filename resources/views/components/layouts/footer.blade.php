@@ -45,24 +45,24 @@
     <div class="flex justify-center gap-5 flex-wrap md:flex-col md:items-center">
         <h2 class="hidden md:block text-primary text-2xl">Navigation</h2>
         <div class="md:flex md:gap-1 md:items-center">
-            <div class="flex gap-5 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
+            <div class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
                 <a href="{{ route('home') }}"
-                    class="text-black md:text-coffeDark  hover:underline transition duration-300 ease-in-out">Home
+                    class="text-black mx-2.5 md:text-coffeDark  hover:underline transition duration-300 ease-in-out">Home
                 </a>
                 <a href="{{ route('coRoasting') }}"
-                    class="text-black md:text-coffeDark hover:underline transition duration-300 ease-in-out">Co-Roasting
+                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Co-Roasting
                 </a>
                 <a href="{{ route('hireRoaster') }}"
-                    class="text-black md:text-coffeDark hover:underline transition duration-300 ease-in-out">Hire a Roaster
+                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Hire a Roaster
                 </a>
                 <a href="{{ route('aboutUs') }}"
-                    class="text-black md:text-coffeDark hover:underline transition duration-300 ease-in-out">About Us
+                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">About Us
                 </a>
                 <a href="{{ route('contact') }}"
-                    class="text-black md:text-coffeDark hover:underline transition duration-300 ease-in-out">Contact
+                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Contact
                 </a>
             </div>
-            <div class="flex md:flex-col md:gap-1">
+            <div class="flex md:flex-col md:gap-1 justify-center gap-5">
                 <a
                     class="hover:text-coffeDark hover:opacity-100 hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 md:text-coffeDark">Privacy
                     Policy</a>
