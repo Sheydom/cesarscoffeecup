@@ -8,7 +8,7 @@
     </div> 
 
     <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
-        <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
+        <div class="mx-auto flex max-w-7xl flex-col items-center  text-white sm:items-start ">
 
             <h1 class="mb-8 max-w-4xl font-bodoni drop-shadow-2xl text-5xl italic leading-[0.95] sm:text-6xl lg:text-7xl">
                 Roast your own coffee.<br>
