@@ -1,12 +1,24 @@
-<section class="bg-neutral p-5 gap-5 flex flex-col items-center md:mx-auto md:grid md:grid-cols-4 md:items-start">
-    <div class="md:items-center">
-        <h2 class="text-2xl  text-primary md:mb-5">Heritage Coffee Roasters</h2>
-        <p class="hidden md:block text-coffeDark">Melbourne's premier dedicated B2B roasting facility, emopowering the
-            next generation of independent coffee brands.</p>
+<section class="bg-neutral w-full p-5 gap-5 flex flex-col items-center md:grid md:grid-cols-4 md:items-start md:mx-auto">
+    <div class="flex flex-col items-center">
+        <div class="w-max">
+            <h2 class="text-2xl text-primary w-full text-left md:mb-5">
+                Heritage Coffee Roasters
+            </h2>
+            <p class="hidden md:block text-coffeDark text-left">
+                Melbourne's premier dedicated B2B <br>
+                roasting facility, empowering the next <br> generation
+                of independent coffee brands.
+            </p>
+        </div>
     </div>
-    <div class=" gap-4 flex justify-center w-full  text-primary mb-6 md:flex-col">
+
+
+
+
+
+    <div class=" gap-4 flex justify-center  text-primary mb-6 md:flex-col md:items-start md:mx-auto">
         <h2 class="hidden md:block text-2xl text-center">Social Media</h2>
-        <div class="gap-4 flex justify-center w-full ">
+        <div class="gap-4 flex justify-center w-full md:justify-start md:mx-auto">
             </a><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@CesarsCoffeeCup">
                 <svg xmlns="http://www.w3.org/2000/svg"
                     class="w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black  md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
@@ -42,24 +54,27 @@
         </div>
 
     </div>
-    <div class="flex justify-center gap-5 flex-wrap md:flex-col md:items-center">
+    <div class="flex  gap-5 flex-wrap md:flex-col md:items-start md:mx-auto">
         <h2 class="hidden md:block text-primary text-2xl">Navigation</h2>
         <div class="md:flex md:gap-1 md:items-center">
-            <div class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
+            <div
+                class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
                 <a href="{{ route('home') }}"
-                    class="text-black mx-2.5 md:text-coffeDark  hover:underline transition duration-300 ease-in-out">Home
+                    class="text-black mx-2.5 md:mx-0 md:text-coffeDark  hover:underline transition duration-300 ease-in-out">Home
                 </a>
                 <a href="{{ route('coRoasting') }}"
-                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Co-Roasting
+                    class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Co-Roasting
                 </a>
                 <a href="{{ route('hireRoaster') }}"
-                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Hire a Roaster
+                    class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Hire
+                    a Roaster
                 </a>
                 <a href="{{ route('aboutUs') }}"
-                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">About Us
+                    class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">About
+                    Us
                 </a>
                 <a href="{{ route('contact') }}"
-                    class="text-black mx-2.5 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Contact
+                    class="text-black mx-2.5 md:mx-0 md:text-coffeDark hover:underline transition duration-300 ease-in-out">Contact
                 </a>
             </div>
             <div class="flex md:flex-col md:gap-1 justify-center gap-5">
@@ -76,17 +91,18 @@
         </div>
 
     </div>
-   
-    <div class="hidden md:flex md:flex-col gap-5 text-coffeDark md:items-center">
+
+    <div class="hidden md:flex md:flex-col gap-5 text-coffeDark md:items-start md:mx-auto">
         <h2 class="text-2xl text-primary">Contact</h2>
         <ul class="flex flex-col gap-1 text-coffeDark">
-            <li class="flex flex-col"><span>19 Churchill St,</span> <span>North Williamstown</span> <span>VIC 3060</span>
+            <li class="flex flex-col"><span>19 Churchill St,</span> <span>North Williamstown</span> <span>VIC
+                    3060</span>
             </li>
             <li>info@cesarscoffeecup.com</li>
             <li>www.cesarscoffeecup.com</li>
         </ul>
     </div>
-    <div class="flex flex-col text-center md:w-max md:text-left"><span>© 2026 Cesar's Coffee Cup. All rights
+    <div class="flex flex-col text-center text-xs md:w-max md:text-left "><span>© 2026 Cesar's Coffee Cup. All rights
             reserved.</span> <span>
             Website developed by
             Dominic Knabe
