@@ -48,7 +48,7 @@
                 <span class="relative hidden md:flex justify-center items-center bg-pastel w-10 h-10 md:mb-5 rounded-full"><span
                         class="hidden absolute md:flex md:text-3xl md:text-black  ">3</span></span>
                 <h3 class="text-2xl mb-5 text-white md:text-3xl">Roasting Session</h3>
-                <p class=" text-tertiary">The main event. You roast your benas under our watchful guidance.
+                <p class=" text-tertiary">The main event. You roast your beans under our watchful guidance.
             </div>
         </div>
         <div class="flex items-start relative z-10 mb-10 md:flex-col  md:p-5 ">

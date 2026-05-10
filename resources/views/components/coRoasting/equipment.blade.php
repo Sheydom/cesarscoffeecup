@@ -12,8 +12,8 @@
             <div class=" md:flex md:justify-between md:bg-neutral md:p-5">
                 <img class="md:hidden w-full h-50 object-cover rounded mb-5 "
                     src="{{ asset('images/coRoasting/roaster_test.jpg') }}" alt="roasterLoring">
-                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl md:justify-center">
-                    <h2 class="text-3xl mb-5 font-bodoni text-pastel  md:text-coffeDark">Loring S7 Nighthawk</h2>
+                <div class="p-5 md:flex md:flex-col md:w-xl md:justify-center md:p-5 md:bg-pastelLight">
+                    <h2 class="text-4xl mb-5 font-bodoni text-pastel  md:text-black">Loring S7 Nighthawk</h2>
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
                     <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
@@ -47,7 +47,7 @@
                     <img class="hidden md:flex w-full h-50 object-cover rounded  md:w-150 md:h-100 "
                         src="{{ asset('images/coRoasting/roaster_test.jpg') }}" alt="">
                     <div
-                        class="hidden md:flex md:flex-col absolute -bottom-9 -left-15 bg-primary p-2.5 text-white md:items-center rounded">
+                        class="hidden md:flex md:flex-col absolute -bottom-9 -left-15 bg-primary p-2.5 text-white text-xs italic md:items-center rounded">
                         <p>01</p>
                         <p>MASTERPIECE</p>
                     </div>
@@ -62,14 +62,14 @@
                     <img class="w-full h-50 object-cover rounded mb-5 md:mr-5 md:mb-0 md:w-auto md:h-100 "
                         src="{{ asset('images/coRoasting/roaster.jpg') }}" alt="">
                     <div
-                        class="hidden md:flex md:flex-col absolute -top-9 -right-7 bg-bean p-2.5 text-white md:items-center rounded">
+                        class="hidden md:flex md:flex-col absolute -top-9 -right-7 bg-bean p-2.5 text-white italic text-xs md:items-center rounded">
                         <p>02</p>
                         <p>PRECISION</p>
                     </div>
                     
                 </div>
-                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl md:justify-center">
-                    <h2 class="text-3xl mb-5 font-bodoni text-pastel md:text-coffeDark">Loring S15 Falcon</h2>
+                <div class="p-5 md:p-5 md:flex md:flex-col md:w-xl md:justify-center md:bg-pastelLight">
+                    <h2 class="text-4xl mb-5 font-bodoni text-pastel md:text-black">Loring S15 Falcon</h2>
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
                     <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
