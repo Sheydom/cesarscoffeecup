@@ -11,23 +11,43 @@
 
             <div class=" md:flex md:justify-between md:bg-neutral md:p-5">
                 <img class="md:hidden w-full h-50 object-cover rounded mb-5 "
-                    src="{{ asset('images/coRoasting/roaster_test.jpg') }}" alt="">
-                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl">
+                    src="{{ asset('images/coRoasting/roaster_test.jpg') }}" alt="roasterLoring">
+                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl md:justify-center">
                     <h2 class="text-3xl mb-5 font-bodoni text-pastel  md:text-coffeDark">Loring S7 Nighthawk</h2>
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
-                    <span class="flex justify-between">
+                    <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
                         <p>7kg</p>
                     </span>
-                    <p class="flex flex-col"><span class="white">Details:</span>Ideal for smaller batches, profile
+                    <p class="flex flex-col mb-5"><span class="white">Details:</span>Ideal for smaller batches, profile
                         development and new blends. Precise,
                         consistent and forgiving.</p>
+                    <ul class="text-xs leading-loose">
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>PRESION CONTROL: DIGITAL GAS & AIR PROFILING</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>CAPACITY: 7-15kg PER BATCH</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>SUSTAINIBILITY: TESST</li>
+                    </ul>
                 </div>
-                <div class="relative inset-0">
-                    <img class="hidden md:flex w-full h-50 object-cover rounded md:ml-25 md:w-150 md:h-100 "
+                <div class="relative ">
+                    <img class="hidden md:flex w-full h-50 object-cover rounded  md:w-150 md:h-100 "
                         src="{{ asset('images/coRoasting/roaster_test.jpg') }}" alt="">
                     <div
-                        class="hidden md:flex md:flex-col absolute -bottom-9 left-10 bg-primary p-2.5 text-white md:items-center rounded">
+                        class="hidden md:flex md:flex-col absolute -bottom-9 -left-15 bg-primary p-2.5 text-white md:items-center rounded">
                         <p>01</p>
                         <p>MASTERPIECE</p>
                     </div>
@@ -38,26 +58,47 @@
         <div
             class=" bg-primaryLight rounded flex flex-col justify-between text-white  mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-transparent border-2 md:border-none md:p-0 md:bg-pastel md:shadow-none md:drop-shadow-none md:text-black">
             <div class=" md:flex md:justify-between md:bg-neutral md:p-5 md:pt-25">
-                <div class="relative inset-0">
+                <div class="relative ">
                     <img class="w-full h-50 object-cover rounded mb-5 md:mr-5 md:mb-0 md:w-auto md:h-100 "
                         src="{{ asset('images/coRoasting/roaster.jpg') }}" alt="">
-                        <div
+                    <div
                         class="hidden md:flex md:flex-col absolute -top-9 -right-7 bg-bean p-2.5 text-white md:items-center rounded">
                         <p>02</p>
                         <p>PRECISION</p>
                     </div>
+                    
                 </div>
-                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl">
+                <div class="p-5 md:p-0 md:flex md:flex-col md:w-xl md:justify-center">
                     <h2 class="text-3xl mb-5 font-bodoni text-pastel md:text-coffeDark">Loring S15 Falcon</h2>
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
-                    <span class="flex justify-between">
+                    <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
                         <p>7kg</p>
                     </span>
-                    <p class="flex flex-col text-white md:text-black"><span class="white">Details:</span>Perfect for
+                    <p class="flex flex-col text-white md:text-black mb-5"><span class="white">Details:</span>Perfect for
                         larger
                         production runs
                         and scaling established profiles at volume.</p>
+                        <ul class="text-xs leading-loose">
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>PRESION CONTROL: DIGITAL GAS & AIR PROFILING</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>CAPACITY: 7-15kg PER BATCH</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>SUSTAINIBILITY: TESST</li>
+                    </ul>
                 </div>
 
 
