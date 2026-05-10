@@ -1,10 +1,9 @@
 <section class="px-5 mt-10 flex flex-col justify-center">
-    <div class="mb-10 sm:mx-auto  sm:text-center sm:w-max">
-        <span class="text-xs text-coffeDark">SESSIONS & PRICING</span>
-        <h2 class="text-4xl mb-5 text-primary">Simple, flexible, no lock-in</h2>
-        <div class="w-15 h-0.5 border border-coffeDark sm:self-start"></div>
+    <div class="mb-10 flex flex-col sm:mx-auto  sm:text-center sm:w-max">
+        <h2 class="text-4xl text-primary">Simple, flexible, no lock-in</h2>
+        <p class="text-xs text-coffeDark text-center">Transparent pricing for every stage of your roasting journey.</p>
     </div>
-    <div class=" md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-[350px_350px_350px]  lg:justify-center  ">
+    <div class=" md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-[350px_350px]  lg:justify-center  ">
         <div
             class="relative bg-white border-bean flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
             <div class=" mb-5 ">
