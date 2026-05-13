@@ -49,10 +49,10 @@
 
                     <a class=" hover:bg-accent/10 rounded p-2 {{ request()->routeIs('home') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('home') }} "wire:navigate.hover>Home</a>
+                        <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('greenStock') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                            href="{{ route('greenStock') }} "wire:navigate.hover>Green Stock</a>
                     <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('coRoasting') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting</a>
-                    <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('hireRoaster') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('hireRoaster') }} "wire:navigate.hover>Hire a Roaster</a>
+                        href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting Hire</a>
                     <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('aboutUs') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('aboutUs') }}"wire:navigate.hover>About
                         Us</a>
@@ -112,10 +112,10 @@
     <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="{{ request()->routeIs('home') ? 'text-primary underline' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover>Home</a>
+            <a href="{{ route('greenStock') }}"class="{{ request()->routeIs('greenStock') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+                wire:navigate.hover>Green Stock</a>
         <a href="{{ route('coRoasting') }}"
             class="{{ request()->routeIs('coRoasting') ? 'text-primary underline' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>Co-Roasting</a>
-        <a href="{{ route('hireRoaster') }}"class="{{ request()->routeIs('hireRoaster') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover>Hire a Roaster</a>
         <a href="{{ route('aboutUs') }}"class="{{ request()->routeIs('aboutUs') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover>About Us</a>
         <a href="{{ route('contact') }}"class="{{ request()->routeIs('contact') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
