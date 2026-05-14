@@ -3,10 +3,10 @@
         <h2 class="text-4xl text-primary">Simple, flexible, no lock-in</h2>
         <p class="text-xs text-coffeDark text-center">Transparent pricing for every stage of your roasting journey.</p>
     </div>
-    <div class=" md:grid md:grid-cols-2 md:gap-6 lg:grid-cols-[350px_350px]  lg:justify-center  ">
+    <div class=" md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-[350px_350px_350px]  lg:justify-center  ">
         <div
-            class="relative bg-white border-bean flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
-            <div class=" mb-5 ">
+            class="relative bg-white border-bean flex flex-col  justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
+            <div class=" mb-5 flex flex-col h-full">
                 <span class="absolute -top-3 right-5 z-100 text-white bg-bean rounded px-2 text-sm">MOST POPULAR</span>
                 <h2 class="text-3xl mb-5 font-bodoni font-bold  text-black">Intro session</h2>
                 <p class="text-black mb-2">Perfect for first-timers and those developing new products</p>
@@ -20,14 +20,15 @@
                     <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
                             alt="brownBean">Use of cupping and branding</li>
                 </ul>
-                <p class="text-black"><span class="text-3xl font-bold">$250</span> <span class="text-sm text-black/60">/
+                <p class="text-black mt-auto"><span class="text-3xl font-bold">$250</span> <span
+                        class="text-sm text-black/60">/
                         3 hours</span></p>
             </div>
             <x-ui.buttonSolid class="bg-bean! text-white!">Book guided session</x-ui.buttonSolid>
         </div>
         <div
             class=" bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
-            <div class=" mb-5 ">
+            <div class=" mb-5 flex flex-col h-full">
 
                 <h2 class="text-3xl mb-5 font-bodoni font-bold  text-black">Production Session</h2>
                 <p class="text-black mb-2">Ideal for businesses with established roast profiles</p>
@@ -41,7 +42,7 @@
                     <li class="flex items-center"><img class="w-3 h-3 mr-3" src="{{ asset('images/bean_brown.svg') }}"
                             alt="brownBean">Use of cupping, de-stoner and branding</li>
                 </ul>
-                <p class="text-black"><span class="text-3xl font-bold">$450</span> <span class="text-sm text-black/60">/
+                <p class="text-black mt-auto"><span class="text-3xl font-bold">$450</span> <span class="text-sm text-black/60">/
                         3 hours</span></p>
             </div>
             <x-ui.buttonClear class="border-2! border-bean! text-bean">Book production</x-ui.buttonClear>
@@ -49,7 +50,7 @@
         <div
             class="bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu hover:cursor-pointer transition duration-300 ease-in-out">
 
-            <div class="mb-5">
+            <div class="mb-5 flex flex-col h-full">
 
                 <h2 class="text-3xl mb-5 font-bodoni font-bold text-black">
                     Hire a Roaster
@@ -89,7 +90,7 @@
 
                 </ul>
 
-                <p class="text-black">
+                <p class="text-black mt-auto">
                     <span class="text-3xl font-bold">$450</span>
                     <span class="text-sm text-black/60">/ 3 hours</span>
                 </p>

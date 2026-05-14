@@ -4,7 +4,7 @@
         src="{{ asset('images/hero.jpg') }}" alt="coffee roasting facility">
 
     <div
-        class="absolute inset-0 bg-linear-to-b from-black/40 via-black/0 to-transparent sm:bg-linear-to-r sm:from-black/40 sm:via-black/0 sm:to-transparent">
+        class="absolute inset-0 bg-linear-to-b from-black/60 via-black/60 to-transparent sm:bg-linear-to-b sm:from-black/60 sm:via-black/40 sm:to-transparent">
     </div>
 
     <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
@@ -44,16 +44,6 @@
             </p>
         </div>
 
-        <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around md:text-xl">
-            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
-                    alt="coffeBeanWhite">Direct from Colombian & global farms</p>
-            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
-                    alt="coffeBeanWhite">Loring & IMF equipment</p>
-            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
-                    alt="coffeBeanWhite">No lock-in contracts</p>
-            <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
-                    alt="coffeBeanWhite">Melbourne local delivery</p>
-        </div>
     </div>
 
 </section>

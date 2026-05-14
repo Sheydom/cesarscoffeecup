@@ -25,17 +25,7 @@
                 </div>
                 <button class="p-5 border rounded border-black bg-white text-coffeDark">BOOK A SESSION</button>
             </div>
-        {{-- <div class="bg-pastel/60 flex flex-col justify-between text-white p-5 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-transparent border-2 hover:border-2 hover:border-primary hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
-            <div class="mb-5">
-                <div class=" flex justify-end ">
-                    <p class=" text-xs p-1 px-2 text-end text-black  w-max ">Professional</p>
-                </div>
-                <h2 class="text-3xl mb-5 font-bodoni">Wholesale Coffee Supply</h2>
-                <p>A consistent, high-quality coffee supply tailored to your business. Stable flavour profiles,
-                    year-round availability, and reliable Melbourne delivery — so your offering never drops.</p>
-            </div>
-            <button class="p-5 rounded bg-white text-primary">GET STARTED</button>
-        </div> --}}
+ 
         <div class="bg-pastel/60 flex flex-col justify-between text-white p-5 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-transparent border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
             <div class="mb-5">
                 <div class=" flex justify-end ">
