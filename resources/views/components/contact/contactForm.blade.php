@@ -1,6 +1,6 @@
 <section class="p-5 md:flex md:items-end md:justify-center gap-10 lg:gap-20 lg:p-15">
     <div class="flex flex-col gap-5">
-        <h2 class="text-5xl text-primary">Get in touch</h2>
+        <h2 class="text-5xl text-primary mb-5">Get in touch</h2>
         <div class="flex gap-5 items-start">
             <svg class="h-7 w-7 shrink-0" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -55,7 +55,7 @@
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
                 <option value="" disabled selected>Please Select</option>
                 <option value="">Co-Roasting</option>
-                <option value="">Hirer a Roaster</option>
+                <option value="">Hire a Roaster</option>
                 <option value="">Wholesale Supply</option>
                 <option value="">Starter Packages</option>
             </select></div>

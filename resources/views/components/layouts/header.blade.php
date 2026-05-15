@@ -124,9 +124,9 @@
         <a href="{{ route('home') }}"class="flex {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
-        <a href="{{ route('greenStock') }}"class="flex {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+        {{-- <a href="{{ route('greenStock') }}"class="flex {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('greenStock') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
-                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Green Stock</a>
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Green Stock</a> --}}
         <a href="{{ route('coRoasting') }}"
             class=" flex {{ request()->routeIs('coRoasting') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>
             <img class="{{ request()->routeIs('coRoasting') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
