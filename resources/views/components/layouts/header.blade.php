@@ -22,7 +22,7 @@
             </button>
             {{-- Dark overlay --}}
 
-            {{-- <div x-show="open" @click="open = false" x-transition.opacity class="fixed inset-0 bg-black/50 z-40"></div>  --}}
+            {{-- <div x-show="open" @click="open = false" x-transition.opacity class="fixed inset-0 bg-black/50 z-40"></div>   --}}
 
             {{-- Sliding sidebar --}}
 
@@ -47,17 +47,26 @@
 
                 <nav class="flex flex-col gap-4 text-lg">
 
-                    <a class=" hover:bg-accent/10 rounded p-2 {{ request()->routeIs('home') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('home') }} "wire:navigate.hover>Home</a>
-                        <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('greenStock') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                            href="{{ route('greenStock') }} "wire:navigate.hover>Green Stock</a>
-                    <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('coRoasting') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('coRoasting') }} "wire:navigate.hover>Co-Roasting Hire</a>
-                    <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('aboutUs') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('aboutUs') }}"wire:navigate.hover>About
+                    <a class=" flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('home') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                        href="{{ route('home') }} "wire:navigate.hover>
+                        <img class=" {{ request()->routeIs('home') ? 'w-6 h-6 shrink-0 flex items-center' : 'hidden' }}"
+                            src="{{ asset('images/bean_brown.svg') }}" alt="brownBean">
+                        Home</a>
+                    {{-- <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('greenStock') ? 'text-black font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                            href="{{ route('greenStock') }} "wire:navigate.hover> <img class="{{request()->routeIs('greenStock')?'w-6 h-6 shrink-0':'hidden'}}" src="{{asset('images/bean_brown.svg')}}" alt="beanBrown"> Green Stock</a> --}}
+                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('coRoasting') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                        href="{{ route('coRoasting') }} "wire:navigate.hover> <img
+                            class="{{ request()->routeIs('coRoasting') ? 'w-6 h-7 shrink-0' : 'hidden' }}"
+                            src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Co-Roasting Hire</a>
+                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('aboutUs') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                        href="{{ route('aboutUs') }}"wire:navigate.hover> <img
+                            class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                            src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> About
                         Us</a>
-                    <a class="hover:bg-accent/10 rounded p-2 {{ request()->routeIs('contact') ? 'text-primary underline underline-primary font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
-                        href="{{ route('contact') }}"wire:navigate.hover>Contact</a>
+                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('contact') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                        href="{{ route('contact') }}"wire:navigate.hover> <img
+                            class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                            src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
 
                 </nav>
 
@@ -104,22 +113,30 @@
         </div>
     </div>
 
+    {{-- Desktop Navbar --}}
+
     <div class="h-10 flex gap-2 items-center md:text-xl md:h-20">
         <img class="w-10 h-10 shrink-0 md:h-20 md:w-20" src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}"
             alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
     <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
-        <a href="{{ route('home') }}"class="{{ request()->routeIs('home') ? 'text-primary underline' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover>Home</a>
-            <a href="{{ route('greenStock') }}"class="{{ request()->routeIs('greenStock') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-                wire:navigate.hover>Green Stock</a>
+        <a href="{{ route('home') }}"class="flex {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+            wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
+        <a href="{{ route('greenStock') }}"class="flex {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+            wire:navigate.hover> <img class="{{ request()->routeIs('greenStock') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Green Stock</a>
         <a href="{{ route('coRoasting') }}"
-            class="{{ request()->routeIs('coRoasting') ? 'text-primary underline' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>Co-Roasting</a>
-        <a href="{{ route('aboutUs') }}"class="{{ request()->routeIs('aboutUs') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover>About Us</a>
-        <a href="{{ route('contact') }}"class="{{ request()->routeIs('contact') ? 'text-primary underline ' : 'text-black/30 hover:text-primary hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover>Contact</a>
+            class=" flex {{ request()->routeIs('coRoasting') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>
+            <img class="{{ request()->routeIs('coRoasting') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Co-Roasting</a>
+        <a href="{{ route('aboutUs') }}"class="flex {{ request()->routeIs('aboutUs') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+            wire:navigate.hover> <img class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> About Us</a>
+        <a href="{{ route('contact') }}"class="flex {{ request()->routeIs('contact') ? 'text-black  ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+            wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
     <div class="h-10 flex items-center md:h-20">
         <svg class="h-10 w-10 shrink-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
