@@ -66,9 +66,9 @@
                     <a href="{{ route('coRoasting') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Co-Roasting
                     </a>
-                    <a href="{{ route('greenStock') }}"
+                    {{-- <a href="{{ route('greenStock') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Green Stock
-                    </a>
+                    </a> --}}
                     <a href="{{ route('aboutUs') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">About
                         Us
