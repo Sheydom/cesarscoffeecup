@@ -77,15 +77,14 @@
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out">Contact
                     </a>
                 </div>
-                <div
-                    class="flex  text-xs md:text-base md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
-                    <a
+                <div class="flex  text-xs md:text-base md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
+                    <a href="{{ route('legal.privacy') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Privacy
                         Policy</a>
-                    <a
+                    <a href="{{ route('legal.termsAndCondition') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Terms
                         & Conditions</a>
-                    <a
+                    <a href="{{ route('legal.cookies') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Cookies
                         Policy</a>
                 </div>
@@ -103,17 +102,18 @@
                 <li>www.cesarscoffeecup.com</li>
             </ul>
         </div>
-        
 
 
 
 
-    </div><div class="flex justify-center text-center text-xs  w-full mt-5">© 2026 Cesar's Coffee Cup.
-            All
-            rights
-            reserved.<br>
-            Website developed by
-            Dominic Knabe
-        </div>
+
+    </div>
+    <div class="flex justify-center text-center text-xs  w-full mt-5">© 2026 Cesar's Coffee Cup.
+        All
+        rights
+        reserved.<br>
+        Website developed by
+        Dominic Knabe
+    </div>
 
 </section>

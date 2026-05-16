@@ -16,8 +16,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 require __DIR__.'/settings.php';
 
 Route::prefix('legal')->group(function () {
-    Route::view('terms', 'legal.terms')->name('legal.terms');
+    Route::view('terms', 'legal.termsAndCondition')->name('legal.termsAndCondition');
     Route::view('refunds', 'legal.refunds')->name('legal.refunds');
     Route::view('privacy', 'legal.privacy')->name('legal.privacy');
     Route::view('shipping', 'legal.shipping')->name('legal.shipping');
+    Route::view('cookies', 'legal.cookies')->name('legal.cookies');
 });
