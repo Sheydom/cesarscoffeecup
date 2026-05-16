@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+// core-views
+
 Route::view('/', 'welcome')->name('home');
 Route::view('products', 'products')->name('products');
 Route::view('greenStock', 'greenStock')->name('greenStock');
@@ -9,12 +12,12 @@ Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('contact', 'contact')->name('contact');
 Route::view('aboutUs','aboutUs')->name('aboutUs');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
-});
 
-require __DIR__.'/settings.php';
 
+
+
+
+// lega-views
 Route::prefix('legal')->group(function () {
     Route::view('terms', 'legal.termsAndCondition')->name('legal.termsAndCondition');
     Route::view('cancellationAndRefund', 'legal.cancellationAndRefund')->name('legal.cancellationAndRefund');
