@@ -87,6 +87,10 @@
                     <a href="{{ route('legal.cookies') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Cookies
                         Policy</a>
+                    <a href="{{ route('legal.cancellationAndRefund') }}"
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Cancellation & Refund Policy</a>
+                    <a href="{{ route('legal.shipping') }}"
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 ">Shipping Policy</a>
                 </div>
             </div>
 

@@ -17,7 +17,7 @@ require __DIR__.'/settings.php';
 
 Route::prefix('legal')->group(function () {
     Route::view('terms', 'legal.termsAndCondition')->name('legal.termsAndCondition');
-    Route::view('refunds', 'legal.refunds')->name('legal.refunds');
+    Route::view('cancellationAndRefund', 'legal.cancellationAndRefund')->name('legal.cancellationAndRefund');
     Route::view('privacy', 'legal.privacy')->name('legal.privacy');
     Route::view('shipping', 'legal.shipping')->name('legal.shipping');
     Route::view('cookies', 'legal.cookies')->name('legal.cookies');
