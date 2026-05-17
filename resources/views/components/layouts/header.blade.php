@@ -170,12 +170,12 @@
             </form>
         @else
             <a href="{{ route('register') }}" 
-                class="flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out"
+                class="hidden sm:flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out"
                 wire:navigate.hover>
                 <p>Register</p>
             </a>
             <a href="{{ route('login') }}"
-                class="hidden sm:flex flex-col items-center border-2 rounded px-2 bg-primaryLight border-primaryLight text-white hover:border-primary hover:bg-transparent hover:text-primary transition duration-300 ease-in-out"
+                class=" sm:flex flex-col items-center border-2 rounded px-2 bg-primaryLight border-primaryLight text-white hover:border-primary hover:bg-transparent hover:text-primary transition duration-300 ease-in-out"
                 wire:navigate.hover>
                 <p>LogIn</p>
             </a>
