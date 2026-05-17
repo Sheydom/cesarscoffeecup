@@ -11,7 +11,9 @@
         <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
 
             <h1 class="mb-8 max-w-4xl font-bodoni text-5xl italic leading-[0.95] sm:text-6xl lg:text-8xl">
-                Specialty Coffee,<br>
+                @if (Auth::check())
+                    <p class="text-gold"><span class="text-white">Hello</span> {{ auth()->user()->name }}</p>
+                @endif Specialty Coffee,<br>
                 Built for Your Business
             </h1>
 
@@ -22,7 +24,7 @@
 
             <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
                 <x-ui.buttonSolid class="w-full sm:w-auto">
-                   Book a Facility Visit
+                    Book a Facility Visit
                 </x-ui.buttonSolid>
 
                 <x-ui.buttonClear class="w-full sm:w-auto">

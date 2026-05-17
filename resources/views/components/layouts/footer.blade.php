@@ -61,37 +61,37 @@
                 <div
                     class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
                     <a href="{{ route('home') }}"
-                        class="text-black mx-2.5 md:mx-0   hover:underline transition duration-300 ease-in-out"wire:navigation.hover>Home
+                        class="text-black mx-2.5 md:mx-0   hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Home
                     </a>
                     <a href="{{ route('coRoasting') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigation.hover>Co-Roasting
                     </a>
                     {{-- <a href="{{ route('greenStock') }}"
-                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigation.hover>Green Stock
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Green Stock
                     </a> --}}
                     <a href="{{ route('aboutUs') }}"
-                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigation.hover>About
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>About
                         Us
                     </a>
                     <a href="{{ route('contact') }}"
-                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigation.hover>Contact
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Contact
                     </a>
                 </div>
                 <div class="flex  text-xs md:text-base md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
                     <a href="{{ route('legal.privacy') }}"
-                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigation.hover>Privacy
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Privacy
                         Policy</a>
                     <a href="{{ route('legal.termsAndCondition') }}"
-                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigation.hover>Terms
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Terms
                         & Conditions</a>
                     <a href="{{ route('legal.cookies') }}"
-                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigation.hover>Cookies
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Cookies
                         Policy</a>
                     <a href="{{ route('legal.cancellationAndRefund') }}"
-                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigation.hover>Cancellation
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Cancellation
                         & Refund Policy</a>
                     <a href="{{ route('legal.shipping') }}"
-                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigation.hover>Shipping
+                        class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Shipping
                         Policy</a>
                 </div>
             </div>
