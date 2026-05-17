@@ -16,7 +16,6 @@
 
 
 
-
         <div class=" gap-4 flex justify-center mb-5  text-primary md:flex-col md:items-start md:mx-auto">
             <h2 class="hidden md:block text-2xl text-center">Social Media</h2>
             <div class="gap-4 flex justify-center w-full md:justify-start md:mx-auto">
