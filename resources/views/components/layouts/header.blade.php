@@ -1,13 +1,14 @@
-<nav class="flex bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium md:px-10">
+<nav
+    class="flex bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium sm:px-2.5 md:px-2.5 lg:px-10">
 
-    <div class="sm:hidden self-start">
+    <div class="sm:hidden self-center">
         <div x-data="{ open: false }"class="relative">
 
-            <button class="relative w-10 h-10 flex items-center justify-center" @click="open = !open"
-                @click.outside="open = false">
+            <button class="relative flex  " @click="open = !open" @click.outside="open = false">
 
                 <!-- Burger icon -->
-                <svg x-show="!open" x-transition:enter="transition ease-out duration-200"
+                <svg class="items-center flex h-10 w-10" x-show="!open"
+                    x-transition:enter="transition ease-out duration-200"
                     x-transition:enter-start="opacity-0 scale-90 rotate-[-90deg]"
                     x-transition:enter-end="opacity-100 scale-100 rotate-0"
                     x-transition:leave="transition ease-in duration-150"
@@ -47,26 +48,39 @@
 
                 <nav class="flex flex-col gap-4 text-lg">
 
-                    <a class=" flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('home') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                    <a class="items-center flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('home') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('home') }} "wire:navigate.hover>
-                        <img class=" {{ request()->routeIs('home') ? 'w-6 h-6 shrink-0 flex items-center' : 'hidden' }}"
+                        <img class=" {{ request()->routeIs('home') ? 'w-6 h-6 shrink-0 flex' : 'hidden' }}"
                             src="{{ asset('images/bean_brown.svg') }}" alt="brownBean">
                         Home</a>
-                    {{-- <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('greenStock') ? 'text-black font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                    {{-- <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('greenStock') ? 'text-black font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                             href="{{ route('greenStock') }} "wire:navigate.hover> <img class="{{request()->routeIs('greenStock')?'w-6 h-6 shrink-0':'hidden'}}" src="{{asset('images/bean_brown.svg')}}" alt="beanBrown"> Green Stock</a> --}}
-                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('coRoasting') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                    <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('coRoasting') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('coRoasting') }} "wire:navigate.hover> <img
-                            class="{{ request()->routeIs('coRoasting') ? 'w-6 h-7 shrink-0' : 'hidden' }}"
+                            class="{{ request()->routeIs('coRoasting') ? 'w-6 h-6 shrink-0' : 'hidden' }}"
                             src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Co-Roasting Hire</a>
-                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('aboutUs') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                    <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('aboutUs') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('aboutUs') }}"wire:navigate.hover> <img
                             class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                             src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> About
                         Us</a>
-                    <a class="flex hover:bg-accent/10 rounded p-2 {{ request()->routeIs('contact') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                    <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('contact') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
                         href="{{ route('contact') }}"wire:navigate.hover> <img
                             class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                             src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
+                    @if (Auth::check())
+                        <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('settings') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                            href="{{ route('settings') }}"wire:navigate.hover> <img
+                                class="{{ request()->routeIs('settings') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Settings</a>
+                    @endif
+                    @guest
+                        <a class="flex items-center hover:bg-accent/10 rounded p-2 {{ request()->routeIs('register') ? 'text-black  font-bold scale-105' : 'text-black/30 hover:text-primary transition duration-300 ease-in-out' }}"
+                            href="{{ route('register') }}"wire:navigate.hover> <img
+                                class="{{ request()->routeIs('register') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+                                src="{{ asset('images/bean_brown.svg') }}" alt="brownBean">Register</a>
+                    @endguest
+
 
                 </nav>
 
@@ -115,50 +129,55 @@
 
     {{-- Desktop Navbar --}}
 
-    <div class="h-10 flex gap-2 items-center md:text-xl md:h-20">
-        <img class="w-12 h-12 shrink-0 md:h-20 md:w-20" src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}"
-            alt="CesarsCoffeeCupLogo">
+    <div class="h-10 flex md:gap-0 lg:gap-2 items-center text-xl md:text-lg lg:text-xl md:h-15 lg:h-20">
+        <img class="w-12 h-12 shrink-0 md:h-15 md:w-15 lg:h-20 lg:w-20"
+            src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}" alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
 
     {{-- hidden in mobile --}}
 
-    <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
-        <a href="{{ route('home') }}"class="flex {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+    <div
+        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-[clamp(10px,2vw,15px)] md:text-sm lg:text-xl sm:justify-around sm:items-center">
+        <a href="{{ route('home') }}"class="flex items-center {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
-        {{-- <a href="{{ route('greenStock') }}"class="flex {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+        {{-- <a href="{{ route('greenStock') }}"class="flex items-center {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('greenStock') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Green Stock</a> --}}
         <a href="{{ route('coRoasting') }}"
-            class=" flex {{ request()->routeIs('coRoasting') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>
+            class=" flex items-center {{ request()->routeIs('coRoasting') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>
             <img class="{{ request()->routeIs('coRoasting') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Co-Roasting</a>
-        <a href="{{ route('aboutUs') }}"class="flex {{ request()->routeIs('aboutUs') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+        <a href="{{ route('aboutUs') }}"class="flex items-center {{ request()->routeIs('aboutUs') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> About Us</a>
-        <a href="{{ route('contact') }}"class="flex {{ request()->routeIs('contact') ? 'text-black  ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
+        <a href="{{ route('contact') }}"class="flex items-center {{ request()->routeIs('contact') ? 'text-black  ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
-    <div class="h-12 flex items-center  md:gap-5 md:h-20">
+    <div class="h-12 flex items-center  md:gap-5 md:h-20 lg:text-xl md:text-base text-lg">
         @auth
-            <form action="{{ route('logout') }}" method="POST"
-                class="flex flex-col items-center border-2 border-transparent px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out">
-                @csrf @method('DELETE')<button type="submit">LogOut</button>
-            </form>
-            <a href="{{ route('register') }}"
-                class="flex flex-col items-center border-2 rounded px-2 bg-primaryLight border-primaryLight text-white hover:border-black hover:bg-white hover:text-black transition duration-300 ease-in-out" wire:navigate.hover>
+
+            <a href="{{ route('settings') }}"
+                class="hidden sm:flex flex-col items-center border-2 border-transparent text-black hover:border-black px-2 rounded transition duration-300 ease-in-out"
+                wire:navigate.hover>
                 <p>Settings</p>
             </a>
+            <form action="{{ route('logout') }}" method="POST"
+                class="flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out">
+                @csrf @method('DELETE')<button type="submit">LogOut</button>
+            </form>
         @else
-            <a href="{{ route('login') }}" action="{{ route('login') }}" method="post"
-                class="flex flex-col items-center border-2 border-transparent px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out" wire:navigate.hover>
-                <p>LogIn</p>
-            </a>
-            <a href="{{ route('register') }}"
-                class="flex flex-col items-center border-2 rounded px-2 bg-primaryLight border-primaryLight text-white hover:border-black hover:bg-white hover:text-black transition duration-300 ease-in-out" wire:navigate.hover>
+            <a href="{{ route('register') }}" 
+                class="flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out"
+                wire:navigate.hover>
                 <p>Register</p>
+            </a>
+            <a href="{{ route('login') }}"
+                class="hidden sm:flex flex-col items-center border-2 rounded px-2 bg-primaryLight border-primaryLight text-white hover:border-black hover:bg-white hover:text-black transition duration-300 ease-in-out"
+                wire:navigate.hover>
+                <p>LogIn</p>
             </a>
         @endauth
     </div>

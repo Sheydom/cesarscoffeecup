@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\SessionsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\UserSettingsController;
 
 
 // core-views
@@ -12,10 +13,11 @@ Route::view('products', 'products')->name('products');
 Route::view('greenStock', 'greenStock')->name('greenStock');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('contact', 'contact')->name('contact');
-Route::view('aboutUs','aboutUs')->name('aboutUs')->middleware('auth');
+Route::view('aboutUs','aboutUs')->name('aboutUs');
 
 
-// lega-views
+
+// legal-views
 Route::prefix('legal')->group(function () {
     Route::view('terms', 'legal.termsAndCondition')->name('legal.termsAndCondition');
     Route::view('cancellationAndRefund', 'legal.cancellationAndRefund')->name('legal.cancellationAndRefund');
@@ -27,8 +29,9 @@ Route::prefix('legal')->group(function () {
 //auth
 Route::get('register', [RegisterUserController::class, 'create'])->name('register');
 Route::post('register', [RegisterUserController::class, 'store'])->name('register.store');
-
 Route::get('login',[SessionsController::class, 'create'])->name('login');
 Route::post('login',[SessionsController::class, 'store'])->name('login.store');
-
 Route::delete('logout',[SessionsController::class, 'destroy'])->name('logout');
+
+//user-settings
+Route::get('settings',[UserSettingsController::class, 'create'])->name('settings');

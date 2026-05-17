@@ -4,15 +4,15 @@
         src="{{ asset('images/hero4.jpg') }}" alt="coffee roasting facility">
 
     <div
-        class="absolute inset-0 bg-linear-to-b from-black/40 via-black/0 to-transparent sm:bg-linear-to-r sm:from-black/40 sm:via-black/0 sm:to-transparent">
+        class="absolute inset-0 bg-linear-to-b from-black/40 via-black/40 to-transparent sm:bg-linear-to-r sm:from-black/60 sm:via-black/40 sm:to-transparent">
     </div>
 
     <div class="relative z-10 flex min-h-130 md:min-h-170 lg:min-h-170 items-center ">
         <div class="mx-auto flex w-[90%] max-w-7xl flex-col items-center  text-white sm:items-start ">
 
-            <h1 class="mb-8 max-w-4xl font-bodoni text-5xl italic leading-[0.95] sm:text-6xl lg:text-8xl">
+            <h1 class="mb-8 max-w-4xl font-bodoni text-5xl italic leading-relaxed sm:text-5xl md:text-6xl lg:text-7xl">
                 @if (Auth::check())
-                    <p class="text-gold"><span class="text-white">Hello</span> {{ auth()->user()->name }}</p>
+                    <p class="text-gold"><span class="text-white">Welcome</span> {{ auth()->user()->name }}</p>
                 @endif Specialty Coffee,<br>
                 Built for Your Business
             </h1>
@@ -47,9 +47,9 @@
             </p>
         </div>
 
-        <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around md:text-xl">
+        <div class="mx-auto hidden p-1 md:flex md:gap-5 md:justify-around sm:text-base md:text-sm lg:text-xl">
             <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
-                    alt="coffeBeanWhite">Direct from Colombian & global farms</p>
+                    alt="coffeBeanWhite">Colombian & global farms</p>
             <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
                     alt="coffeBeanWhite">Loring & IMF equipment</p>
             <p class="flex items-center"><img class="w-6 h-6 shrink-0" src="{{ asset('images/bean_white.svg') }}"
