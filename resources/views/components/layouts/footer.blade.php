@@ -110,9 +110,6 @@
         </div>
 
 
-
-
-
     </div>
     <div class="flex justify-center text-center text-xs  w-full mt-5">© 2026 Cesar's Coffee Cup.
         All
