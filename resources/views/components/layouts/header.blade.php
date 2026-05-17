@@ -1,4 +1,4 @@
-<nav class="flex bg-[#FCF9F2] text-black p-2 justify-between w-full font-medium md:px-10">
+<nav class="flex bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium md:px-10">
 
     <div class="sm:hidden self-start">
         <div x-data="{ open: false }"class="relative">
@@ -120,6 +120,9 @@
             alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
+
+    {{-- hidden in mobile --}}
+
     <div class="hidden sm:text-xs sm:flex sm:gap-4 md:gap-15 lg:text-xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="flex {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
@@ -138,7 +141,7 @@
             wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
-    <div class="h-12 flex items-center gap-5 md:h-20">
+    <div class="h-12 flex items-center  md:gap-5 md:h-20">
         @auth
             <a href="" class="flex flex-col items-center">
                 {{-- <svg class="h-10 w-10 shrink-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
@@ -148,11 +151,7 @@
             </svg> --}}<p>LogOut</p>
             </a>
             <a href="" class="flex flex-col items-center">
-                {{-- <svg class="h-10 w-10 shrink-0 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                <path fill="currentColor"
-                    d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
-            </svg> --}}<p>Settings</p>
+                <p>Settings</p>
             </a>
         @else
             <a href=""
