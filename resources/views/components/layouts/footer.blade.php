@@ -2,7 +2,7 @@
     <div class="p-10 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
         <div class="flex flex-col items-center ">
             <div class="w-max">
-                <h2 class="lg:text-2xl mb-5 text-primary w-full text-left md:mb-5">
+                <h2 class="text-2xl mb-5 text-primary w-full text-left md:mb-5">
                     Heritage Coffee Roasters
                 </h2>
                 <p class="hidden md:text-sm md:block text-black text-left">
@@ -17,11 +17,11 @@
 
 
         <div class=" gap-4 flex justify-center mb-5  text-primary md:flex-col md:items-start md:mx-auto">
-            <h2 class="hidden md:block lg:text-2xl text-center">Social Media</h2>
+            <h2 class="hidden md:block text-2xl text-center">Social Media</h2>
             <div class="gap-4 flex justify-center w-full md:justify-start md:mx-auto">
                 </a><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@CesarsCoffeeCup">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        class="lg:w-10 lg:h-10 md:w-8 w-10 h-10 md:h-8 shrink-0 rounded-full p-2 bg-white text-black  md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
+                        class="lg:w-10 lg:h-10 md:w-10 md:h-10 w-15 h-15 shrink-0 rounded-full p-2 bg-white text-black  md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
                         viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path fill="currentColor"
                             d="M282 256.2l-95.2-54.1 0 108.2 95.2-54.1zM384 32L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9-28.3 7.7-142.2 7.7-142.2 7.7s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9-7.6-28.6-7.6-88.2-7.6-88.2s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4 28.3-7.7 142.2-7.7 142.2-7.7s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z" />
@@ -29,7 +29,7 @@
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cesarscoffeecup/">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        class="lg:w-10 lg:h-10 md:w-8 md:h-8 w-10 h-10 md:h-8shrink-0 rounded-full p-2 bg-white text-black   md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
+                        class="lg:w-10 lg:h-10 md:w-10 md:h-10 w-15 h-15 shrink-0 rounded-full p-2 bg-white text-black   md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
                         viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path fill="currentColor"
                             d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
@@ -37,14 +37,14 @@
                 </a><a target="_blank" rel="noopener noreferrer"
                     href="https://www.facebook.com/p/Cesarscoffeecup-61558969643906/">
                     <svg xmlns="http://www.w3.org/2000/svg"
-                        class="lg:w-10 lg:h-10 md:w-8 md:h-8 w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black    md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
+                        class="lg:w-10 lg:h-10 md:w-10 md:h-10 w-15 h-15 shrink-0 rounded-full p-2 bg-white text-black    md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
                         viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path fill="currentColor"
                             d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z" />
                     </svg>
                 </a>
                 </a><a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@cesarscoffeecup">
-                    <svg class="lg:w-10 lg:h-10 md:w-8 md:h-8 w-10 h-10 shrink-0 rounded-full p-2 bg-white text-black   md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
+                    <svg class="lg:w-10 lg:h-10 md:w-10 md:h-10 w-15 h-15 shrink-0 rounded-full p-2 bg-white text-black   md:bg-white md:hover:-translate-y-3 md:hover:text-white md:hover:bg-bean transition duration-300 ease-in-out cursor-pointer"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path fill="currentColor"
@@ -54,8 +54,8 @@
             </div>
 
         </div>
-        <div class="flex gap-5  flex-wrap md:flex-col lg:items-start items-center ">
-            <h2 class="hidden md:block text-primary lg:text-2xl">Navigation</h2>
+        <div class="flex gap-5  flex-wrap md:flex-col lg:items-start items-start mx-auto ">
+            <h2 class="hidden md:block text-primary text-2xl">Navigation</h2>
             <div class="w-max flex flex-col md:flex-row  md:items-start md:text-sm">
                 <div
                     class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
@@ -63,7 +63,7 @@
                         class="text-black mx-2.5 md:mx-0   hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Home
                     </a>
                     <a href="{{ route('coRoasting') }}"
-                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigation.hover>Co-Roasting
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Co-Roasting
                     </a>
                     {{-- <a href="{{ route('greenStock') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Green Stock
@@ -98,7 +98,7 @@
         </div>
 
         <div class="hidden md:flex md:flex-col gap-5 text-coffeDark md:items-start md:mx-auto">
-            <h2 class="lg:text-2xl text-primary">Contact</h2>
+            <h2 class="text-2xl text-primary">Contact</h2>
             <ul class="flex flex-col gap-1 text-black md:text-sm">
                 <li class="flex flex-col"><span>19 Churchill St,</span> <span>North Williamstown</span> <span>VIC
                         3060</span>
