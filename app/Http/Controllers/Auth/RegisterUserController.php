@@ -17,7 +17,7 @@ class RegisterUserController extends Controller
         return view('auth.register');
     }
 
-    // submit form
+    /// submit form
     // validate input
     public function store(Request $request)
     {
