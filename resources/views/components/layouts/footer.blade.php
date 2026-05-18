@@ -1,4 +1,4 @@
-<section class="bg-neutral w-full px-5 py-15 gap-5 flex flex-col justify-center ">
+<section class="bg-neutral w-full px-5 pt-15 gap-5 flex flex-col justify-center ">
     <div class="p-10 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
         <div class="flex flex-col items-center ">
             <div class="w-max">
@@ -110,7 +110,7 @@
 
 
     </div>
-    <div class="flex justify-center text-center text-xs  w-full mt-5">© 2026 Cesar's Coffee Cup.
+    <div class="flex justify-center text-center text-xs  w-full ">© 2026 Cesar's Coffee Cup.
         All
         rights
         reserved.<br>
