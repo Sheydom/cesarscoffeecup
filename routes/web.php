@@ -33,5 +33,5 @@ Route::get('login',[SessionsController::class, 'create'])->name('login');
 Route::post('login',[SessionsController::class, 'store'])->name('login.store');
 Route::delete('logout',[SessionsController::class, 'destroy'])->name('logout');
 
-//user-settings
-Route::get('settings',[UserSettingsController::class, 'create'])->name('settings');
+//user-settings -  middleware to redirect non authenticated user to loginpage
+Route::get('settings',[UserSettingsController::class, 'create'])->name('settings')->middleware('auth');
