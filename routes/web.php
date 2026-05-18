@@ -2,9 +2,8 @@
 
 use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\SessionsController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserSettingsController;
-
+use Illuminate\Support\Facades\Route;
 
 // core-views
 
@@ -13,9 +12,7 @@ Route::view('products', 'products')->name('products');
 Route::view('greenStock', 'greenStock')->name('greenStock');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('contact', 'contact')->name('contact');
-Route::view('aboutUs','aboutUs')->name('aboutUs');
-
-
+Route::view('aboutUs', 'aboutUs')->name('aboutUs');
 
 // legal-views
 Route::prefix('legal')->group(function () {
@@ -26,12 +23,17 @@ Route::prefix('legal')->group(function () {
     Route::view('cookies', 'legal.cookies')->name('legal.cookies');
 });
 
-//auth
-Route::get('register', [RegisterUserController::class, 'create'])->name('register');
-Route::post('register', [RegisterUserController::class, 'store'])->name('register.store');
-Route::get('login',[SessionsController::class, 'create'])->name('login');
-Route::post('login',[SessionsController::class, 'store'])->name('login.store');
-Route::delete('logout',[SessionsController::class, 'destroy'])->name('logout');
+// auth -> group function only guests can acces these sites to login or register
+Route::middleware('guest')->group(function () {
+    Route::get('register', [RegisterUserController::class, 'create'])->name('register');
+    Route::post('register', [RegisterUserController::class, 'store'])->name('register.store');
+    Route::get('login', [SessionsController::class, 'create'])->name('login');
+    Route::post('login', [SessionsController::class, 'store'])->name('login.store');
+});
+//only authorised user can logout
+Route::middleware('auth')->group(function () {
+    Route::delete('logout', [SessionsController::class, 'destroy'])->name('logout');
+});
 
-//user-settings -  middleware to redirect non authenticated user to loginpage
-Route::get('settings',[UserSettingsController::class, 'create'])->name('settings')->middleware('auth');
+// user-settings -  middleware to redirect non authenticated user to loginpage
+Route::get('settings', [UserSettingsController::class, 'create'])->middleware('auth')->name('settings');
