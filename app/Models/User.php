@@ -12,7 +12,20 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable([
+    'first_name',
+    'last_name',
+    'email',
+    'phone',
+    'company_name',
+    'business_name',
+    'tax_number',
+    'street_address',
+    'city',
+    'postal_code',
+    'country',
+    'password',
+])]
 #[Hidden(['password', 'two_factor_secret', 'two_factor_recovery_codes', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -37,7 +50,7 @@ class User extends Authenticatable
      */
     public function initials(): string
     {
-        return Str::of($this->name)
+        return Str::of($this->first_name.' '.$this->last_name)
             ->explode(' ')
             ->take(2)
             ->map(fn ($word) => Str::substr($word, 0, 1))

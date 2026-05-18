@@ -12,7 +12,7 @@
 
             <h1 class="mb-8 max-w-4xl font-bodoni text-5xl italic leading-relaxed sm:text-5xl md:text-6xl lg:text-7xl">
                 @if (Auth::check())
-                    <p class="text-gold"><span class="text-white">Welcome</span> {{ auth()->user()->name }}</p>
+                    <p class="text-gold"><span class="text-white">Welcome</span> {{ auth()->user()->first_name }}</p>
                 @endif Specialty Coffee,<br>
                 Built for Your Business
             </h1>

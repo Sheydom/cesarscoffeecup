@@ -23,16 +23,34 @@ class RegisterUserController extends Controller
     {
 // dd($request->all());
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name'=>['required','string', 'max:255'],
             'email' => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'min:3'],
+            'phone'=>['required','string','max:30'],
+            'company_name'=>['required','string','max:255'],
+            'business_name'=>['required','string','max:255'],
+            'tax_number'=>['required','string','max:255'],
+            'street_address'=>['required','string','max:255'],
+            'city'=>['required','string','max:255'],
+            'postal_code'=>['required','string','max:30'],
+            'country'=>['required','string','max:255'],
+            'password' => ['required','confirmed', Password::default()->mixedCase()->numbers()->symbols()],
         ]);
         
         // Password::default()
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'company_name'=>$request->company_name,
+            'business_name'=>$request->business_name,
+            'tax_number'=>$request->tax_number,
+            'street_address'=>$request->street_address,
+            'city'=>$request->city,
+            'postal_code'=>$request->postal_code,
+            'country'=>$request->country,
+            'password'=>$request->password,
         ]);
 
         // dd($user->name);

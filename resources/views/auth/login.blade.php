@@ -1,25 +1,45 @@
 <x-layouts.app>
-    <form action="{{ route('login.store') }}" method="POST">
+    <form method="POST" action="{{route('login')}}"
+        class="max-w-4xl w-md sm:w-xl md:w-2xl lg:w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8">
         @csrf
-        <fieldset class="fieldset bg-tertiary flex flex-col border-base-300 rounded-box w-xs border p-4 mx-auto">
 
-            <legend class="fieldset-legend">Login</legend>
+        <div>
+            <h2 class="text-3xl font-bold text-black mb-2">LogIn</h2>
+            <p class="text-sm text-neutral-500">
+                Please enter your details.
+            </p>
+        </div>
 
-            @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <p>{{ $error }}</p>
-                @endforeach
-            @endif
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="email" class="block text-sm font-medium text-black mb-2">
+                    Email <span class="text-red-500">*</span>
+                </label>
+                <input id="email" name="email" type="email" required
+                    class="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
+                    placeholder="you@example.com">
+                @error('email')
+                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
+                @enderror
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-black mb-2">
+                    Password <span class="text-red-500">*</span>
+                </label>
+                <input id="password" name="password" type="password" required
+                    class="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
+                    placeholder="Create a password">
+                @error('password')
+                    <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
+                @enderror
+            </div>
+        </div>
 
-            <label class="label">Email</label>
-            <input name="email" type="email" class="bg-pastel" placeholder="test@gmail.com" />
-            @error('email')
-                <p class="text-red-500">{{ $message }}</p>
-            @enderror
-            <label class="label">Password</label>
-            <input name="password" type="password" class="bg-pastel" />
-            <button type="submit" class="border-2 border-black">Login</button>
-
-        </fieldset>
+        <div class="pt-4">
+            <button type="submit"
+                class="w-full md:w-auto rounded-lg bg-black px-8 py-3 text-sm font-semibold text-white hover:bg-neutral-800 transition">
+                LogIn
+            </button>
+        </div>
     </form>
 </x-layouts.app>
