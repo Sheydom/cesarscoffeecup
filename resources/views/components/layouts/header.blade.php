@@ -1,5 +1,5 @@
 <nav
-    class="flex bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium sm:px-2.5 md:px-2.5 lg:px-10">
+    class="flex  bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium sm:px-2.5 md:px-2.5">
 
     <div class="sm:hidden self-center">
         <div x-data="{ open: false }"class="relative">
@@ -129,8 +129,8 @@
 
     {{-- Desktop Navbar --}}
 
-    <div class="h-10 flex md:gap-0 lg:gap-2 items-center text-xl md:text-lg lg:text-xl md:h-15 lg:h-20">
-        <img class="w-12 h-12 shrink-0 md:h-15 md:w-15 lg:h-20 lg:w-20"
+    <div class="h-10 flex  lg:gap-2 items-center text-xl sm:text-base md:text-xl lg:text-2xl sm:h-max md:h-12 lg:h-20">
+        <img class="w-12 h-12 shrink-0 sm:h-12 sm:w-12 md:h-12 md:w-12 lg:h-20 lg:w-20"
             src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}" alt="CesarsCoffeeCupLogo">
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
@@ -138,7 +138,7 @@
     {{-- hidden in mobile --}}
 
     <div
-        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-[clamp(10px,2vw,15px)] md:text-sm lg:text-xl sm:justify-around sm:items-center">
+        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-[clamp(10px,1vw,25px)] md:text-base lg:text-2xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="flex items-center {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
@@ -156,7 +156,7 @@
             wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
-    <div class="h-12 flex items-center  md:gap-5 md:h-20 lg:text-xl md:text-base text-lg">
+    <div class="h-12 flex items-center sm:text-sm   md:h-max lg:text-xl md:text-base text-lg">
         @auth
 
             <a href="{{ route('settings') }}"
