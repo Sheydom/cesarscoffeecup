@@ -1,9 +1,9 @@
 <section class="bg-neutral w-full px-5 pt-15 gap-5 flex flex-col justify-center ">
-    <div class="p-10 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
+    <div class="p-5 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
         <div class="flex flex-col items-center ">
             <div class="w-max">
-                <h2 class="text-2xl mb-5 text-primary w-full text-left md:mb-5">
-                    Heritage Coffee Roasters
+                <h2 class="hidden md:block text-2xl mb-5 text-primary w-full text-left md:mb-5">
+                    Cesar's Coffee Cup
                 </h2>
                 <p class="hidden md:text-sm md:block text-black text-left">
                     Melbourne's premier dedicated B2B <br>
@@ -56,9 +56,9 @@
         </div>
         <div class="flex gap-5  flex-wrap md:flex-col lg:items-start items-start mx-auto ">
             <h2 class="hidden md:block text-primary text-2xl">Navigation</h2>
-            <div class="w-max flex flex-col md:flex-row  md:items-start md:text-sm">
+            <div class="w-full  flex flex-col md:flex-row  md:items-start md:text-sm">
                 <div
-                    class="flex mb-5 leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
+                    class="flex mb-5  leading-10 md:leading-normal md:m-0 flex-wrap justify-center md:flex-col md:gap-1 md:mr-5">
                     <a href="{{ route('home') }}"
                         class="text-black mx-2.5 md:mx-0   hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Home
                     </a>
@@ -76,7 +76,7 @@
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Contact
                     </a>
                 </div>
-                <div class="flex  text-xs md:text-sm md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
+                <div class="flex flex-wrap text-xs md:text-sm md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
                     <a href="{{ route('legal.privacy') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Privacy
                         Policy</a>
