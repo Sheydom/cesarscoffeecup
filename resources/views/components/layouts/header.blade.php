@@ -156,7 +156,7 @@
             wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
-    <div class="h-12 flex items-center sm:text-sm   md:h-max lg:text-xl md:text-base text-lg">
+    <div class="h-12 flex gap-2 items-center sm:text-sm   md:h-max lg:text-xl md:text-base text-lg">
         @auth
 
             <a href="{{ route('settings') }}"
