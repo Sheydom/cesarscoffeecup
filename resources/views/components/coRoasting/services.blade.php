@@ -1,5 +1,5 @@
 <section class="px-5 mt-10 flex flex-col justify-center md:px-25">
-    <div class="mb-10 sm:mx-auto  sm:text-center sm:w-max md:text-left md:w-full">
+    <div class="mb-10 flex flex-col sm:mx-auto  sm:text-center  md:text-left md:w-full">
         <span class="text-xs text-coffeDark">WHAT YOU GET</span>
         <h2 class="text-6xl mb-5 text-primary">Everything you need to roast</h2>
 
@@ -7,7 +7,7 @@
         <p class="hidden md:flex justify-end text-left italic font-bodoni text-primary!">"Professional-grade
             infrastucture without <br> the overhead of ownership."</p>
     </div>
-    <div class=" md:mx-auto md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-2  lg:justify-center lg:max-w-6xl ">
+    <div class="flex flex-col sm:gap-5 md:mx-auto md:grid md:grid-cols-3 md:gap-6 lg:grid-cols-2  lg:justify-center lg:max-w-6xl ">
         <div
             class=" bg-white border-l-bean border-l-4 flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0  sm:p-5 sm:drop-shadow-xl border-transparent border-2 ">
             <div >
