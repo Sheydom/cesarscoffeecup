@@ -16,7 +16,7 @@
                     Email <span class="text-red-500">*</span>
                 </label>
                 <input id="email" name="email" type="email" required
-                    class="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
+                    class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                     placeholder="you@example.com">
                 @error('email')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -27,7 +27,7 @@
                     Password <span class="text-red-500">*</span>
                 </label>
                 <input id="password" name="password" type="password" required
-                    class="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
+                    class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                     placeholder="Create a password">
                 @error('password')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
