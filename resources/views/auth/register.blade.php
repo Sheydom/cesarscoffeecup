@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <form method="POST" action="{{route('register.store')}}" class="max-w-4xl w-md sm:w-xl md:w-2xl lg:w-3xl flex flex-col justify-center bg-white rounded-2xl shadow-lg p-5 md:p-10 space-y-8">
+    <form method="POST" action="{{route('register.store')}}" class="max-w-4xl w-md sm:w-xl md:w-2xl lg:w-3xl flex flex-col mx-auto justify-center bg-white rounded-2xl shadow-lg p-5 md:p-10 space-y-8">
     @csrf
         @if ($errors->any())
             <ul>
