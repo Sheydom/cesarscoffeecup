@@ -138,7 +138,7 @@
     {{-- hidden in mobile --}}
 
     <div
-        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-[clamp(10px,1vw,25px)] md:text-base lg:text-2xl sm:justify-around sm:items-center">
+        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-4 md:text-base lg:text-2xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="flex items-center {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
             wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
