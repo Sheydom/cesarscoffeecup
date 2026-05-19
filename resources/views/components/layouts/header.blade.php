@@ -135,7 +135,7 @@
         <p class="text-center font-bold">Cesar's Coffee Cup</p>
     </div>
 
-    {{-- hidden in mobile  -- --}}
+    {{-- hidden in mobile  --- --}}
 
     <div
         class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-4 md:text-base lg:text-2xl sm:justify-around sm:items-center">
