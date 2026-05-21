@@ -1,7 +1,3 @@
-html{
-    scroll-behavior: smooth;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @theme {
@@ -28,6 +24,10 @@ html{
 
 @import "tailwindcss";
 @import "../../vendor/livewire/flux/dist/flux.css";
+
+html {
+    scroll-behavior: smooth;
+}
 
 @layer theme {
     .dark {
@@ -75,7 +75,7 @@ select:focus[data-flux-control] {
 } */
 
 input[type="date"] {
-  -webkit-appearance: auto;
-  appearance: auto;
-  display: block;
+    -webkit-appearance: auto;
+    appearance: auto;
+    display: block;
 }

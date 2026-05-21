@@ -6,7 +6,7 @@
     <div
         class=" md:mx-auto sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-6  lg:justify-center lg:max-w-6xl md:pb-15">
         <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">
-            <div class=""><img class="rounded-full h-70 w-70 mb-5" src="{{ asset('images/cesarProfilePhoto.webp') }}"
+            <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover" src="{{ asset('images/aboutUs/cesarProfilePhoto.webp') }}"
                     alt="cesar">
             </div>
             <div class="text-center mb-auto">
@@ -16,8 +16,8 @@
             </div>
         </div>
         <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">
-            <div class=""><img class="rounded-full h-70 w-70 mb-5"
-                    src="{{ asset('images/cesarProfilePhoto.webp') }}" alt="cesar">
+            <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover"
+                    src="{{ asset('images/aboutUs/carlos.jpg') }}" alt="cesar">
             </div>
             <div class="text-center mb-auto">
                 <h2 class="text-3xl font-bodoni italic text-coffeDark ">Carlos Gallo</h2>
@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">
-            <div class=""><img class="rounded-full h-70 w-70 mb-5 "
-                    src="{{ asset('images/cesarProfilePhoto.webp') }}" alt="cesar">
+            <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover"
+                    src="{{ asset('images/aboutUs/sheyla.jpg') }}" alt="cesar">
             </div>
             <div class="text-center mb-auto">
                 <h2 class="text-3xl font-bodoni italic text-coffeDark">Sheyla Solis</h2>
