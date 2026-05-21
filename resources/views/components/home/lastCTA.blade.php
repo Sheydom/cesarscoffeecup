@@ -17,7 +17,7 @@
         <x-ui.buttonSolid class="bg-tertiary text-coffeDark text-[11px] tracking-[0.14em] uppercase font-semibold rounded-full py-3.5 px-9">
             BOOK A VISIT
         </x-ui.buttonSolid>
-        <x-ui.buttonClear class="border border-neutral/40 text-neutral text-[11px] tracking-[0.14em] uppercase font-medium rounded-full py-3.5 px-9">
+        <x-ui.buttonClear href="{{route('contact')}}" class="border border-neutral/40 text-neutral text-[11px] tracking-[0.14em] uppercase font-medium rounded-full py-3.5 px-9">
             CONTACT US
         </x-ui.buttonClear>
     </div>

@@ -36,9 +36,9 @@
                 </select></div>
             <div class="flex flex-col mb-5"><label for="">Experience Level</label>
                 <div class="flex  w-full justify-around p-2.5  bg-neutral items-center rounded border-b-2 border-black">
-                    <label for="">Beginner</label><input class=" " type="radio" name="experience">
-                    <label for="">Some</label><input class=" " type="radio" name="experience">
-                    <label for="">Expert</label><input class=" " type="radio" name="experience">
+                    <label for="beginner">Beginner</label><input id="beginner" class=" " type="radio" name="experience">
+                    <label for="some">Some</label><input id="some" class=" " type="radio" name="experience">
+                    <label for="expert">Expert</label><input id="expert" class=" " type="radio" name="experience">
                 </div>
                 <div class="flex flex-col w-max mt-5">
                     <label for="date">Select preferred Date</label>

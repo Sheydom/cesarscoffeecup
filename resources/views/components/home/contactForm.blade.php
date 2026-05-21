@@ -1,7 +1,7 @@
 <section class="p-5 md:flex md:items-end md:justify-center gap-10 lg:gap-20 lg:p-15">
     <div>
         <div class="flex flex-col mb-10">
-            <h2 class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come and see for yourself</h2>
+            <h2 id="homeContactForm" class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come and see for yourself</h2>
             <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility. Let's discuss your vision
                 over a fresh brewand walk through how we can bring your brand to life.</p>
         </div>
@@ -50,6 +50,7 @@
                 <option value="">Wholesale</option>
                 <option value="">Starter Packages</option>
                 <option value="">Private label</option>
+                <option value="">Facility Visit</option>
                 <option value="">Other</option>
             </select></div>
         <div class="flex flex-col mb-"><label for="">Your Message</label>

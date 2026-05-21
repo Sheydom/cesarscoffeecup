@@ -1,6 +1,6 @@
 <section class="p-5 flex flex-col sm:flex-row w-full justify-center sm:flex md:mx-auto md:flex md:justify-center gap-10 lg:p-15 ">
     <div class="flex flex-col sm:w-full md:w-3xl  sm: gap-5">
-        <h2 class="text-5xl text-primary mb-5">Get in touch</h2>
+        <h2 id="contactForm" class="text-5xl text-primary mb-5">Get in touch</h2>
         <div class="flex gap-5 items-start">
             <svg class="h-7 w-7 shrink-0" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -59,6 +59,7 @@
                 <option value="">Wholesale</option>
                 <option value="">Starter Packages</option>
                 <option value="">Private label</option>
+                <option value="">Facility Visit</option>
                 <option value="">Other</option>
             </select></div>
         <div class="flex flex-col mb-"><label for="">Your Message</label>
