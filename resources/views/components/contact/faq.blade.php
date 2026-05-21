@@ -29,7 +29,10 @@
                 </div>
                 <span class="w-full h-0.5 border border-coffeDark/30"></span>
             </div>
-            <div x-data="{ open: false }" @click.outside="open = false" class="group flex flex-col cursor-pointer">
+           
+        </div>
+        <div class="flex flex-col gap-5 md:max-w-md lg:max-w-xl lg:w-full md:gap-5">
+             <div x-data="{ open: false }" @click.outside="open = false" class="group flex flex-col cursor-pointer">
                 <button type="button" @click="open = !open"
                     class="flex justify-between w-full items-center text-left font-bold">
                     <span>Can I visit the facility before committing?</span>
@@ -38,32 +41,6 @@
                 </button>
                 <div x-show="open" x-collapse>
                     <p>Absolutely. Book a visit through the form above — no commitment required.</p>
-                </div>
-                <span class="w-full h-0.5 border border-coffeDark/30"></span>
-            </div>
-        </div>
-        <div class="flex flex-col gap-5 md:max-w-md lg:max-w-xl lg:w-full md:gap-5">
-            <div x-data="{ open: false }" @click.outside="open = false" class="group flex flex-col cursor-pointer">
-                <button type="button" @click="open = !open"
-                    class="flex justify-between w-full items-center text-left font-bold">
-                    <span>Do you provide training for staff?</span>
-                    <img class="w-7 h-7 md:w-10 md:h-10 shrink-0 transition-transform duration-300 ease-in-out md:group-hover:rotate-45"
-                        :class="open ? 'rotate-45' : ''" src="{{ asset('images/bean_brown.svg') }}" alt="Coffee Bean">
-                </button>
-                <div x-show="open" x-collapse>
-                    <p>test</p>
-                </div>
-                <span class="w-full h-0.5 border border-coffeDark/30"></span>
-            </div>
-            <div x-data="{ open: false }" @click.outside="open = false" class="group flex flex-col cursor-pointer">
-                <button type="button" @click="open = !open"
-                    class="flex justify-between w-full items-center text-left font-bold">
-                    <span>How long is private label lead time?</span>
-                    <img class="w-7 h-7 md:w-10 md:h-10 shrink-0 transition-transform duration-300 ease-in-out md:group-hover:rotate-45"
-                        :class="open ? 'rotate-45' : ''" src="{{ asset('images/bean_brown.svg') }}" alt="Coffee Bean">
-                </button>
-                <div x-show="open" x-collapse>
-                    <p>test</p>
                 </div>
                 <span class="w-full h-0.5 border border-coffeDark/30"></span>
             </div>
