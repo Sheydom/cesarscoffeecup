@@ -45,9 +45,11 @@
         <div class="flex flex-col mb-5"><label for="">Type of enquiry</label><select
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
                 <option value="" disabled selected>Please Select</option>
-                <option value="">test2</option>
-                <option value="">test3</option>
-                <option value="">test4</option>
+                <option value="">Co-Roasting</option>
+                <option value="">Roaser Hire</option>
+                <option value="">Wholesale</option>
+                <option value="">Private label</option>
+                <option value="">Other</option>
             </select></div>
         <div class="flex flex-col mb-"><label for="">Your Message</label>
             <textarea class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"

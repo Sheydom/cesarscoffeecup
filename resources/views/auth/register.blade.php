@@ -9,7 +9,7 @@
             </ul>
         @endif
     <div>
-        <h2 class="text-3xl font-bold text-black mb-2">Business Details</h2>
+        <h2 class="text-3xl font-bold text-black mb-2">Register</h2>
         <p class="text-sm text-neutral-500">
             Please enter your details.
         </p>
