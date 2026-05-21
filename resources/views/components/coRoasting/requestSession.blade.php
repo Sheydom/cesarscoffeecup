@@ -27,10 +27,12 @@
             <div class="flex flex-col mb-5"><label for="">Session type</label><select
                     class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
                     <option value="">Please Select</option>
-                    <option value="">Guided Session</option>
-                    <option value="">Production Session</option>
-                    <option value="">test3</option>
-                    <option value="">test4</option>
+                    <option value="">Co-Roasting</option>
+                    <option value="">Starter Package</option>
+                    <option value="">Basic Package</option>
+                    <option value="">Standart Package</option>
+                    <option value="">Premium Package</option>
+                    <option value="">Other</option>
                 </select></div>
             <div class="flex flex-col mb-5"><label for="">Experience Level</label>
                 <div class="flex  w-full justify-around p-2.5  bg-neutral items-center rounded border-b-2 border-black">

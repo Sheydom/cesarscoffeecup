@@ -17,30 +17,34 @@
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
                     <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
-                        <p>7kg</p>
+                        <p>1.4-7kg</p>
                     </span>
-                    <p class="flex flex-col mb-5"><span class="white">Details:</span>Ideal for smaller batches, profile
-                        development and new blends. Precise,
-                        consistent and forgiving.</p>
+                    <p class="flex flex-col mb-5"><span class="white">Best for:</span>smaller batches, profile development, sample production, and custom blends.</p>
                     <ul class="text-xs leading-loose">
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>PRESION CONTROL: DIGITAL GAS & AIR PROFILING</li>
+                            </svg>Digital roast profiling</li>
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>CAPACITY: 7-15kg PER BATCH</li>
+                            </svg>Automated roast control</li>
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>SUSTAINIBILITY: TESST</li>
+                            </svg>Repeatable profiles for consistency</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>Ideal for small-batch and specialty coffee production</li>
                     </ul>
                 </div>
                 <div class="relative ">
@@ -73,31 +77,34 @@
                     <span class="w-full border border-primary flex mb-5 md:hidden"></span>
                     <span class="flex gap-1">
                         <p class="text-white md:text-black">Batch size:</p>
-                        <p>7kg</p>
+                        <p>3-15kg</p>
                     </span>
-                    <p class="flex flex-col text-white md:text-black mb-5"><span class="white">Details:</span>Perfect for
-                        larger
-                        production runs
-                        and scaling established profiles at volume.</p>
+                    <p class="flex flex-col text-white md:text-black mb-5"><span class="white">Best for:</span>larger production runs, scaling established profiles, and wholesale coffee roasting.</p>
                         <ul class="text-xs leading-loose">
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>PRESION CONTROL: DIGITAL GAS & AIR PROFILING</li>
+                            </svg>Digital roast profiling</li>
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>CAPACITY: 7-15kg PER BATCH</li>
+                            </svg>Automated roast control</li>
                         <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path fill="currentColor"
                                     d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
-                            </svg>SUSTAINIBILITY: TESST</li>
+                            </svg>Repeatable profiles for consistency</li>
+                        <li class="flex gap-3"><svg class="w-6 h-6 shrink-0  text-gold"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                <path fill="currentColor"
+                                    d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM438 209.7C427.3 201.9 412.3 204.3 404.5 215L285.1 379.2L233 327.1C223.6 317.7 208.4 317.7 199.1 327.1C189.8 336.5 189.7 351.7 199.1 361L271.1 433C276.1 438 282.9 440.5 289.9 440C296.9 439.5 303.3 435.9 307.4 430.2L443.3 243.2C451.1 232.5 448.7 217.5 438 209.7z" />
+                            </svg>Built for higher-volume specialty coffee production</li>
                     </ul>
                 </div>
 
