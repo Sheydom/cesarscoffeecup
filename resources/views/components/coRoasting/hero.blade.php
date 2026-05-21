@@ -20,13 +20,13 @@
             </p>
 
             <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-                <x-ui.buttonSolid class="w-full sm:w-auto bg-pastel! text-black">
-                    Boook a session
+                <x-ui.buttonSolid href="{{route('coRoasting')}}#sessionsPrice" class="w-full sm:w-auto bg-pastel! text-black">
+                    See Pricing
                 </x-ui.buttonSolid>
 
-                <x-ui.buttonClear class="w-full sm:w-auto  ">
+                {{-- <x-ui.buttonClear class="w-full sm:w-auto  ">
                     See Pricing
-                </x-ui.buttonClear>
+                </x-ui.buttonClear> --}}
             </div>
 
         </div>

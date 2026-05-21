@@ -20,11 +20,11 @@
             </p>
 
             <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-                <x-ui.buttonSolid class="w-full sm:w-auto">
+                <x-ui.buttonSolid href="{{route('contact')}}#contactForm" class="w-full sm:w-auto">
                     Book a Facility Visit
                 </x-ui.buttonSolid>
 
-                <x-ui.buttonClear class="w-full sm:w-auto">
+                <x-ui.buttonClear href="{{route('coRoasting')}}" class="w-full sm:w-auto">
                     Explore Co-Roasting
                 </x-ui.buttonClear>
             </div>
