@@ -24,10 +24,10 @@
                     <p class="font-bodoni text-3xl italic text-coffeDark">40+</p>
                     <p class="text-xs">DIRECT FARMS</p>
                 </div>
-                <div class="5flex flex-col">
+                {{-- <div class="5flex flex-col">
                     <p class="font-bodoni text-3xl italic text-coffeDark">15</p>
                     <p class="text-xs">YEARS ROASTED</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
