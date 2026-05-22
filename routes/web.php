@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterUserController;
+use App\Http\Controllers\Mail\ContactController;
 use App\Http\Controllers\Auth\SessionsController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\User\UserSettingsController;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;

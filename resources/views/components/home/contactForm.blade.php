@@ -26,39 +26,54 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3517643218615!2d144.86003537676578!3d-37.85205893622908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66148018d3543%3A0xe873e59dd7c65e0d!2s19%20Churchill%20St%2C%20Williamstown%20North%20VIC%203016!5e0!3m2!1sen!2sau!4v1777770937450!5m2!1sen!2sau"
                 style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
+   
     <form action="{{ route('contactMail') }}" method="POST"
         class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10">
+        @csrf
+        @if (session('success'))
+            <p class="text-green-500">{{session('success')}}</p>
+        @endif
+        @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error )
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+            
+        @endif
         <div class="flex w-full gap-5">
             <div class="flex w-full flex-col mb-5"><label for="">First Name</label><input name="name"
-                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text"
+                    required class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text"
                     placeholder="Julian">
             </div>
-            <div class="flex w-full flex-col mb-5"><label for="">Last Name</label><input
-                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
+            <div class="flex w-full flex-col mb-5"><label for="">Last Name</label><input name="lastName"
+                    required class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
+                    placeholder="Smith">
             </div>
         </div>
-        <div class="flex flex-col mb-5"><label for="">Email Address</label><input name="email"
+        <div class="flex flex-col mb-5"><label for="">Email Address</label><input name="email" required
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
                 placeholder="Julian.Smith@gmail.com">
         </div>
-        <div class="flex flex-col mb-5"><label for="">Phone</label><input
+        <div class="flex flex-col mb-5"><label for="">Phone</label><input name="phone"
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223">
         </div>
-        <div class="flex flex-col mb-5"><label for="">Type of enquiry</label><select
+        <div class="flex flex-col mb-5"><label for="">Type of enquiry</label><select name="typeOf" required
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
                 <option value="" disabled selected>Please Select</option>
-                <option value="">Co-Roasting</option>
-                <option value="">Roaser Hire</option>
-                <option value="">Wholesale</option>
-                <option value="">Starter Packages</option>
-                <option value="">Private label</option>
-                <option value="">Facility Visit</option>
-                <option value="">Other</option>
+                <option value="Co-Roasting">Co-Roasting</option>
+                <option value="Roaster-Hire">Roaster Hire</option>
+                <option value="Wholesale">Wholesale</option>
+                <option value="Starter Packages">Starter Packages</option>
+                <option value="Priavte label">Private label</option>
+                <option value="Facility Visit">Facility Visit</option>
+                <option value="Other">Other</option>
             </select></div>
-        <div class="flex flex-col mb-"><label for="">Your Message</label>
-            <textarea name="message" class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
-                placeholder="Type here..."></textarea>
-            <x-ui.buttonSolid type="submit" class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
+        <div class="flex flex-col mb-"><label for="message">Your Message</label>
+            <textarea required id="message" name="message"
+                class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
+                placeholder="Type here...">{{ old('message') }}</textarea>
+            <button type="submit" class=" text-white">SUBMIT REQUEST</button>
         </div>
     </form>
 </section>
