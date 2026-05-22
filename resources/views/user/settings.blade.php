@@ -39,7 +39,7 @@
                     <div class="space-y-4 text-sm">
                         <div>
                             <p class="text-neutral-500">ABN, VAT, EIN, etc.</p>
-                            <p>{{auth()->user()->tax_number}}</p>
+                            <p>{{auth()->user()->tax_number ?? 'Not added yet'}}</p>
                         </div>
                         <div>
                             <p class="text-neutral-500">Phone</p>
@@ -156,7 +156,7 @@
             @csrf
             @method('DELETE')<button
                 class="mt-5 text-xs  text-red-500 p-1 rounded-xl hover:bg-red-500 hover:text-white transition duration-300 ease-in-out"
-                onclick="return confirm('Are you Sure?This action can not be undone.')" type="submit">Delete
+                onclick="return confirm('Are you Sure? This action can not be undone.')" type="submit">Delete
                 Account</button></form>
                 </div>
 
