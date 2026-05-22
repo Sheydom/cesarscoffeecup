@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserSettingsController extends Controller
 {
@@ -27,10 +28,7 @@ class UserSettingsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request) {}
 
     /**
      * Display the specified resource.
@@ -51,16 +49,43 @@ class UserSettingsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|string|max:255',
+
+            'last_name' => 'required|string|max:255',
+
+            'phone' => 'nullable|string|max:255',
+
+            'email' => 'required|email|max:255',
+
+            'street_address' => 'nullable|string|max:255',
+
+            'city' => 'nullable|string|max:255',
+
+            'postal_code' => 'nullable|string|max:255',
+
+            'country' => 'nullable|string|max:255',
+
+        ]);
+        $user = User::findOrFail(Auth::id());
+
+        $user->update($validated);
+
+        return redirect()->back()->with('succes', 'Profile updated succesfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(Request $request)
     {
-        //
+        $user = $request->user();
+        Auth::logout();
+        $user->delete();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\SessionsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\User\UserSettingsController;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;
 
 // core-views
@@ -37,7 +38,12 @@ Route::middleware('auth')->group(function () {
 });
 
 // user-settings -  middleware to redirect non authenticated user to loginpage
-Route::get('settings', [UserSettingsController::class, 'create'])->middleware('auth')->name('settings');
+Route::middleware('auth')->group(function(){
+    Route::get('settings', [UserSettingsController::class, 'create'])->name('settings');
+    Route::put('settings',[UserSettingsController::class, 'update'])->name('settings.update');
+    Route::delete('settings',[UserSettingsController::class, 'destroy'])->name('settings.delete');
+
+});
 
 
 //mail route
