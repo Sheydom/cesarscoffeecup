@@ -147,7 +147,7 @@
                                 Cancel
                             </a>
 
-                            <button type="submit" class="px-6 py-2 rounded-lg bg-tertiary text-white hover:opacity-90">
+                            <button type="submit" class="px-6 py-2 rounded-lg bg-tertiary text-white hover:opacity-90 hover:text-white">
                                 Save Changes
                             </button>
                         </div>
@@ -155,7 +155,7 @@
 <form action="{{ route('settings.delete') }}" method="POST">
             @csrf
             @method('DELETE')<button
-                class="mt-5 text-xs  text-red-500 p-1 rounded-xl hover:bg-red-500 hover:text-white transition duration-300 ease-in-out"
+                class="mt-5 text-xs  text-red-500 border-2 border-transparent p-2 rounded-xl hover:border-2 hover:border-red-500 transition duration-300 ease-in-out"
                 onclick="return confirm('Are you Sure? This action can not be undone.')" type="submit">Delete
                 Account</button></form>
                 </div>
