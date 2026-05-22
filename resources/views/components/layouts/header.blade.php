@@ -4,7 +4,7 @@
     <div class="sm:hidden self-center">
         <div x-data="{ open: false }"class="relative">
 
-            <button class="relative flex  " @click="open = !open" @click.outside="open = false">
+            <button class="relative flex  " @click="open = !open" >
 
                 <!-- Burger icon -->
                 <svg class="items-center flex h-10 w-10" x-show="!open"
@@ -31,7 +31,7 @@
                 x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0"
                 x-transition:leave="transition ease-in duration-300 " x-transition:leave-start="translate-x-0"
                 x-transition:leave-end="-translate-x-full opacity-0"
-                class="fixed top-0 left-0 h-full w-72 bg-[#FCF9F2] z-50  p-6 transform-gpu will-change-transform">
+                class="fixed top-0 left-0 h-full w-72 bg-[#FCF9F2] z-50  p-6 transform-gpu will-change-transform" @click.outside="open = false">
 
                 <button @click="open = false" class="mb-6 ">
 

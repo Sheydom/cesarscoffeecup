@@ -1,7 +1,8 @@
 <section class="p-5 md:flex md:items-end md:justify-center gap-10 lg:gap-20 lg:p-15">
     <div>
         <div class="flex flex-col mb-10">
-            <h2 id="homeContactForm" class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come and see for yourself</h2>
+            <h2 id="homeContactForm" class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come
+                and see for yourself</h2>
             <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility. Let's discuss your vision
                 over a fresh brewand walk through how we can bring your brand to life.</p>
         </div>
@@ -23,19 +24,20 @@
         </div>
         <div class="mb-10 md:flex w-full h-90"><iframe class="h-full rounded w-full md:block"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3517643218615!2d144.86003537676578!3d-37.85205893622908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66148018d3543%3A0xe873e59dd7c65e0d!2s19%20Churchill%20St%2C%20Williamstown%20North%20VIC%203016!5e0!3m2!1sen!2sau!4v1777770937450!5m2!1sen!2sau"
-                style="border:0;" allowfullscreen="" 
-                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-    <form class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10" action="">
+    <form action="{{ route('contactMail') }}" method="POST"
+        class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10">
         <div class="flex w-full gap-5">
-            <div class="flex w-full flex-col mb-5"><label for="">First Name</label><input
-                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text" placeholder="Julian">
+            <div class="flex w-full flex-col mb-5"><label for="">First Name</label><input name="name"
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text"
+                    placeholder="Julian">
             </div>
             <div class="flex w-full flex-col mb-5"><label for="">Last Name</label><input
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
             </div>
         </div>
-        <div class="flex flex-col mb-5"><label for="">Email Address</label><input
+        <div class="flex flex-col mb-5"><label for="">Email Address</label><input name="email"
                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
                 placeholder="Julian.Smith@gmail.com">
         </div>
@@ -54,8 +56,9 @@
                 <option value="">Other</option>
             </select></div>
         <div class="flex flex-col mb-"><label for="">Your Message</label>
-            <textarea class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
+            <textarea name="message" class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
                 placeholder="Type here..."></textarea>
-            <x-ui.buttonSolid class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid></div>
+            <x-ui.buttonSolid type="submit" class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
+        </div>
     </form>
 </section>
