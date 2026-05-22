@@ -38,6 +38,10 @@
 
                     <div class="space-y-4 text-sm">
                         <div>
+                            <p class="text-neutral-500">ABN, VAT, EIN, etc.</p>
+                            <p>{{auth()->user()->tax_number}}</p>
+                        </div>
+                        <div>
                             <p class="text-neutral-500">Phone</p>
                             <p class="font-medium">{{ auth()->user()->phone ?? 'Not added yet' }}</p>
                         </div>
@@ -96,7 +100,9 @@
                                 value="{{ old('last_name', auth()->user()->last_name) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
                         </div>
-
+                        <div class="flex flex-col md:col-span-2">
+                            <label for="">ABN, VAT, EIN, etc.</label><input name="tax_number" class="px-3 py-2 border-tertiary border rounded " type="text" value="{{auth()->user()->tax_number}}">
+                        </div>
                         <div class="flex flex-col">
                             <label class="mb-1 text-sm font-medium">Phone</label>
                             <input name="phone" type="text" value="{{ old('phone', auth()->user()->phone) }}"
