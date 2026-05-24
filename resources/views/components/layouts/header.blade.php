@@ -1,10 +1,9 @@
-<nav
-    class="flex  bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium sm:px-2.5 md:px-2.5">
+<nav class="flex  bg-[#FCF9F2] text-black items-center p-2 justify-between w-full font-medium sm:px-2.5 md:px-2.5">
 
     <div class="sm:hidden self-center">
         <div x-data="{ open: false }"class="relative">
 
-            <button class="relative flex  " @click="open = !open" >
+            <button class="relative flex  " @click="open = !open">
 
                 <!-- Burger icon -->
                 <svg class="items-center flex h-10 w-10" x-show="!open"
@@ -31,7 +30,8 @@
                 x-transition:enter-start="-translate-x-full opacity-0" x-transition:enter-end="translate-x-0"
                 x-transition:leave="transition ease-in duration-300 " x-transition:leave-start="translate-x-0"
                 x-transition:leave-end="-translate-x-full opacity-0"
-                class="fixed top-0 left-0 h-full w-72 bg-[#FCF9F2] z-50  p-6 transform-gpu will-change-transform" @click.outside="open = false">
+                class="fixed top-0 left-0 h-full w-72 bg-[#FCF9F2] z-50  p-6 transform-gpu will-change-transform"
+                @click.outside="open = false">
 
                 <button @click="open = false" class="mb-6 ">
 
@@ -138,22 +138,25 @@
     {{-- hidden in mobile  --- --}}
 
     <div
-        class="hidden sm:text-xs sm:flex sm:gap-2 md:gap-4 md:text-base lg:text-2xl sm:justify-around sm:items-center">
+        class="hidden sm:text-xs sm:flex md:gap-2 lg:gap-2   md:text-base lg:text-2xl sm:justify-around sm:items-center">
         <a href="{{ route('home') }}"class="flex items-center {{ request()->routeIs('home') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover> <img class="{{ request()->routeIs('home') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+            wire:navigate.hover> <img
+                class="{{ request()->routeIs('home') ? 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 ' : 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 opacity-0' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Home</a>
         {{-- <a href="{{ route('greenStock') }}"class="flex items-center {{ request()->routeIs('greenStock') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover> <img class="{{ request()->routeIs('greenStock') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+            wire:navigate.hover> <img class="{{ request()->routeIs('greenStock') ? 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 ' : 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 opacity-0' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Green Stock</a> --}}
         <a href="{{ route('coRoasting') }}"
             class=" flex items-center {{ request()->routeIs('coRoasting') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"wire:navigate.hover>
-            <img class="{{ request()->routeIs('coRoasting') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+            <img class="{{ request()->routeIs('coRoasting') ? 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 ' : 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 opacity-0' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Co-Roasting</a>
         <a href="{{ route('aboutUs') }}"class="flex items-center {{ request()->routeIs('aboutUs') ? 'text-black ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover> <img class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+            wire:navigate.hover> <img
+                class="{{ request()->routeIs('aboutUs') ? 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 ' : 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 opacity-0' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> About Us</a>
         <a href="{{ route('contact') }}"class="flex items-center {{ request()->routeIs('contact') ? 'text-black  ' : 'text-black/30 hover:text-bean hover:-translate-y-1 transition duration-300 ease-in-out' }}"
-            wire:navigate.hover> <img class="{{ request()->routeIs('contact') ? 'shrink-0 w-6 h-6' : 'hidden' }}"
+            wire:navigate.hover> <img
+                class="{{ request()->routeIs('contact') ? 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 ' : 'shrink-0 w-4 h-4 sm:w-4 sm:h-4 md:w-6 md:h-6 opacity-0' }}"
                 src="{{ asset('images/bean_brown.svg') }}" alt="brownBean"> Contact</a>
     </div>
     <div class="h-12 flex gap-2 items-center sm:text-sm   md:h-max lg:text-xl md:text-base text-lg">
@@ -169,7 +172,7 @@
                 @csrf @method('DELETE')<button type="submit">LogOut</button>
             </form>
         @else
-            <a href="{{ route('register') }}" 
+            <a href="{{ route('register') }}"
                 class="hidden sm:flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out"
                 wire:navigate.hover>
                 <p>Register</p>

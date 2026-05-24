@@ -45,6 +45,4 @@ Route::middleware('auth')->group(function () {
 
 });
 
-// mail route
-// Route::post('contactMail', [ContactController::class, 'homeSubmit'])->name('contactMail');
-// Route::post('coRoastingMail', [ContactController::class, 'coRoastingSubmit'])->name('coRoastingMail');
+

@@ -13,7 +13,7 @@
                 <p class="text-black">Already know how to roast? Hire our machines independently after completing a
                     short induction. Bring your own beans or use ours.</p>
                 </div>
-                <button class="p-5 border rounded border-black bg-white text-primary">HIRE A ROASTER</button>
+                <button class="p-5 border rounded border-black bg-white text-primary text-center">HIRE A ROASTER</button>
             </div>
             <div class=" bg-pastel/60 border-2 border-primary flex flex-col justify-between text-white p-5  drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl  hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
                 <div class="mb-5">
@@ -23,7 +23,7 @@
                     <h2 class="text-3xl mb-5 font-bodoni  text-coffeDark">Co-Roasting</h2>
                     <p class="text-black">Share our state-of-the-art facility. Perfect for independent roasters looking for premium gear without the overhead.</p>
                 </div>
-                <a href="{{route('coRoasting')}}#sessionsPrice" class="p-5 border rounded border-black bg-white text-coffeDark">BOOK A SESSION</a>
+                <a href="{{route('coRoasting')}}#sessionsPrice" class="p-5 border rounded border-black bg-white text-coffeDark text-center">BOOK A SESSION</a>
             </div>
  
         <div class="bg-pastel/60 flex flex-col justify-between text-white p-5 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-transparent border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
@@ -35,7 +35,7 @@
                 <p class="text-black">A complete solution — beans, roasting, packaging and hands-on support. Perfect for
                     businesses or cafés starting from scratch.</p>
             </div>
-            <button class="p-5 border rounded border-black bg-white text-primary">HIRE A ROASTER</button>
+            <button class="p-5 border rounded border-black bg-white text-primary text-center">HIRE A ROASTER</button>
         </div>
     </div>
 
