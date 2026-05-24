@@ -20,8 +20,8 @@ services:
     volumes:
     - .:/var/www
 
-  networks:
-   - caddy_net
+    networks:
+    - caddy_net
 
 
 networks:
