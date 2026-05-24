@@ -12,7 +12,7 @@ services:
 
 
 
-queue:
+  queue:
   build: .
   container_name: cesarscoffeecup-queue
   restart: unless-stopped
