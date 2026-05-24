@@ -5,6 +5,7 @@
     <x-coRoasting.sessionsPricing />
     <x-coRoasting.whoItsFor />
     <x-coRoasting.whatToExpect />
-    <x-coRoasting.requestSession />
+    {{-- <x-coRoasting.requestSession /> --}}
+    <livewire:coRoasting.contact-controller />
     <x-coRoasting.faq />
 </x-layouts.app>

@@ -73,7 +73,7 @@
             <textarea required id="message" name="message"
                 class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
                 placeholder="Type here...">{{ old('message') }}</textarea>
-            <button type="submit" class=" text-white">SUBMIT REQUEST</button>
+            <x-ui.buttonSolid type="submit" class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
         </div>
     </form>
 </section>

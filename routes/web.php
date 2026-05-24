@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterUserController;
-use App\Http\Controllers\Mail\ContactController;
 use App\Http\Controllers\Auth\SessionsController;
+use App\Http\Controllers\Mail\ContactController;
 use App\Http\Controllers\User\UserSettingsController;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;
@@ -32,19 +32,19 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [SessionsController::class, 'create'])->name('login');
     Route::post('login', [SessionsController::class, 'store'])->name('login.store');
 });
-//only authorised user can logout
+// only authorised user can logout
 Route::middleware('auth')->group(function () {
     Route::delete('logout', [SessionsController::class, 'destroy'])->name('logout');
 });
 
 // user-settings -  middleware to redirect non authenticated user to loginpage
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
     Route::get('settings', [UserSettingsController::class, 'create'])->name('settings');
-    Route::put('settings',[UserSettingsController::class, 'update'])->name('settings.update');
-    Route::delete('settings',[UserSettingsController::class, 'destroy'])->name('settings.delete');
+    Route::put('settings', [UserSettingsController::class, 'update'])->name('settings.update');
+    Route::delete('settings', [UserSettingsController::class, 'destroy'])->name('settings.delete');
 
 });
 
-
-//mail route
-Route::post('contactMail',[ContactController::class,'submit'])->name('contactMail');
+// mail route
+Route::post('contactMail', [ContactController::class, 'homeSubmit'])->name('contactMail');
+// Route::post('coRoastingMail', [ContactController::class, 'coRoastingSubmit'])->name('coRoastingMail');
