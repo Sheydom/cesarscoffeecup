@@ -36,12 +36,21 @@ new class extends Component
 
 
 <section class="p-5 md:flex md:items-end md:justify-center gap-10 lg:gap-20 lg:p-15">
-    <div>
+    <div class="flex flex-col gap-5">
         <div class="flex flex-col mb-10">
             <h2 id="homeContactForm" class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come
                 and see for yourself</h2>
-            <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility. Let's discuss your vision
+            <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility.<br> Let's discuss your vision
                 over a fresh brewand walk through how we can bring your brand to life.</p>
+        </div>
+        <div class="flex gap-5 items-start">
+            <svg class="h-7 w-7 shrink-0" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="currentColor"
+                    d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z" />
+            </svg>
+
+            <p>Mon-Fri: 8:00 AM - 5:00 PM<br> Sat: 9:00 AM - 2:00 PM</p>
         </div>
         <div class="flex gap-5 items-start">
             <svg class="shrink-0 w-7 h-7 text-coffeDark" xmlns="http://www.w3.org/2000/svg"
