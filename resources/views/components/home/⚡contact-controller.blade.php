@@ -73,7 +73,7 @@ new class extends Component
                 style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
    
-    <form wire:submit.prevent="homeSubmit"
+    <form wire:submit.prevent="homeSubmit" id="homeForm"
         class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10 self-bottom">
         @csrf
         @if (session('success'))
