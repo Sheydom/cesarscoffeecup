@@ -49,7 +49,7 @@ new class extends Component {
             @if ($errors->any())
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li class="text-red-500">{{ $error }}</li>
+                        <p class="text-red-500">{{ $error }}</p>
                     @endforeach
                 </ul>
             @endif
