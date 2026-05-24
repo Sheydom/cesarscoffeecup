@@ -167,7 +167,7 @@
                 wire:navigate.hover>
                 <p>Settings</p>
             </a>
-            <form action="{{ route('logout') }}" method="POST"
+            <form action="{{ route('auth.logout') }}" method="POST"
                 class="flex flex-col items-center border-2 border-transparent sm:px-2 hover:border-2 hover:border-black  rounded transition duration-300 ease-in-out">
                 @csrf @method('DELETE')<button type="submit">LogOut</button>
             </form>

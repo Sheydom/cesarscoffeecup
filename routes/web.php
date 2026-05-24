@@ -34,7 +34,7 @@ Route::middleware('guest')->group(function () {
 });
 // only authorised user can logout
 Route::middleware('auth')->group(function () {
-    Route::delete('logout', [SessionsController::class, 'destroy'])->name('logout');
+    Route::delete('logout', [SessionsController::class, 'destroy'])->name('auth.logout');
 });
 
 // user-settings -  middleware to redirect non authenticated user to loginpage
