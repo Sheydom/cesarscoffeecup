@@ -100,7 +100,7 @@
                             class="text-sm text-black/60">/
                             kg*</span></p>
                 </div>
-                <x-ui.buttonSolid class="bg-bean! text-white!">Book Starter</x-ui.buttonSolid>
+                <button class="border-2 p-2 rounded bg-bean border-bean text-white">Book Starter</button>
             </div>
             <div
                 class=" bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
@@ -117,7 +117,7 @@
                             class="text-sm text-black/60">/
                             kg*</span></p>
                 </div>
-                <x-ui.buttonClear class="border-2! border-bean! text-bean">Book Basic</x-ui.buttonClear>
+                <button class="border-2 p-2 rounded border-bean text-bean">Book Basic</button>
             </div>
             <div
                 class="bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0  sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu hover:cursor-pointer transition duration-300 ease-in-out">
@@ -140,9 +140,9 @@
                         <span class="text-sm text-black/60">/ kg*</span>
                     </p>
                 </div>
-                <x-ui.buttonClear class="border-2! border-bean! text-bean">
+                <button class="border-2 p-2 rounded border-bean text-bean">
                     Book Standard
-                </x-ui.buttonClear>
+                </button>
             </div>
             <div
                 class="bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0  sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu hover:cursor-pointer transition duration-300 ease-in-out">
@@ -166,10 +166,11 @@
                         <span class="text-sm text-black/60">/ kg*</span>
                     </p>
                 </div>
-                <x-ui.buttonClear class="border-2! border-bean! text-bean">
+                <button class="border-2 p-2 rounded border-bean text-bean">
                     Book Premium
-                </x-ui.buttonClear>
+                </button>
             </div>
+            <p class="col-span-2 text-gray-300 text-sm">*Package pricing may vary on green coffee bean selection, origin, availibility and batch volume. Larger batch orders may be eligible for better procing.</p>
         </div>
         
     </div>
