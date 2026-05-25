@@ -21,6 +21,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
     'business_name',
     'tax_number',
     'street_address',
+    'state',
     'city',
     'postal_code',
     'country',

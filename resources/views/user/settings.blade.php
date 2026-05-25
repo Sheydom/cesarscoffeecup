@@ -39,7 +39,7 @@
                     <div class="space-y-4 text-sm">
                         <div>
                             <p class="text-neutral-500">ABN, VAT, EIN, etc.</p>
-                            <p>{{auth()->user()->tax_number ?? 'Not added yet'}}</p>
+                            <p>{{ auth()->user()->tax_number ?? 'Not added yet' }}</p>
                         </div>
                         <div>
                             <p class="text-neutral-500">Phone</p>
@@ -60,14 +60,18 @@
                             <p class="text-neutral-500">Postal Code</p>
                             <p class="font-medium">{{ auth()->user()->postal_code ?? 'Not added yet' }}</p>
                         </div>
+                        <div>
+                            <p class="text-neutral-500">State</p>
+                            <p class="font-medium">{{ auth()->user()->state ?? 'Not added yet' }}</p>
+                        </div>
 
                         <div>
                             <p class="text-neutral-500">Country</p>
                             <p class="font-medium">{{ auth()->user()->country ?? 'Not added yet' }}</p>
                         </div>
-                        
+
                     </div>
-                    
+
                 </aside>
 
                 {{-- Right side: update form --}}
@@ -101,7 +105,9 @@
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
                         </div>
                         <div class="flex flex-col md:col-span-2">
-                            <label for="">ABN, VAT, EIN, etc.</label><input name="tax_number" class="px-3 py-2 border-tertiary border rounded " type="text" value="{{auth()->user()->tax_number}}">
+                            <label for="">ABN, VAT, EIN, etc.</label><input name="tax_number"
+                                class="px-3 py-2 border-tertiary border rounded " type="text"
+                                value="{{ auth()->user()->tax_number }}">
                         </div>
                         <div class="flex flex-col">
                             <label class="mb-1 text-sm font-medium">Phone</label>
@@ -134,8 +140,25 @@
                                 value="{{ old('postal_code', auth()->user()->postal_code) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
                         </div>
+                        <div class="flex flex-col">
+                            <label class="mb-1 text-sm font-medium">State</label>
+                            <select
+                                class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40"
+                                name="state" id="state">
+                                <option value="{{ old('postal_code', auth()->user()->postal_code) }}" required
+                                    selected>{{old('state',auth()->user()->state)}}</option>
+                                <option value="ACT">ACT</option>
+                                <option value="NSW">NSW</option>
+                                <option value="NT">NT</option>
+                                <option value="QLD">QLD</option>
+                                <option value="SA">SA</option>
+                                <option value="TAS">TAS</option>
+                                <option value="VIC">VIC</option>
+                                <option value="WA">WA</option>
+                            </select>
+                        </div>
 
-                        <div class="flex flex-col md:col-span-2">
+                        <div class="flex flex-col">
                             <label class="mb-1 text-sm font-medium">Country</label>
                             <input name="country" type="text" value="{{ old('country', auth()->user()->country) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
@@ -147,22 +170,24 @@
                                 Cancel
                             </a>
 
-                            <button type="submit" class="px-6 py-2 rounded-lg bg-tertiary text-white hover:opacity-90 hover:text-white">
+                            <button type="submit"
+                                class="px-6 py-2 rounded-lg bg-tertiary text-white hover:opacity-90 hover:text-white">
                                 Save Changes
                             </button>
                         </div>
                     </form>
-<form action="{{ route('settings.delete') }}" method="POST">
-            @csrf
-            @method('DELETE')<button
-                class="mt-5 text-xs  text-red-500 border-2 border-transparent p-2 rounded-xl hover:border-2 hover:border-red-500 transition duration-300 ease-in-out"
-                onclick="return confirm('Are you Sure? This action can not be undone.')" type="submit">Delete
-                Account</button></form>
+                    <form action="{{ route('settings.delete') }}" method="POST">
+                        @csrf
+                        @method('DELETE')<button
+                            class="mt-5 text-xs  text-red-500 border-2 border-transparent p-2 rounded-xl hover:border-2 hover:border-red-500 transition duration-300 ease-in-out"
+                            onclick="return confirm('Are you Sure? This action can not be undone.')"
+                            type="submit">Delete
+                            Account</button></form>
                 </div>
 
             </div>
-        
+
         </div>
-        
+
     </section>
 </x-layouts.app>
