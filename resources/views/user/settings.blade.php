@@ -145,16 +145,24 @@
                             <select
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40"
                                 name="state" id="state">
-                                <option value="{{ old('postal_code', auth()->user()->postal_code) }}" required
-                                    selected>{{old('state',auth()->user()->state)}}</option>
-                                <option value="ACT">ACT</option>
-                                <option value="NSW">NSW</option>
-                                <option value="NT">NT</option>
-                                <option value="QLD">QLD</option>
-                                <option value="SA">SA</option>
-                                <option value="TAS">TAS</option>
-                                <option value="VIC">VIC</option>
-                                <option value="WA">WA</option>
+                                <option value="">Select State</option>
+
+                                <option value="ACT" @selected(old('state', auth()->user()->state) === 'ACT')>ACT</option>
+
+                                <option value="NSW" @selected(old('state', auth()->user()->state) === 'NSW')>NSW</option>
+
+                                <option value="NT" @selected(old('state', auth()->user()->state) === 'NT')>NT</option>
+
+                                <option value="QLD" @selected(old('state', auth()->user()->state) === 'QLD')>QLD</option>
+
+                                <option value="SA" @selected(old('state', auth()->user()->state) === 'SA')>SA</option>
+
+                                <option value="TAS" @selected(old('state', auth()->user()->state) === 'TAS')>TAS</option>
+
+                                <option value="VIC" @selected(old('state', auth()->user()->state) === 'VIC')>VIC</option>
+
+                                <option value="WA" @selected(old('state', auth()->user()->state) === 'WA')>WA</option>
+
                             </select>
                         </div>
 
