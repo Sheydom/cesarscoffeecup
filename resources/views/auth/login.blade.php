@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <form method="POST" action="{{route('login')}}"
+    <form method="POST" action="{{ route('login') }}"
         class="max-w-4xl w-md sm:w-xl md:w-2xl lg:w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8">
         @csrf
 
@@ -40,6 +40,10 @@
                 class="w-full md:w-auto rounded-lg bg-black px-8 py-3 text-sm font-semibold text-white hover:bg-neutral-800 transition">
                 LogIn
             </button>
+            <a href="{{ route('password.request') }}"
+                class="inline-block w-full md:w-auto rounded-lg border-2 border-black px-8 py-3 text-sm font-semibold text-black transform transition duration-200 hover:-translate-y-1">
+                Forgot Password
+            </a>
         </div>
     </form>
 </x-layouts.app>

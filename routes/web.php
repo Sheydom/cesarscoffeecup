@@ -45,4 +45,17 @@ Route::middleware('auth')->group(function () {
 
 });
 
+//-----------------------------
 
+// forgot-password
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->middleware('guest')->name('password.request');
+
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+});
+
+require __DIR__.'/settings.php';
