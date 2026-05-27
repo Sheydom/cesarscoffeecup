@@ -119,7 +119,10 @@
                             <label class="mb-1 text-sm font-medium">Email</label>
                             <input name="email" type="email" value="{{ old('email', auth()->user()->email) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                                @error('email')
+                                    <p class="text-sm mt-1 text-red-500">{{$email}}</p>
+                                @enderror
+                            </div>
 
                         <div class="flex flex-col md:col-span-2">
                             <label class="mb-1 text-sm font-medium">Street Address</label>
