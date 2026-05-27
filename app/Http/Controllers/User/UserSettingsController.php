@@ -59,7 +59,7 @@ class UserSettingsController extends Controller
 
             'phone' => 'nullable|string|max:255',
 
-            'email' => 'required|email|max:255',
+            'email' => 'required|email|unique:users,email|max:255',
 
             'street_address' => 'nullable|string|max:255',
 
