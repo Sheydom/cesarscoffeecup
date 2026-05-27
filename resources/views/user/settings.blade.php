@@ -92,28 +92,40 @@
                         @method('PUT')
 
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">First Name</label>
-                            <input name="first_name" type="text"
+                            <label for="name" class="mb-1 text-sm font-medium">First Name</label>
+                            <input id="name" name="first_name" type="text"
                                 value="{{ old('first_name', auth()->user()->first_name) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                            @error('name')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
 
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">Last Name</label>
-                            <input name="last_name" type="text"
+                            <label for="last_name" class="mb-1 text-sm font-medium">Last Name</label>
+                            <input id="last_name" name="last_name" type="text"
                                 value="{{ old('last_name', auth()->user()->last_name) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
-                        <div class="flex flex-col md:col-span-2">
-                            <label for="">ABN, VAT, EIN, etc.</label><input name="tax_number"
+                            @error('last_name')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
+                        {{-- <div class="flex flex-col md:col-span-2">
+                            <label for="tax">ABN, VAT, EIN, etc.</label><input id="tax" name="tax_number"
                                 class="px-3 py-2 border-tertiary border rounded " type="text"
                                 value="{{ auth()->user()->tax_number }}">
-                        </div>
+                                @error('tax_number')
+                                    <p class="text-red-500 mt-1 text-sm">{{$message}}</p>
+                                @enderror
+                        </div> --}}
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">Phone</label>
-                            <input name="phone" type="text" value="{{ old('phone', auth()->user()->phone) }}"
+                            <label for="phone" class="mb-1 text-sm font-medium">Phone</label>
+                            <input id="phone" name="phone" type="text" value="{{ old('phone', auth()->user()->phone) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                            @error('phone')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
 
                         <div class="flex flex-col">
                             <label class="mb-1 text-sm font-medium">Email</label>
@@ -125,27 +137,36 @@
                             </div>
 
                         <div class="flex flex-col md:col-span-2">
-                            <label class="mb-1 text-sm font-medium">Street Address</label>
-                            <input name="street_address" type="text"
+                            <label for="street_address" class="mb-1 text-sm font-medium">Street Address</label>
+                            <input id="street_address" name="street_address" type="text"
                                 value="{{ old('street_address', auth()->user()->street_address) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                            @error('street_address')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
 
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">City</label>
-                            <input name="city" type="text" value="{{ old('city', auth()->user()->city) }}"
+                            <label for="city" class="mb-1 text-sm font-medium">City</label>
+                            <input id="city" name="city" type="text" value="{{ old('city', auth()->user()->city) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                            @error('city')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
 
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">Postal Code</label>
-                            <input name="postal_code" type="text"
+                            <label for="postal_code" class="mb-1 text-sm font-medium">Postal Code</label>
+                            <input id="postal_code" name="postal_code" type="text"
                                 value="{{ old('postal_code', auth()->user()->postal_code) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
-                        </div>
+                            @error('postal_code')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
+                            </div>
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">State</label>
-                            <select
+                            <label for="select" class="mb-1 text-sm font-medium">State</label>
+                            <select id="select"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40"
                                 name="state" id="state">
                                 <option value="">Select State</option>
@@ -167,12 +188,18 @@
                                 <option value="WA" @selected(old('state', auth()->user()->state) === 'WA')>WA</option>
 
                             </select>
+                            @error('state')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div class="flex flex-col">
-                            <label class="mb-1 text-sm font-medium">Country</label>
-                            <input name="country" type="text" value="{{ old('country', auth()->user()->country) }}"
+                            <label for="country" class="mb-1 text-sm font-medium">Country</label>
+                            <input id="country" name="country" type="text" value="{{ old('country', auth()->user()->country) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
+                                @error('country')
+                                <p class="text-sm text-red-500 mt-1">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div class="md:col-span-2 flex justify-end gap-3 pt-5">
