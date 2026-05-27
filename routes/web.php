@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
 
 // forgot-password
 Route::get('/forgot-password', function () {
-    return view('auth.forgot-password');
+    return view('pages.auth.forgot-password');
 })->middleware('guest')->name('password.request');
 
 
