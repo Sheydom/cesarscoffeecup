@@ -120,7 +120,7 @@
                             <input name="email" type="email" value="{{ old('email', auth()->user()->email) }}"
                                 class="px-3 py-2 border border-tertiary bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-tertiary/40">
                                 @error('email')
-                                    <p class="text-sm mt-1 text-red-500">{{$email}}</p>
+                                    <p class="text-sm mt-1 text-red-500">{{$message}}</p>
                                 @enderror
                             </div>
 
