@@ -29,7 +29,7 @@ class RegisterUserController extends Controller
             'phone'=>['required','string','max:30'],
             'company_name'=>['required','string','max:255'],
             'business_name'=>['required','string','max:255'],
-            'tax_number'=>['required','string','max:255'],
+            'tax_number'=>['required','string','max:255','unique:users,tax_number'],
             'street_address'=>['required','string','max:255'],
             'state'=>['required','string','max:30'],
             'city'=>['required','string','max:255'],
