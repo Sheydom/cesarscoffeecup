@@ -59,5 +59,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
-///KEEP COMMENTED OUT ITS THE STARTER KIT SETTINGS
+///KEEP COMMENTED OUT ITS THE STARTER KIT SETTINGS otherwise error if not dashboard and related views not updated
 //require __DIR__.'/settings.php';
