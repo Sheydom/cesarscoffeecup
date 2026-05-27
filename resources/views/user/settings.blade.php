@@ -1,7 +1,11 @@
 <x-layouts.app>
     <section class="min-h-screen bg-neutral px-5 py-10">
         <div class="max-w-6xl mx-auto">
-
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            @endif
             <div class="mb-10">
                 <p class="text-sm uppercase tracking-wide text-tertiary mb-2">
                     Account Settings

@@ -55,7 +55,7 @@ class UserSettingsController extends Controller
             'first_name' => 'required|string|max:255',
 
             'last_name' => 'required|string|max:255',
-            'tax_number'=> 'required|string|max:255|unique:users,tax_number',
+            // 'tax_number'=> 'required|string|max:255|unique:users,tax_number',
 
             'phone' => 'nullable|string|max:255',
 
