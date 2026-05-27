@@ -40,8 +40,8 @@
                 class="w-full md:w-auto rounded-lg bg-black px-8 py-3 text-sm font-semibold text-white hover:bg-neutral-800 transition">
                 LogIn
             </button>
-            <a href="{{ route('password.request') }}"
-                class="inline-block w-full md:w-auto rounded-lg border-2 border-black px-8 py-3 text-sm font-semibold text-black transform transition duration-200 hover:-translate-y-1">
+            <a  href="{{ route('password.request') }}"
+                class="inline-block w-full mt-5 text-center sm:mt-0 md:w-auto rounded-lg border-2 border-black px-8 py-3 text-sm font-semibold text-black transform transition duration-200 hover:-translate-y-1">
                 Forgot Password
             </a>
         </div>
