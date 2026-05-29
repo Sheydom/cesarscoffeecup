@@ -79,39 +79,3 @@ input[type="date"] {
     appearance: auto;
     display: block;
 }
-
-
-@media (max-width: 768px) {
-    .page {
-        width: 100%;
-        max-width: 100%;
-        min-height: auto;
-    }
-
-    .cards-page,
-    .intro,
-    .country-header,
-    .world-header,
-    .back {
-        padding: 28px 18px;
-    }
-
-    .stats-row,
-    .country-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card-top,
-    .page-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .ch-name {
-        font-size: 40px;
-    }
-
-    .catalog-title {
-        font-size: 32px;
-    }
-}
