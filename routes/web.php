@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 Route::view('products', 'products')->name('products');
-Route::view('greenStock', 'greenStock')->name('greenStock');
+Route::view('wholesale', 'wholesale')->name('wholesale');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('contact', 'contact')->name('contact');
 Route::view('aboutUs', 'aboutUs')->name('aboutUs');
+
 
 // legal-views
 Route::prefix('legal')->group(function () {

@@ -1,5 +1,6 @@
 <section class="bg-neutral w-full px-5 pt-15 gap-5 flex flex-col justify-center ">
-    <div class="p-5 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
+    <div
+        class="p-5 sm:flex sm:flex-col md:grid  md:grid-cols-2 md:gap-10  lg:grid-cols-4 md:items-start md:mx-auto md:w-full">
         <div class="flex flex-col items-center ">
             <div class="w-max">
                 <h2 class="hidden md:block text-2xl mb-5 text-primary w-full text-left md:mb-5">
@@ -65,9 +66,9 @@
                     <a href="{{ route('coRoasting') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Co-Roasting
                     </a>
-                    {{-- <a href="{{ route('greenStock') }}"
-                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Green Stock
-                    </a> --}}
+                    <a href="{{ route('wholesale') }}"
+                        class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Wholesale
+                    </a>
                     <a href="{{ route('aboutUs') }}"
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>About
                         Us
@@ -76,7 +77,8 @@
                         class="text-black mx-2.5 md:mx-0  hover:underline transition duration-300 ease-in-out"wire:navigate.hover>Contact
                     </a>
                 </div>
-                <div class="flex flex-wrap text-xs md:text-sm md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
+                <div
+                    class="flex flex-wrap text-xs md:text-sm md:flex-col md:gap-1 md: md:leading-normal justify-center gap-5">
                     <a href="{{ route('legal.privacy') }}"
                         class="  hover:underline opacity-25 transition duration-300 ease-in-out md:opacity-100 "wire:navigate.hover>Privacy
                         Policy</a>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wholesale Green Beans — Cesar's Coffee Cup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+  :root {
+    --green: #495531;
+    --red: #d03928;
+    --cream: #e8ddc8;
+    --dark: #3E291B;
+    --cream-light: #f5f0e8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lato', sans-serif; background: #e0d8cc; color: var(--dark); }
+
+  /* ── PAGE SHELL ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 24px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  /* ── COVER ── */
+  .cover { background: var(--dark); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .top-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--red); }
+  .ring { position: absolute; border-radius: 50%; border: 1px solid rgba(232,221,200,0.07); }
+  .ring-1 { width: 480px; height: 480px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .ring-2 { width: 680px; height: 680px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .ring-3 { width: 880px; height: 880px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cover-inner { position: relative; z-index: 2; text-align: center; padding: 60px 48px; }
+  .eyebrow { font-size: 9px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--red); margin-bottom: 28px; }
+  .brand-name { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 6px; }
+  .brand-sub { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; font-style: italic; color: rgba(232,221,200,0.5); margin-bottom: 28px; }
+  .cover-rule { width: 56px; height: 2px; background: var(--red); margin: 0 auto 28px; }
+  .catalog-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: rgba(232,221,200,0.6); margin-bottom: 10px; }
+  .catalog-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 600; color: var(--cream); line-height: 1.25; }
+  .cover-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 48px; }
+  .cover-tag { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(232,221,200,0.65); padding: 6px 14px; border: 1px solid rgba(232,221,200,0.18); border-radius: 2px; }
+  .cover-footer { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: rgba(232,221,200,0.25); }
+
+  /* ── INTRO ── */
+  .intro { background: var(--green); padding: 72px 60px; display: flex; flex-direction: column; justify-content: center; }
+  .section-label { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
+  .section-heading { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: var(--cream); line-height: 1.3; margin-bottom: 28px; }
+  .section-body { font-size: 13px; font-weight: 300; line-height: 2; color: rgba(232,221,200,0.8); max-width: 520px; margin-bottom: 44px; }
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-top: 1px solid rgba(232,221,200,0.15); padding-top: 36px; }
+  .stat-n { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--cream); display: block; }
+  .stat-l { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: rgba(232,221,200,0.45); margin-top: 4px; display: block; }
+
+  /* ── COUNTRY DIVIDER ── */
+  .country-header { background: var(--dark); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 48px; }
+  .ch-origin { font-size: 9px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
+  .ch-name { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; color: var(--cream); line-height: 1; margin-bottom: 12px; }
+  .ch-sub { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: rgba(232,221,200,0.45); margin-bottom: 32px; }
+  .ch-rule { width: 64px; height: 2px; background: var(--red); margin: 0 auto 32px; }
+  .ch-desc { font-size: 13px; font-weight: 300; line-height: 2; color: rgba(232,221,200,0.7); max-width: 440px; }
+  .ch-count { position: absolute; bottom: 48px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(232,221,200,0.25); }
+
+  /* ── WORLD SECTION (multi-country page) ── */
+  .world-header { background: var(--green); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px; }
+
+  /* ── CARDS PAGE ── */
+  .cards-page { background: var(--cream-light); padding: 44px 44px; }
+  .page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; padding-bottom: 14px; border-bottom: 2px solid var(--dark); }
+  .ph-country { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--dark); display: flex; align-items: center; gap: 8px; }
+  .ph-country::before { content: ''; display: inline-block; width: 10px; height: 10px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+  .ph-brand { font-size: 8px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(62,41,27,0.35); }
+
+  /* ── COFFEE CARD ── */
+  .card { background: white; border-radius: 3px; margin-bottom: 14px; overflow: hidden; display: grid; grid-template-columns: 5px 1fr; box-shadow: 0 1px 5px rgba(62,41,27,0.07); }
+  .card-bar { background: var(--green); }
+  .card-bar.premium { background: var(--red); }
+  .card-bar.world { background: var(--dark); }
+  .card-body { padding: 16px 20px; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 9px; }
+  .variety { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; color: var(--dark); line-height: 1.2; }
+  .lot-ref { font-size: 8px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(62,41,27,0.32); margin-top: 3px; }
+  .sca-box { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; margin-left: 12px; }
+  .sca-n { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--green); line-height: 1; }
+  .sca-l { font-size: 7px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(62,41,27,0.38); }
+  .badge { display: inline-block; font-size: 8px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: var(--cream); color: var(--dark); flex-shrink: 0; margin-left: 10px; }
+  .badge.sp { background: rgba(208,57,40,0.1); color: var(--red); }
+  .meta { display: flex; gap: 18px; margin-bottom: 10px; flex-wrap: wrap; }
+  .meta-item { display: flex; flex-direction: column; }
+  .ml { font-size: 7px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(62,41,27,0.38); margin-bottom: 2px; }
+  .mv { font-size: 11px; font-weight: 400; color: var(--dark); }
+  .notes { font-size: 11px; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(62,41,27,0.7); border-top: 1px solid rgba(62,41,27,0.07); padding-top: 9px; display: flex; align-items: center; gap: 7px; }
+  .dot { color: var(--red); font-size: 9px; flex-shrink: 0; }
+
+  /* ── NOTE BOX ── */
+  .note-box { margin-top: 24px; padding: 16px 20px; background: rgba(73,85,49,0.07); border-left: 3px solid var(--green); border-radius: 2px; font-size: 11px; font-weight: 300; color: rgba(62,41,27,0.68); line-height: 1.8; }
+  .note-box strong { font-weight: 700; font-style: normal; color: var(--green); display: block; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+
+  /* ── BACK COVER ── */
+  .back { background: var(--green); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 64px; }
+  .back-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(232,221,200,0.06); }
+  .back-ring-1 { width: 500px; height: 500px; bottom: -180px; left: -180px; }
+  .back-heading { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 600; color: var(--cream); line-height: 1.35; margin-bottom: 18px; position: relative; z-index: 2; }
+  .back-text { font-size: 13px; font-weight: 300; line-height: 2; color: rgba(232,221,200,0.7); max-width: 380px; margin-bottom: 44px; position: relative; z-index: 2; }
+  .contact-box { border: 1px solid rgba(232,221,200,0.2); border-radius: 3px; padding: 28px 44px; margin-bottom: 40px; position: relative; z-index: 2; }
+  .cb-label { font-size: 8px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .cb-cta { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--cream); margin-bottom: 10px; }
+  .cb-detail { font-size: 11px; font-weight: 300; color: rgba(232,221,200,0.55); letter-spacing: 1px; }
+  .back-brand { font-family: 'Playfair Display', serif; font-size: 16px; color: rgba(232,221,200,0.35); position: relative; z-index: 2; }
+
+  /* ── COUNTRY GRID (world section) ── */
+  .country-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .mini-card { background: white; border-radius: 3px; overflow: hidden; display: grid; grid-template-columns: 5px 1fr; box-shadow: 0 1px 5px rgba(62,41,27,0.07); }
+  .mc-bar { background: var(--dark); }
+  .mc-body { padding: 13px 16px; }
+  .mc-country { font-size: 8px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+  .mc-variety { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.2; margin-bottom: 6px; }
+  .mc-meta { display: flex; gap: 14px; margin-bottom: 7px; }
+  .mc-notes { font-size: 10px; font-weight: 300; font-style: italic; color: rgba(62,41,27,0.65); border-top: 1px solid rgba(62,41,27,0.07); padding-top: 7px; }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════
+     COVER
+══════════════════════════ -->
+<div class="page cover">
+  <div class="top-bar"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div class="ring ring-3"></div>
+  <div class="cover-inner">
+    <div class="eyebrow">Melbourne · Australia · Specialty Coffee</div>
+    <div class="brand-name">Cesar's Coffee Cup</div>
+    <div class="brand-sub">Specialty Coffee Partner</div>
+    <div class="cover-rule"></div>
+    <div class="catalog-label">Service Catalog</div>
+    <div class="catalog-title">Wholesale<br>Green Beans</div>
+    <div class="cover-tags">
+      <div class="cover-tag">🇨🇴 Colombia</div>
+      <div class="cover-tag">🇵🇦 Panama</div>
+      <div class="cover-tag">🇧🇷 Brazil</div>
+      <div class="cover-tag">🇪🇹 Ethiopia</div>
+      <div class="cover-tag">🇬🇹 Guatemala</div>
+      <div class="cover-tag">+ More Origins</div>
+    </div>
+  </div>
+  <div class="cover-footer">cesarcoffeecup.com.au &nbsp;·&nbsp; Melbourne, VIC &nbsp;·&nbsp; @cesarscoffeecup</div>
+</div>
+
+<!-- ══════════════════════════
+     INTRO
+══════════════════════════ -->
+<div class="page intro">
+  <div class="top-bar"></div>
+  <div class="section-label">Wholesale Green Beans</div>
+  <div class="section-heading">Source Directly.<br>Roast Your Way.</div>
+  <div class="section-body">
+    At Cesar's Coffee Cup, we supply specialty-grade green beans to independent cafés, roasters, and coffee businesses across Melbourne and Australia. Our current selection covers origins from Colombia, Panama, Brazil, Ethiopia, Guatemala, and beyond — all traceable, quality-checked, and ready to roast.
+    <br><br>
+    Whether you're looking for a consistent commercial blend base, a traceable single origin for your espresso bar, or a rare lot to feature as a filter or specialty offering — we can supply the right green bean for your program.
+    <br><br>
+    Pair our wholesale green beans with our co-roasting service and we become your full-service coffee production partner. No unnecessary lock-in. No hidden costs. Just quality coffee, your way.
+  </div>
+  <div class="stats-row">
+    <div>
+      <span class="stat-n">13+</span>
+      <span class="stat-l">Origins</span>
+    </div>
+    <div>
+      <span class="stat-n">30+</span>
+      <span class="stat-l">Varieties</span>
+    </div>
+    <div>
+      <span class="stat-n">SCA</span>
+      <span class="stat-l">Specialty Grade</span>
+    </div>
+    <div>
+      <span class="stat-n">VIC</span>
+      <span class="stat-l">Melbourne Based</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     COLOMBIA HEADER
+══════════════════════════ -->
+<div class="page country-header">
+  <div class="top-bar"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div style="position:relative;z-index:2;">
+    <div class="ch-origin">Featured Origin · 01</div>
+    <div class="ch-name">Colombia</div>
+    <div class="ch-sub">Direct Sourcing · Multiple Farms &amp; Regions</div>
+    <div class="ch-rule"></div>
+    <div class="ch-desc">Our Colombian selection is one of our strongest — spanning commercial-grade Excelso lots from Cauca and Caldas, through to premium single-farm offerings including Geisha, Pink Bourbon, and experimentally processed varieties. All traceable by region and farm.</div>
+  </div>
+  <div class="ch-count">12 Varieties Available</div>
+</div>
+
+<!-- ══════════════════════════
+     COLOMBIA — PAGE 1
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Colombia — Commercial &amp; Specialty Lots</div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Excelso Supremo — Cauca</div><div class="lot-ref">Lot 00004 · Café de Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Cauca</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Supremo</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">4,235 kg available</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Herbaceous · Clean finish</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Excelso — Cauca</div><div class="lot-ref">Lot 00006 · Café de Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Cauca</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Excelso</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">3,220 kg available</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Herbaceous · Clean finish</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Excelso — Cauca (Consignment)</div><div class="lot-ref">Ref CESAR-00M03102 · Café de Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Cauca</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Excelso</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">630 kg available</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Herbaceous · Clean finish</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Excelso Decaf — Sugar Cane Process · Caldas</div><div class="lot-ref">Lot 00007 · Café de Colombia</div></div>
+        <span class="badge sp">Decaf · Sugar Cane</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Caldas</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Sugar Cane EA Decaf</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">665 kg available</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Dried rose · Molasses</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">MdC Sugar Cane De Café</div><div class="lot-ref">Ref CESAR-00F02132/B · Colombian</div></div>
+        <span class="badge sp">Decaf</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Sugar Cane</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">70 kg available</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Sweet, clean — ideal for decaf blends</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════
+     COLOMBIA — PAGE 2 (Premium)
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Colombia — Premium Single Farm <span style="font-size:11px;font-weight:300;color:rgba(62,41,27,0.4);margin-left:6px;font-family:'Lato',sans-serif;">continued</span></div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Variedad Colombia / Cogollo Morado</div><div class="lot-ref">Lot 00008 · Finca San Fernando</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">Finca San Fernando</span></div>
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Colombia / Cogollo Morado</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">105 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Nutty · Herbaceous</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Geisha Washed — San Fernando</div><div class="lot-ref">Lot 00009/2 · Product of Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">San Fernando</span></div>
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Geisha</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">96 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Floral · Pomegranate</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Geisha Washed — German Murillo</div><div class="lot-ref">Lot 00009/3 · Product of Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">German Murillo</span></div>
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Geisha</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Candy · Lavender · Cranberry</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Super Castillo — Hacienda Altamira</div><div class="lot-ref">Lot 00009/4 · Product of Colombia</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">Hacienda Altamira</span></div>
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Castillo</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">36 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Floral · Grapefruit · Yellow citrus</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Pink Bourbon — Finca Genova</div><div class="lot-ref">Lot 00009/5 · Product of Colombia</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">Finca Genova</span></div>
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Pink Bourbon</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">156 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Yellow floral · Apricot · Naval orange</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════
+     COLOMBIA — PAGE 3 (Infused)
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Colombia — Experimental &amp; Infused <span style="font-size:11px;font-weight:300;color:rgba(62,41,27,0.4);margin-left:6px;font-family:'Lato',sans-serif;">continued</span></div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Castillo Natural Infused — Coconut &amp; Caramel</div><div class="lot-ref">Lot 00009/6 · Product of Colombia</div></div>
+        <span class="badge sp">Natural Infused</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Castillo</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Natural Infused</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">36 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Caramel sweetness · Hint of coconut</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Castillo Natural Infused — Coconut &amp; Lime</div><div class="lot-ref">Lot 00009/7 · Product of Colombia</div></div>
+        <span class="badge sp">Natural Infused</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Castillo</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Natural Infused</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">48 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Lime · Hint of coconut</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>About Our Colombian Selection</strong>
+    Our Colombian lots are sourced across multiple farms and regions — from large-volume commercial grades ideal for blends, to small-batch specialty lots suited for single origin or specialty programs. Contact us to discuss quantities, roast profiling, and co-roasting options.
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     PANAMA HEADER
+══════════════════════════ -->
+<div class="page country-header">
+  <div class="top-bar"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div style="position:relative;z-index:2;">
+    <div class="ch-origin">Featured Origin · 02</div>
+    <div class="ch-name">Panama</div>
+    <div class="ch-sub">Moreno Coffee Farm · Jurutungo</div>
+    <div class="ch-rule"></div>
+    <div class="ch-desc">Our Panamanian lots come exclusively from the Moreno Coffee Farm in Jurutungo — a high-altitude farm known for meticulous processing and world-class specialty coffee. Every lot is SCA scored, with profiles ranging from 87.75 to 90.75. Ideal for roasters seeking distinction.</div>
+  </div>
+  <div class="ch-count">8 Varieties · SCA 87.75–90.75</div>
+</div>
+
+<!-- ══════════════════════════
+     PANAMA — PAGE 1
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Panama — Moreno Coffee Farm</div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Geisha Natural</div><div class="lot-ref">Lot GN-01 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">90.75</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Natural</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9.70%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">766 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">13.5 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Jasmine · Lily · Lemon zest</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar premium"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Edy Gallo Natural</div><div class="lot-ref">Lot EG-101 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">89.75</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Natural</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">10%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">768 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">13.5 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Jasmine · Orange blossom · Lemongrass · Clean</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Bourbon Rosado — Alcoholic Fermentation</div><div class="lot-ref">Lot BR-110 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">88.75</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">F.A. Alcoholic Fermentation</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9.20%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">807.9 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">27.1 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Citrus · Sweet white florals · Jasmine · Clean</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Bourbon Rosado — Natural</div><div class="lot-ref">Lot BR-120 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">89.00</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Natural</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9.60%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">789.6 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">28.6 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Ripe berries · Strawberry · Raspberry · Berry yogurt · Pink florals</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     PANAMA — PAGE 2
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Panama — Moreno Coffee Farm <span style="font-size:11px;font-weight:300;color:rgba(62,41,27,0.4);margin-left:6px;font-family:'Lato',sans-serif;">continued</span></div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Bourbon Rosado — Honey</div><div class="lot-ref">Lot BR-115 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">88.25</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Honey</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9.30%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">803 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">28.6 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Sweet white florals · Chamomile &amp; oolong tea · Delicate citrus · Clean</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Bourbon Rosado — Extended Oxidation</div><div class="lot-ref">Lot BR-OX · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">87.75</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">O-X Extended Oxidation</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9.30%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">785 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">28.6 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Strawberry · Stewed mango · Gentle florals · Lemon zest</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Catigua — Washed</div><div class="lot-ref">Lot CA-01 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">87.75</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">815 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">30 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Florals · Citrus · Açaí</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Catuai — Honey</div><div class="lot-ref">Lot CA-121 · Jurutungo · Moreno Coffee Farm</div></div>
+        <div class="sca-box"><span class="sca-n">88.00</span><span class="sca-l">SCA Score</span></div>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Honey</span></div>
+        <div class="meta-item"><span class="ml">Moisture</span><span class="mv">9%</span></div>
+        <div class="meta-item"><span class="ml">Density</span><span class="mv">796.6 g/L</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">15 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Sweet · Mars bar · Caramel · Grapefruit · Subtle florals</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     WORLD SELECTIONS HEADER
+══════════════════════════ -->
+<div class="page world-header">
+  <div class="top-bar"></div>
+  <div class="ring ring-1"></div>
+  <div class="ring ring-2"></div>
+  <div style="position:relative;z-index:2;text-align:center;">
+    <div class="ch-origin">Global Selections</div>
+    <div class="ch-name" style="color:var(--cream);font-size:52px;">World Origins</div>
+    <div class="ch-sub">Victoria Consignment Stock</div>
+    <div class="ch-rule"></div>
+    <div class="ch-desc" style="color:rgba(232,221,200,0.7);">In addition to our direct Colombian and Panamanian lots, we carry a broad range of green beans from major coffee-producing countries worldwide — ideal for blending, house espresso programs, and diverse roast profiles.</div>
+  </div>
+  <div class="ch-count" style="color:rgba(232,221,200,0.25);">Brazil · Ethiopia · Guatemala · Peru · Honduras · Nicaragua · El Salvador · Mexico · India · PNG · Vietnam</div>
+</div>
+
+<!-- ══════════════════════════
+     BRAZIL + ETHIOPIA
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Brazil &amp; Ethiopia</div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Brazil 20 Farmers — Cerrado Scr 14/16</div><div class="lot-ref">Ref CESAR-00F02132 · Brazil</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Cerrado</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Scr 14/16</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">118 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Chocolate · Nutty · Low acidity — excellent blend base</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Brazil Labreda Yellow Bourbon FC</div><div class="lot-ref">Ref CESAR-00F02132 · Brazil</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Variety</span><span class="mv">Yellow Bourbon</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Full Natural (FC)</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Sweet · Caramel · Soft fruit</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Brazil Ouro Fino FC Scr 16/18</div><div class="lot-ref">Ref CESAR-00M03102 · Brazil</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Scr 16/18</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Full Natural (FC)</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">649 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Chocolate · Round body · Clean sweetness</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Brazil 20 Farmers FC Scr 17/18</div><div class="lot-ref">Ref CESAR-00A04130 / CESAR-00M05216 · Brazil</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Scr 17/18</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Full Natural (FC)</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">885 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Chocolate · Nutty · Smooth — ideal espresso blend base</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Ethiopian Guji Hambela Gr 3</div><div class="lot-ref">Ref CESAR-00A04130 · Ethiopia</div></div>
+        <span class="badge sp">Natural</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Guji, Hambela</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Grade 3</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">120 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Blueberry · Tropical fruit · Floral</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     GUATEMALA + PERU + HONDURAS + NICARAGUA
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Guatemala · Peru · Honduras · Nicaragua</div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Guatemala El Maya SHB</div><div class="lot-ref">Ref CESAR-00F02132 &amp; CESAR-00F02132/B · Guatemala</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHB (Strictly Hard Bean)</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">207 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Dark chocolate · Brown sugar · Balanced acidity</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Peru SHB Grade 1</div><div class="lot-ref">Ref CESAR-00F02132 · Peru</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHB Gr 1</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">138 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Mild · Clean · Citrus · Good body</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Honduras San Marcos SHG/EP</div><div class="lot-ref">Ref CESAR-00F02132 · Honduras</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">San Marcos</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHG/EP</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">138 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Caramel · Stone fruit · Clean finish</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Nicaragua Santa Rita RFA SHG/EP</div><div class="lot-ref">Ref CESAR-00F02132 · Nicaragua</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Farm</span><span class="mv">Santa Rita</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHG/EP · RFA Certified</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Sweet citrus · Caramel · Balanced</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">El Salvador Oro Lavado SHG/EP</div><div class="lot-ref">Ref CESAR-00F02132/B · El Salvador</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHG/EP</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed (Oro Lavado)</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">69 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Caramel · Brown sugar · Soft citrus</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     MEXICO + INDIA + PNG + VIETNAM
+══════════════════════════ -->
+<div class="page cards-page">
+  <div class="page-header">
+    <div class="ph-country">Mexico · India · PNG · Vietnam</div>
+    <div class="ph-brand">Cesar's Coffee Cup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Mexican Oaxaca SHG/EP</div><div class="lot-ref">Ref CESAR-00F02132/B · Mexico</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Region</span><span class="mv">Oaxaca</span></div>
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">SHG/EP</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">69 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Mild · Nutty · Light citrus · Clean</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Indian Arabica Plantation "B"</div><div class="lot-ref">Ref CESAR-00F02132/B · India</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Plantation "B"</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Earthy · Full body · Spice — classic espresso component</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">PNG Pea Berry</div><div class="lot-ref">Ref CESAR-00F02132/B · Papua New Guinea</div></div>
+        <span class="badge">Washed</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Type</span><span class="mv">Pea Berry</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Tropical fruit · Earthy · Sweet</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-bar world"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div><div class="variety">Vietnam Arabica Grade 1</div><div class="lot-ref">Ref CESAR-00F02132/B · Vietnam</div></div>
+        <span class="badge">Washed / Pulped</span>
+      </div>
+      <div class="meta">
+        <div class="meta-item"><span class="ml">Grade</span><span class="mv">Grade 1</span></div>
+        <div class="meta-item"><span class="ml">Process</span><span class="mv">Washed / Pulped (W/P)</span></div>
+        <div class="meta-item"><span class="ml">Stock</span><span class="mv">60 kg</span></div>
+      </div>
+      <div class="notes"><span class="dot">◆</span>Mild · Clean · Low acidity · Versatile blend component</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Stock Note</strong>
+    All stock quantities are current as of May 2026 and are subject to change. Some lots are limited availability. Contact us to confirm stock, discuss minimum quantities, and explore roasting options through our co-roasting service.
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     BACK COVER
+══════════════════════════ -->
+<div class="page back">
+  <div class="top-bar"></div>
+  <div class="back-ring back-ring-1"></div>
+  <div class="ring ring-2" style="top:auto;left:auto;bottom:-200px;right:-200px;transform:none;opacity:0.5;"></div>
+  <div class="back-heading">
+    Ready to Source<br>Your Green Beans?
+  </div>
+  <div class="back-text">
+    We supply specialty-grade green beans to cafés, roasters, and coffee businesses across Melbourne and Australia. Whether you need commercial volumes or rare single-farm lots — let's talk.
+  </div>
+  <div class="contact-box">
+    <div class="cb-label">Get in Touch</div>
+    <div class="cb-cta">Book a visit or send us a message</div>
+    <div class="cb-detail" style="margin-top:14px;">Melbourne, Victoria · Australia</div>
+    <div class="cb-detail">@cesarscoffeecup</div>
+  </div>
+  <div style="margin-bottom:12px;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);position:relative;z-index:2;">Also Ask About</div>
+  <div style="display:flex;gap:14px;margin-bottom:40px;position:relative;z-index:2;flex-wrap:wrap;justify-content:center;">
+    <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,221,200,0.55);border:1px solid rgba(232,221,200,0.18);padding:6px 14px;border-radius:2px;">Co-Roasting</div>
+    <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,221,200,0.55);border:1px solid rgba(232,221,200,0.18);padding:6px 14px;border-radius:2px;">Roaster Hire</div>
+    <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,221,200,0.55);border:1px solid rgba(232,221,200,0.18);padding:6px 14px;border-radius:2px;">Private Label</div>
+  </div>
+  <div class="back-brand">Cesar's Coffee Cup</div>
+</div>
+
+</body>
+</html>
