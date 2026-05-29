@@ -132,7 +132,7 @@
     <div class="h-10 flex  lg:gap-2 items-center text-xl sm:text-base md:text-xl lg:text-2xl sm:h-max md:h-12 lg:h-20">
         <img class="w-12 h-12 shrink-0 sm:h-12 sm:w-12 md:h-12 md:w-12 lg:h-20 lg:w-20"
             src="{{ asset('images/Cesars_Coffee_Cup_just_face.png') }}" alt="CesarsCoffeeCupLogo">
-        <p class="text-center font-bold">Cesar's Coffee Cup</p>
+        <p class="text-center font-bold sm:text-sm md:text-base lg:text-2xl">Cesar's Coffee Cup</p>
     </div>
 
     {{-- hidden in mobile  --- --}}
