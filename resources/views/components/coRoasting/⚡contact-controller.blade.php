@@ -43,7 +43,7 @@ new class extends Component {
 ?>
 
 <section class="p-5 md:flex md:items-end md:justify-center gap-10 lg:gap-20 lg:p-15">
-    <form class="bg-pastel flex flex-col h-full  shadow-md md:flex-row md:gap-10  rounded p-5 lg:p-10"
+    <form id="coRoastingForm" class="bg-pastel flex flex-col h-full  shadow-md md:flex-row md:gap-10  rounded p-5 lg:p-10"
         wire:submit.prevent="coRoastingSubmit">
         <div>
             @if ($errors->any())
@@ -56,11 +56,11 @@ new class extends Component {
 
             <div class="flex justify-between">
                 <p class=" text-primary mb-2">Ready to Roast?</p>
-               @if (session('success'))
+                @if (session('success'))
                     <p class="text-green-500 text-2xl">{{ session('success') }}</p>
                 @endif
             </div>
-            <h2 class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>
+            <h2  class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>
             <div class="flex w-full gap-5">
                 <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input wire:model="name"
                         required id="firstName" name="name"

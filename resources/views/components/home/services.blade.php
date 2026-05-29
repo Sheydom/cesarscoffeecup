@@ -18,7 +18,7 @@
             <button type="button" class="p-5 border rounded border-black bg-white text-primary text-center">HIRE A
                 ROASTER</button>
         </a>
-        <a href="{{ route('coRoasting') }}#sessionsPrice"
+        <a href="{{ route('coRoasting') }}#sessionsPrice" wire:navigate.hover
             class=" bg-pastel/60 border-2 border-primary flex flex-col justify-between text-white p-5  drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl  hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
             <div class="mb-5">
                 <div class=" flex justify-end ">
@@ -32,7 +32,7 @@
                 SESSION</button>
         </a>
 
-        <div
+        <a href="{{route('wholesale')}}" wire:navigation.hover
             class="bg-pastel/60 flex flex-col justify-between text-white p-5 drop-shadow shadow-md sm:mb-0 sm:p-10 sm:drop-shadow-xl border-transparent border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
             <div class="mb-5">
                 <div class=" flex justify-end ">
@@ -43,9 +43,8 @@
                     We supply premium green beans to roasters and coffee businesses — a wide variety of origins,
                     available all year round.</p>
             </div>
-            <button type="button" class="p-5 border rounded border-black bg-white text-primary text-center">HIRE A
-                ROASTER</button>
-        </div>
+            <button type="button" class="p-5 border rounded border-black bg-white text-primary text-center">WHOLESALE</button>
+        </a>
     </div>
 
 </section>

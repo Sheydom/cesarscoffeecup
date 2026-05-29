@@ -83,7 +83,7 @@
               
             </div> --}}
         <div class="sm:grid sm:gap-6 md:grid-cols-2 lg:grid-cols-[repeat(2,minmax(0,400px))] sm:justify-center  ">
-            <div
+            <a href="{{ route('coRoasting') }}#coRoastingForm"
                 class="relative bg-white border-bean flex flex-col  justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
                 <div class=" mb-5 flex flex-col h-full">
                     <span class="absolute -top-3 right-5 z-100 text-white bg-bean rounded px-2 text-sm">MOST POPULAR</span>
@@ -100,9 +100,9 @@
                             class="text-sm text-black/60">/
                             kg*</span></p>
                 </div>
-                <button class="border-2 p-2 rounded bg-bean border-bean text-white">Book Starter</button>
-            </div>
-            <div
+                <span  class="border-2 p-2 text-center rounded bg-bean border-bean text-white">Book Starter</span>
+            </a>
+            <a href="{{route('coRoasting')}}#coRoastingForm"
                 class=" bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0 sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu  hover:cursor-pointer transition duration-300 ease-in-out">
                 <div class=" mb-5 flex flex-col h-full">
                     <h2 class="text-3xl mb-5 font-bodoni font-bold  text-black">Basic Package</h2>
@@ -117,9 +117,9 @@
                             class="text-sm text-black/60">/
                             kg*</span></p>
                 </div>
-                <button class="border-2 p-2 rounded border-bean text-bean">Book Basic</button>
-            </div>
-            <div
+                <span class="text-center border-2 p-2 rounded border-bean text-bean">Book Basic</span>
+            </a>
+            <a href="{{route('coRoasting')}}#coRoastingForm"
                 class="bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0  sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu hover:cursor-pointer transition duration-300 ease-in-out">
                 <div class="mb-5 flex flex-col h-full">
                     <h2 class="text-3xl mb-5 font-bodoni font-bold text-black">
@@ -140,11 +140,11 @@
                         <span class="text-sm text-black/60">/ kg*</span>
                     </p>
                 </div>
-                <button class="border-2 p-2 rounded border-bean text-bean">
+                <span class="text-center border-2 p-2 rounded border-bean text-bean">
                     Book Standard
-                </button>
-            </div>
-            <div
+                </span>
+            </a>
+            <a href="{{'coRoasting'}}#coRoastingForm"
                 class="bg-white border-transparent flex flex-col justify-between text-white p-5 mb-10 drop-shadow shadow-md sm:mb-0  sm:drop-shadow-xl border-2 hover:border-2 hover:border-coffeDark hover:-translate-y-2 hover:scale-105 transform-gpu hover:cursor-pointer transition duration-300 ease-in-out">
                 <div class="mb-5 flex flex-col h-full">
                     <h2 class="text-3xl mb-5 font-bodoni font-bold text-black">
@@ -166,10 +166,10 @@
                         <span class="text-sm text-black/60">/ kg*</span>
                     </p>
                 </div>
-                <button class="border-2 p-2 rounded border-bean text-bean">
+                <span class="text-center border-2 p-2 rounded border-bean text-bean">
                     Book Premium
-                </button>
-            </div>
+                </span>
+            </a>
             <p class="col-span-2 text-gray-300 text-sm">*Package pricing may vary on green coffee bean selection, origin, availibility and batch volume. Larger batch orders may be eligible for better procing.</p>
         </div>
         
