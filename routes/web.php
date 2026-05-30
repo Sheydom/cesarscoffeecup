@@ -29,8 +29,7 @@ Route::prefix('legal')->group(function () {
 
 // auth -> group function only guests can acces these sites to login or register
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisterUserController::class, 'create'])->name('register');
-    Route::post('register', [RegisterUserController::class, 'store'])->name('register.store');
+    Route::view('register', 'register')->name('register');
     Route::get('login', [SessionsController::class, 'create'])->name('login');
     Route::post('login', [SessionsController::class, 'store'])->name('login.store');
 });
