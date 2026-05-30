@@ -7,6 +7,7 @@ use App\Http\Controllers\User\UserSettingsController;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;
 
+
 // core-views
 
 Route::view('/', 'welcome')->name('home');
@@ -39,12 +40,7 @@ Route::middleware('auth')->group(function () {
 });
 
 // user-settings -  middleware to redirect non authenticated user to loginpage
-Route::middleware('auth')->group(function () {
-    Route::get('settings', [UserSettingsController::class, 'create'])->name('settings');
-    Route::put('settings', [UserSettingsController::class, 'update'])->name('settings.update');
-    Route::delete('settings', [UserSettingsController::class, 'destroy'])->name('settings.delete');
-
-});
+Route::view('settings','settings')->middleware('auth')->name('settings');
 
 //-----------------------------
 
