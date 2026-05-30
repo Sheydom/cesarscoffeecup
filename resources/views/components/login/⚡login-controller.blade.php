@@ -16,7 +16,7 @@ new class extends Component
 
         if (Auth::attempt($validated)) {
             session()->regenerate();
-            return redirect('/')->with('success', 'You are now logged in');
+            return redirect('/');
         }
         $this->addError('email','The provided credentials do not match our records.');
     }
