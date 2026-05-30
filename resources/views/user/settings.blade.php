@@ -81,13 +81,19 @@
                 {{-- Right side: update form --}}
                 <div class="bg-white rounded-2xl shadow-sm border border-black/10 p-6 md:p-8">
 
-                    <div class="mb-8">
-                        <h2 class="text-2xl font-semibold text-black">
-                            Edit Personal Details
-                        </h2>
-                        <p class="text-sm text-neutral-500 mt-1">
-                            Change your details below and save your updates.
-                        </p>
+                    <div class="mb-8 flex text-xl justify-between">
+                        <div class="">
+                            <h2 class="text-2xl font-semibold text-black">
+                                Edit Personal Details
+                            </h2>
+                            <p class="text-sm text-neutral-500 mt-1">
+                                Change your details below and save your updates.
+                            </p>
+                            
+                        </div>
+                        <div>@if (session('success'))
+                            <p class="text-green-500">{{session('success')}}</p>
+                        @endif</div>
                     </div>
 
                     <form action="{{ route('settings.update') }}" method="POST"
