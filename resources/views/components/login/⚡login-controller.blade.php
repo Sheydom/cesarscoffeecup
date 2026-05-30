@@ -1,7 +1,34 @@
-<x-layouts.app>
-    <form method="POST" action="{{ route('login') }}"
+<?php
+
+use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+
+new class extends Component
+{
+    public $email;
+    public $password;
+
+    public function login(){
+        $validated= $this->validate([
+            'email' => ['required', 'email', 'max:255'],
+            'password'=>['required','min:3']
+        ]);
+
+        if (Auth::attempt($validated)) {
+            session()->regenerate();
+            return redirect('/')->with('success', 'You are now logged in');
+        }
+        $this->addError('email','The provided credentials do not match our records.');
+    }
+
+    
+};
+?>
+
+
+    <form wire:submit.prevent="login"
         class="max-w-4xl w-md sm:w-xl md:w-2xl lg:w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8">
-        @csrf
+       
 
         <div>
             <h2 class="text-3xl font-bold text-black mb-2">LogIn</h2>
@@ -15,7 +42,7 @@
                 <label for="email" class="block text-sm font-medium text-black mb-2">
                     Email <span class="text-red-500">*</span>
                 </label>
-                <input id="email" name="email" type="email" required
+                <input id="email" name="email" type="email" wire:model="email" required
                     class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                     placeholder="you@example.com">
                 @error('email')
@@ -26,7 +53,7 @@
                 <label for="password" class="block text-sm font-medium text-black mb-2">
                     Password <span class="text-red-500">*</span>
                 </label>
-                <input id="password" name="password" type="password" required
+                <input id="password" name="password" type="password" wire:model="password" required
                     class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                     placeholder="Create a password">
                 @error('password')
@@ -46,4 +73,3 @@
             </a>
         </div>
     </form>
-</x-layouts.app>

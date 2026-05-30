@@ -22,7 +22,7 @@ class SessionsController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        return view('login');
     }
 
     /**
@@ -31,16 +31,16 @@ class SessionsController extends Controller
     public function store(Request $request)
     {
         // validate
-        $validated = $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'min:3'],
-        ]);
-        // attempt login
-        // redirect
-        if (Auth::attempt($validated)) {
-            return redirect('/')->with('succes', 'You are now logged in');
-        }
-        return back()->withErrors(['email'=>'The provided credentials do not match our records.']);
+        // $validated = $request->validate([
+        //     'email' => ['required', 'string', 'email', 'max:255'],
+        //     'password' => ['required', 'min:3'],
+        // ]);
+        // // attempt login
+        // // redirect
+        // if (Auth::attempt($validated)) {
+        //     return redirect('/')->with('succes', 'You are now logged in');
+        // }
+        // return back()->withErrors(['email'=>'The provided credentials do not match our records.']);
     }
 
     /**
