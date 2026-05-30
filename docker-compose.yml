@@ -16,9 +16,9 @@ services:
     restart: unless-stopped
     command: php artisan queue:work --sleep=3 --tries=3 --timeout=90
     volumes:
-    - .:/var/www
+      - .:/var/www
     networks:
-    - caddy_net
+      - caddy_net
 
 
 networks:
