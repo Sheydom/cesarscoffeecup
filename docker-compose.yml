@@ -3,10 +3,8 @@ services:
     build: .
     container_name: cesarscoffeecup
     restart: unless-stopped
-
     volumes:
       - .:/var/www
-
     networks:
       - caddy_net
 
@@ -19,7 +17,6 @@ services:
     command: php artisan queue:work --sleep=3 --tries=3 --timeout=90
     volumes:
     - .:/var/www
-
     networks:
     - caddy_net
 
