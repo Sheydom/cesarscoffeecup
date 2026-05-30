@@ -32,9 +32,26 @@ services:
     networks:
       - cesar_net
 
+  db:
+    image: mysql:8.4
+    container_name: cesarscoffeecup_db
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      MYSQL_DATABASE: cesarscoffeecup
+      MYSQL_USER: cesar_user
+      MYSQL_PASSWORD: Kakibaum66!!
+      MYSQL_ROOT_PASSWORD: Kakibaum66!!
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - cesar_net    
+
 networks:
   cesar_net:
 
 volumes:
   caddy_data:
   caddy_config:
+  db_data:
