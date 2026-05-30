@@ -23,8 +23,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
+        
     {   //temporary disabled for caddy certificate 
-        // $this->configureDefaults();
+        $this->configureDefaults();
         // if (app()->isProduction()) {
         //     URL::forceScheme('https');
         // }
