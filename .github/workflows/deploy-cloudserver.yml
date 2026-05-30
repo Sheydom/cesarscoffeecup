@@ -1,0 +1,25 @@
+name: Deploy to cloudserver
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, cesar-cloudserver]
+
+    steps:
+      - name: Deploy app on cloudserver
+
+        run: |
+
+          cd /opt/docker-sites/cesarscoffeecup
+          git pull origin main
+          npm install
+          npm run build
+          docker compose up -d --build
+          docker compose exec -T app php artisan migrate --force
+          docker compose exec -T app php artisan optimize
+          docker compose restart
+          
