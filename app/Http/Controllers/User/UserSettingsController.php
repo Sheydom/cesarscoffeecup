@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class UserSettingsController extends Controller
 {
@@ -50,7 +51,9 @@ class UserSettingsController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request)
-    {
+    {  
+        $user = $request->user();
+
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
 
@@ -59,7 +62,8 @@ class UserSettingsController extends Controller
 
             'phone' => 'nullable|string|max:255',
 
-            'email' => 'required|email|unique:users,email|max:255',
+            'email' => ['required','email','max:255',
+                        Rule::unique('users','email')->ignore($user->id)],
 
             'street_address' => 'nullable|string|max:255',
 
@@ -72,11 +76,11 @@ class UserSettingsController extends Controller
             'country' => 'nullable|string|max:255',
 
         ]);
-        $user = User::findOrFail(Auth::id());
+        
 
         $user->update($validated);
 
-        return redirect()->back()->with('succes', 'Profile updated succesfully');
+        return redirect()->back()->with('success', 'Profile updated succesfully');
     }
 
     /**

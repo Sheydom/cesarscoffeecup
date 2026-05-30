@@ -1,0 +1,7 @@
+:80 {
+    root * /var/www/public
+    encode gzip
+
+    php_fastcgi app:9000
+    file_server
+}

@@ -1,26 +1,40 @@
 services:
-  cesarscoffeecup:
+  app:
     build: .
-    container_name: cesarscoffeecup
-    restart: unless-stopped
+    container_name: cesarscoffeecup_app
     volumes:
       - .:/var/www
     networks:
-      - caddy_net
+      - cesar_net
 
-
+  web:
+    image: caddy:2
+    container_name: cesarscoffeecup_caddy
+    ports:
+      - "127.0.0.1:9002:80"
+    volumes:
+      - .:/var/www
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - cesar_net
 
   queue:
     build: .
-    container_name: cesarscoffeecup-queue
+    container_name: cesarscoffeecup_queue
     restart: unless-stopped
     command: php artisan queue:work --sleep=3 --tries=3 --timeout=90
     volumes:
       - .:/var/www
     networks:
-      - caddy_net
-
+      - cesar_net
 
 networks:
-  caddy_net:
-    external: true
+  cesar_net:
+
+volumes:
+  caddy_data:
+  caddy_config:

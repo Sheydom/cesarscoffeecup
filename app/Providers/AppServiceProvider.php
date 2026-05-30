@@ -26,9 +26,9 @@ class AppServiceProvider extends ServiceProvider
         
     {   //temporary disabled for caddy certificate 
         $this->configureDefaults();
-        // if (app()->isProduction()) {
-        //     URL::forceScheme('https');
-        // }
+         if (app()->isProduction()) {
+             URL::forceScheme('https');
+         }
     }
 
     /**
