@@ -2,6 +2,7 @@ services:
   app:
     build: .
     container_name: cesarscoffeecup_app
+    restart: unless-stopped
     volumes:
       - .:/var/www
     networks:
@@ -10,6 +11,7 @@ services:
   web:
     image: caddy:2
     container_name: cesarscoffeecup_caddy
+    restart: unless-stopped
     ports:
       - "127.0.0.1:9002:80"
     volumes:
