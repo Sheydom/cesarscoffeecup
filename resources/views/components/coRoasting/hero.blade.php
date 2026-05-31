@@ -1,7 +1,7 @@
 <section id="hero" class="relative overflow-hidden bg-primary p-5">
 
     <img class=" sm:absolute inset-0 h-full w-full object-cover object-bottom  rounded"
-        src="{{ asset('images/coRoasting/roaster.jpg') }}" alt="coffee roasting facility">
+        src="{{ asset('images/coRoasting/loringMachines.jpg') }}" alt="coffee roasting facility">
 
     <div
         class="absolute inset-0 sm:bg-linear-to-r sm:from-primary/80 sm:via-primary/60 sm:to-transparent">
