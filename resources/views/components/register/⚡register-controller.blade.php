@@ -28,20 +28,23 @@ new class extends Component {
     public $state;
 
     public $country;
+    //honeypot input
+    public $website;
 
     public function register()
     {
         $validated = $this->validate([
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'unique:users,email'],
+            'honeypot' => 'nullable|max:0'
+            'first_name' => ['required', 'string', 'max:100','min:2'],
+            'last_name' => ['required', 'string', 'max:100','min:2'],
+            'email' => ['required', 'email:rfc,dns', 'unique:users,email'],
             'phone' => ['required', 'string', 'max:30'],
-            'company_name' => ['required', 'string', 'max:255'],
-            'business_name' => ['required', 'string', 'max:255'],
-            'tax_number' => ['required', 'string', 'max:255', 'unique:users,tax_number'],
-            'street_address' => ['required', 'string', 'max:255'],
+            'company_name' => ['required', 'string', 'max:100','min:2'],
+            'business_name' => ['required', 'string', 'max:100','min:2'],
+            'tax_number' => ['required', 'string', 'max:100', 'unique:users,tax_number'],
+            'street_address' => ['required', 'string', 'max:100'],
             'state' => ['required', 'string', 'max:30'],
-            'city' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:100'],
             'postal_code' => ['required', 'string', 'max:30'],
             'country' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Password::default()->mixedCase()->numbers()->symbols()],
@@ -74,15 +77,20 @@ new class extends Component {
             Please enter your details.
         </p>
     </div>
-
+    {{-- //honeypot div --}}
     <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
+        <div class="absolute -left-[9999px]" aria-hidden="true">
 
+            <label for="website">Website</label>
+
+            <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
+
+        </div>
         <div>
             <label for="first_name" class="block text-sm font-medium text-black mb-2">
                 First name <span class="text-red-500">*</span>
             </label>
-            <input  id="first_name" name="first_name" wire:model="first_name"
-                type="text" required
+            <input id="first_name" name="first_name" wire:model="first_name" type="text" required
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Your first name">
             @error('first_name')
@@ -94,8 +102,7 @@ new class extends Component {
             <label for="last_name" class="block text-sm font-medium text-black mb-2">
                 Last name <span class="text-red-500">*</span>
             </label>
-            <input  id="last_name" name="last_name" wire:model="last_name" type="text"
-                required
+            <input id="last_name" name="last_name" wire:model="last_name" type="text" required
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Your last name">
             @error('last_name')
@@ -107,7 +114,7 @@ new class extends Component {
             <label for="email" class="block text-sm font-medium text-black mb-2">
                 Email <span class="text-red-500">*</span>
             </label>
-            <input  id="email" name="email" type="email" wire:model="email" required
+            <input id="email" name="email" type="email" wire:model="email" required
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="you@example.com">
             @error('email')
@@ -119,7 +126,7 @@ new class extends Component {
             <label for="phone" class="block text-sm font-medium text-black mb-2">
                 Phone number <span class="text-red-500">*</span>
             </label>
-            <input  id="phone" name="phone" wire:model="phone" type="tel"
+            <input id="phone" name="phone" wire:model="phone" type="tel"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="+61 400 000 000">
             @error('phone')
@@ -131,8 +138,7 @@ new class extends Component {
             <label for="company_name" class="block text-sm font-medium text-black mb-2">
                 Company name <span class="text-red-500">*</span>
             </label>
-            <input  id="company_name"
-                wire:model="company_name" name="company_name" type="text" required
+            <input id="company_name" wire:model="company_name" name="company_name" type="text" required
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Company Pty Ltd">
             @error('company_name')
@@ -144,8 +150,7 @@ new class extends Component {
             <label for="business_name" class="block text-sm font-medium text-black mb-2">
                 Business name <span class="text-red-500">*</span>
             </label>
-            <input  id="business_name" name="business_name" type="text"
-                wire:model="business_name"
+            <input id="business_name" name="business_name" type="text" wire:model="business_name"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Trading name">
             @error('business_name')
@@ -157,8 +162,7 @@ new class extends Component {
             <label for="tax_number" class="block text-sm font-medium text-black mb-2">
                 ABN, VAT, EIN, etc <span class="text-red-500">*</span>
             </label>
-            <input  id="tax_number" name="tax_number" type="text"
-                wire:model="tax_number"
+            <input id="tax_number" name="tax_number" type="text" wire:model="tax_number"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="ABN / VAT / EIN number">
             @error('tax_number')
@@ -170,8 +174,7 @@ new class extends Component {
             <label for="street_address" class="block text-sm font-medium text-black mb-2">
                 Street address <span class="text-red-500">*</span>
             </label>
-            <input  id="street_address" name="street_address"
-                wire:model="street_address" type="text"
+            <input id="street_address" name="street_address" wire:model="street_address" type="text"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Street address">
             @error('street_address')
@@ -185,7 +188,7 @@ new class extends Component {
             <label for="city" class="block text-sm font-medium text-black mb-2">
                 City <span class="text-red-500">*</span>
             </label>
-            <input  id="city" name="city" type="text" wire:model="city"
+            <input id="city" name="city" type="text" wire:model="city"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Melbourne">
             @error('city')
@@ -197,8 +200,7 @@ new class extends Component {
             <label for="postal_code" class="block text-sm font-medium text-black mb-2">
                 Zip / Postal code <span class="text-red-500">*</span>
             </label>
-            <input  id="postal_code" name="postal_code" type="text"
-                wire:model="postal_code"
+            <input id="postal_code" name="postal_code" type="text" wire:model="postal_code"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="3000">
             @error('postal_code')
@@ -232,7 +234,7 @@ new class extends Component {
             <label for="country" class="block text-sm font-medium text-black mb-2">
                 Country <span class="text-red-500">*</span>
             </label>
-            <input  id="country" name="country" wire:model="country" type="text"
+            <input id="country" name="country" wire:model="country" type="text"
                 class="w-full rounded-lg border border-neutral-300 bg-white px-2 py-2 sm:px-4 sm:py-3 text-sm outline-none focus:border-black focus:ring-2 focus:ring-black/10"
                 placeholder="Australia">
             @error('country')
