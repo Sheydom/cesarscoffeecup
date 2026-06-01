@@ -29,12 +29,12 @@ new class extends Component {
 
     public $country;
     //honeypot input
-    public $website;
+    public $website = '';
 
     public function register()
     {
         $validated = $this->validate([
-            'honeypot' => 'nullable|max:0',
+            'website' => 'nullable|max:0',
             'first_name' => ['required', 'string', 'max:100','min:2'],
             'last_name' => ['required', 'string', 'max:100','min:2'],
             'email' => ['required', 'email:rfc,dns', 'unique:users,email'],
