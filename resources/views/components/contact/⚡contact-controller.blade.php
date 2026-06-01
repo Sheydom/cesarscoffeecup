@@ -103,39 +103,39 @@ new class extends Component {
 
             <div class="flex flex-col">
                 <label for="firstName">First Name</label>
-                <input id="firstName" name="name" wire:model="name"
+                <input id="firstName" name="name" wire:model="name" required
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Julian">
             </div>
 
             <div class="flex flex-col">
                 <label for="lastName">Last Name</label>
-                <input id="lastName" name="lastName" wire:model="lastName"
+                <input id="lastName" name="lastName" wire:model="lastName" required
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
             </div>
 
             <div class="flex flex-col md:col-span-2">
                 <label for="businessName">Business Name</label>
-                <input id="businessName" name="businessName" wire:model="businessName"
+                <input id="businessName" name="businessName" required wire:model="businessName"
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
                     placeholder="Smith's Coffee">
             </div>
 
             <div class="flex flex-col">
                 <label for="email">Email Address</label>
-                <input id="email" name="email" wire:model="email"
+                <input id="email" name="email" wire:model="email" required
                     class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
                     placeholder="Julian.Smith@gmail.com">
             </div>
 
             <div class="flex flex-col">
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" wire:model="phone"
+                <input id="phone" name="phone" wire:model="phone" required
                     class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223">
             </div>
 
             <div class="flex flex-col md:col-span-2">
                 <label for="typeOf">Type of enquiry</label>
-                <select id="typeOf" name="typeOf" wire:model="typeOf"
+                <select id="typeOf" name="typeOf" wire:model="typeOf" required
                     class="p-2.5 bg-neutral border-b-2 rounded border-black">
                     <option value="" disabled selected>Please Select</option>
                     <option value="Co-Roasting">Co-Roasting</option>
