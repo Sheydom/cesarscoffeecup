@@ -2,6 +2,7 @@
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
 
 new class extends Component {
     public $email;
@@ -9,6 +10,15 @@ new class extends Component {
 
     public function login()
     {
+        $key = 'login-form:' . request()->ip();
+        if (RateLimiter::tooManyAttempts($key, 3)) {
+            $this->addError('spam', 'Too many submissions. Please wait 1 minute.');
+
+            return;
+        }
+
+        RateLimiter::hit($key, 60);
+
         $validated = $this->validate([
             'email' => ['required', 'email'],
             'password' => ['required', 'min:3'],
@@ -45,6 +55,9 @@ new class extends Component {
                 placeholder="you@example.com">
             @error('email')
                 <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
+            @enderror
+            @error('spam')
+                <p class="text-red-500">{{ $message }}</p>
             @enderror
         </div>
         <div>
