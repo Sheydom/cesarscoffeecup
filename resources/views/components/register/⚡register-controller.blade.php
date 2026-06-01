@@ -79,7 +79,7 @@ new class extends Component {
     </div>
     {{-- //honeypot div --}}
     <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
-        <div class="absolute -left-[9999px]" aria-hidden="true">
+        <div class="absolute hidden" aria-hidden="true">
 
             <label for="website">Website</label>
 
