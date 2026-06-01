@@ -77,15 +77,7 @@ new class extends Component {
             Please enter your details.
         </p>
     </div>
-    {{-- //honeypot div --}}
-    <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
-        <div class="hidden" aria-hidden="true">
-
-            <label for="website">Website</label>
-
-            <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
-
-        </div>
+    
         <div>
             <label for="first_name" class="block text-sm font-medium text-black mb-2">
                 First name <span class="text-red-500">*</span>
@@ -271,4 +263,13 @@ new class extends Component {
             Create Account
         </button>
     </div>
+    {{-- //honeypot div --}}
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
+        <div class="absolute hidden" aria-hidden="true">
+
+            <label for="website">Website</label>
+
+            <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
+
+        </div>
 </form>

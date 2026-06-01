@@ -64,14 +64,15 @@ new class extends Component {
                 @endif
             </div>
             {{-- //honeypot div --}}
+            <div class="absolute hidden" aria-hidden="true">
+
+                <label for="website">Website</label>
+
+                <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
+
+            </div>
             <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
-                <div class=" hidden" aria-hidden="true">
 
-                    <label for="website">Website</label>
-
-                    <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
-
-                </div>
                 <h2 class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>
                 <div class="flex w-full gap-5">
                     <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input
