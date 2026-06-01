@@ -21,7 +21,7 @@ new class extends Component {
             'name' => 'required|string|min:2|max:100',
             'lastName' => 'required|string|min:2|max:100',
             'businessName' => 'required|string|min:2|max:100',
-            'email' => 'require|email:rfc,dns|max:255',
+            'email' => 'required|email:rfc,dns|max:255',
             'phone' => 'required|string|max:30',
             'typeOf' => 'required|string',
             'message' => 'required|string|max:5000',
@@ -68,51 +68,60 @@ new class extends Component {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3517643218615!2d144.86003537676578!3d-37.85205893622908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66148018d3543%3A0xe873e59dd7c65e0d!2s19%20Churchill%20St%2C%20Williamstown%20North%20VIC%203016!5e0!3m2!1sen!2sau!4v1777770937450!5m2!1sen!2sau"
                 style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-    <form class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10" wire:submit.prevent="contactSubmit">
+    <form class="bg-pastel/60 flex flex-col h-full shadow-md rounded p-5 lg:p-10" wire:submit.prevent="contactSubmit">
+
         @if ($errors->any())
             @foreach ($errors->all() as $error)
                 <p class="text-red-500">{{ $error }}</p>
             @endforeach
-
         @endif
+
         @if (session('success'))
             <p class="text-green-500 text-2xl">{{ session('success') }}</p>
         @endif
-        {{-- //honeypot div --}}
-        <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
-            <div class="absolute -left-[9999px]" aria-hidden="true">
 
-                <label for="website">Website</label>
+        {{-- honeypot --}}
+        <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off" class="hidden"
+            aria-hidden="true">
 
-                <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+            <div class="flex flex-col">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="name" wire:model="name"
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Julian">
             </div>
-            <div class="flex w-full gap-5">
-                <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input id="firstName"
-                        class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text" name="name"
-                        wire:model="name" placeholder="Julian">
-                </div>
-                <div class="flex w-full flex-col mb-5"><label for="lastName">Last Name</label><input id="lastName"
-                        wire:model="lastName" class="p-2.5 w-full bg-neutral border-b-2 rounded border-black"
-                        type="text" placeholder="Smith">
-                </div>
+
+            <div class="flex flex-col">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" wire:model="lastName"
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
             </div>
-            <div class="flex w-full flex-col mb-5"><label for="businessName">Business Name</label><input
-                    id="businessName" wire:model="businessName"
+
+            <div class="flex flex-col md:col-span-2">
+                <label for="businessName">Business Name</label>
+                <input id="businessName" name="businessName" wire:model="businessName"
                     class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
                     placeholder="Smith's Coffee">
             </div>
-            <div class="flex flex-col mb-5"><label for="email">Email Address</label><input id="email"
-                    wire:model="email" name="email" class="p-2.5 bg-neutral border-b-2 rounded border-black"
-                    type="email" placeholder="Julian.Smith@gmail.com">
+
+            <div class="flex flex-col">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" wire:model="email"
+                    class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
+                    placeholder="Julian.Smith@gmail.com">
             </div>
-            <div class="flex flex-col mb-5"><label for="phone">Phone</label><input id="phone" wire:model="phone"
-                    name="phone" class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel"
-                    placeholder="+61416323223">
+
+            <div class="flex flex-col">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" wire:model="phone"
+                    class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223">
             </div>
-            <div class="flex flex-col mb-5"><label for="typeOf">Type of enquiry</label><select id="typeOf"
-                    wire:model="typeOf" name="typeOf" class="p-2.5 bg-neutral border-b-2 rounded border-black"
-                    type="select" placeholder="e.g Julian Smith">
+
+            <div class="flex flex-col md:col-span-2">
+                <label for="typeOf">Type of enquiry</label>
+                <select id="typeOf" name="typeOf" wire:model="typeOf"
+                    class="p-2.5 bg-neutral border-b-2 rounded border-black">
                     <option value="" disabled selected>Please Select</option>
                     <option value="Co-Roasting">Co-Roasting</option>
                     <option value="Roaster Hire">Roaster Hire</option>
@@ -121,13 +130,19 @@ new class extends Component {
                     <option value="Private label">Private label</option>
                     <option value="Facility Visit">Facility Visit</option>
                     <option value="Other">Other</option>
-                </select></div>
-            <div class="flex flex-col mb-"><label for="message">Your Message</label>
-                <textarea id="message" name="message" wire:model="message"
-                    class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
-                    placeholder="Type here..."></textarea>
-                <x-ui.buttonSolid class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
+                </select>
             </div>
+
+            <div class="flex flex-col md:col-span-2">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" wire:model="message"
+                    class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" placeholder="Type here..."></textarea>
+
+                <x-ui.buttonSolid type="submit" class="text-white">
+                    SUBMIT REQUEST
+                </x-ui.buttonSolid>
+            </div>
+
         </div>
     </form>
 </section>
