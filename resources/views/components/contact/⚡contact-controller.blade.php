@@ -12,17 +12,20 @@ new class extends Component {
     public $phone = '';
     public $typeOf = '';
     public $message = '';
+    //honeypot input
+    public $website = '';
 
     public function contactSubmit()
     {
         $data = $this->validate([
-            'name' => 'required|string',
-            'lastName' => 'required|string',
-            'businessName' => 'required|string',
-            'email' => 'required|email|string',
+            'name' => 'required|string|min:2|max:100',
+            'lastName' => 'required|string|min:2|max:100',
+            'businessName' => 'required|string|min:2|max:100',
+            'email' => 'require|email:rfc,dns|max:255',
             'phone' => 'required|string|max:30',
             'typeOf' => 'required|string',
             'message' => 'required|string|max:5000',
+            'website' => 'nullable|max:0',
         ]);
 
         Mail::to('info@cesarscoffeecup.com')->send(new ContactFormMail($data));
@@ -75,28 +78,36 @@ new class extends Component {
         @if (session('success'))
             <p class="text-green-500 text-2xl">{{ session('success') }}</p>
         @endif
+        //honeypot safety
+        <div class="hidden">
+            <label for="website">Website</label><input id="website" type="text" wire:model="website"
+                autocomplete="off">
+        </div>
         <div class="flex w-full gap-5">
             <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input id="firstName"
-                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text" name="name" wire:model="name"
-                    placeholder="Julian">
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text" name="name"
+                    wire:model="name" placeholder="Julian">
             </div>
-            <div class="flex w-full flex-col mb-5"><label for="lastName">Last Name</label><input id="lastName" wire:model="lastName"
-                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
+            <div class="flex w-full flex-col mb-5"><label for="lastName">Last Name</label><input id="lastName"
+                    wire:model="lastName" class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
+                    placeholder="Smith">
             </div>
         </div>
-        <div class="flex w-full flex-col mb-5"><label for="businessName">Business Name</label><input id="businessName" wire:model="businessName"
-                class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
+        <div class="flex w-full flex-col mb-5"><label for="businessName">Business Name</label><input id="businessName"
+                wire:model="businessName" class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
                 placeholder="Smith's Coffee">
         </div>
-        <div class="flex flex-col mb-5"><label for="email">Email Address</label><input id="email" wire:model="email" name="email"
-                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
-                placeholder="Julian.Smith@gmail.com">
+        <div class="flex flex-col mb-5"><label for="email">Email Address</label><input id="email"
+                wire:model="email" name="email" class="p-2.5 bg-neutral border-b-2 rounded border-black"
+                type="email" placeholder="Julian.Smith@gmail.com">
         </div>
-        <div class="flex flex-col mb-5"><label for="phone">Phone</label><input id="phone" wire:model="phone" name="phone"
-                 class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223">
+        <div class="flex flex-col mb-5"><label for="phone">Phone</label><input id="phone" wire:model="phone"
+                name="phone" class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel"
+                placeholder="+61416323223">
         </div>
-        <div class="flex flex-col mb-5"><label for="typeOf">Type of enquiry</label><select id="typeOf" wire:model="typeOf" name="typeOf"
-                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
+        <div class="flex flex-col mb-5"><label for="typeOf">Type of enquiry</label><select id="typeOf"
+                wire:model="typeOf" name="typeOf" class="p-2.5 bg-neutral border-b-2 rounded border-black"
+                type="select" placeholder="e.g Julian Smith">
                 <option value="" disabled selected>Please Select</option>
                 <option value="Co-Roasting">Co-Roasting</option>
                 <option value="Roaster Hire">Roaster Hire</option>
@@ -107,7 +118,8 @@ new class extends Component {
                 <option value="Other">Other</option>
             </select></div>
         <div class="flex flex-col mb-"><label for="message">Your Message</label>
-            <textarea id="message" name="message" wire:model="message" class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
+            <textarea id="message" name="message" wire:model="message"
+                class="resize-none mb-5 p-2.5 bg-neutral border-b-2 rounded border-black" rows="5" cols="40"
                 placeholder="Type here..."></textarea>
             <x-ui.buttonSolid class=" text-white">SUBMIT REQUEST</x-ui.buttonSolid>
         </div>

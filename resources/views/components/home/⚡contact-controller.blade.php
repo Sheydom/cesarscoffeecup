@@ -4,32 +4,30 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
 
-new class extends Component
-{
+new class extends Component {
     public $name = '';
     public $lastName = '';
     public $email = '';
     public $phone = '';
     public $typeOf = '';
     public $message = '';
+    public $website = '';
 
-    
     public function homeSubmit()
     {
-        $data=$this->validate([
-
-            'name'=>'required|string',
-            'lastName'=>'required|string',
-            'email'=>'required|email|string',
-            'phone'=>'required|string|max:30',
-            'typeOf'=>'required|string',
-            'message'=>'required|string|max:5000',
-
+        $data = $this->validate([
+            'name' => 'required|string',
+            'lastName' => 'required|string',
+            'email' => 'required|email|string',
+            'phone' => 'required|string|max:30',
+            'typeOf' => 'required|string',
+            'message' => 'required|string|max:5000',
+            'website' => 'nullable|max:0',
         ]);
 
         Mail::to('info@cesarscoffeecup.com')->send(new ContactFormMail($data));
         $this->reset();
-        session()->flash('success','Message sent!');
+        session()->flash('success', 'Message sent!');
     }
 };
 ?>
@@ -40,7 +38,8 @@ new class extends Component
         <div class="flex flex-col mb-10">
             <h2 id="homeContactForm" class="text-4xl text-primary font-bodoni italic mb-10 md:text-5xl lg:text-7xl">Come
                 and see for yourself</h2>
-            <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility.<br> Let's discuss your vision
+            <p class=" text-sms text-coffeDark font-medium">Join us at our Melbourne facility.<br> Let's discuss your
+                vision
                 over a fresh brewand walk through how we can bring your brand to life.</p>
         </div>
         <div class="flex gap-5 items-start">
@@ -72,40 +71,48 @@ new class extends Component
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3517643218615!2d144.86003537676578!3d-37.85205893622908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66148018d3543%3A0xe873e59dd7c65e0d!2s19%20Churchill%20St%2C%20Williamstown%20North%20VIC%203016!5e0!3m2!1sen!2sau!4v1777770937450!5m2!1sen!2sau"
                 style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-   
+
     <form wire:submit.prevent="homeSubmit" id="homeForm"
         class="bg-pastel/60 flex flex-col h-full  shadow-md  rounded p-5 lg:p-10 self-bottom">
         @csrf
         @if (session('success'))
-            <p class="text-green-500 text-2xl">{{session('success')}}</p>
+            <p class="text-green-500 text-2xl">{{ session('success') }}</p>
         @endif
         @if ($errors->any())
-        <ul>
-            @foreach ($errors->all() as $error )
-                <p class="text-red-500">{{$error}}</p>
-            @endforeach
-        </ul>
-            
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <p class="text-red-500">{{ $error }}</p>
+                @endforeach
+            </ul>
+
         @endif
+        //honeypot safety
+        <div class="hidden">
+            <label for="website">Website</label><input id="website" type="text" wire:model="website"
+                autocomplete="off">
+        </div>
         <div class="flex w-full gap-5">
-            <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input id="firstName" name="name" wire:model="name"
-                    required class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text"
+            <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input id="firstName"
+                    name="name" wire:model="name" required
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black " type="text"
                     placeholder="Julian">
             </div>
-            <div class="flex w-full flex-col mb-5"><label for="lastName">Last Name</label><input id="lastName" wire:model="lastName" name="lastName"
-                    required class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text"
-                    placeholder="Smith">
+            <div class="flex w-full flex-col mb-5"><label for="lastName">Last Name</label><input id="lastName"
+                    wire:model="lastName" name="lastName" required
+                    class="p-2.5 w-full bg-neutral border-b-2 rounded border-black" type="text" placeholder="Smith">
             </div>
         </div>
-        <div class="flex flex-col mb-5"><label for="email">Email Address</label><input id="email" name="email" wire:model="email" required
-                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
+        <div class="flex flex-col mb-5"><label for="email">Email Address</label><input id="email" name="email"
+                wire:model="email" required class="p-2.5 bg-neutral border-b-2 rounded border-black" type="email"
                 placeholder="Julian.Smith@gmail.com">
         </div>
-        <div class="flex flex-col mb-5"><label for="phone">Phone</label><input name="phone" id="phone" wire:model="phone"
-                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel" placeholder="+61416323223">
+        <div class="flex flex-col mb-5"><label for="phone">Phone</label><input name="phone" id="phone"
+                wire:model="phone" class="p-2.5 bg-neutral border-b-2 rounded border-black" type="tel"
+                placeholder="+61416323223">
         </div>
-        <div class="flex flex-col mb-5"><label for="select">Type of enquiry</label><select name="typeOf" wire:model="typeOf" required id="select"
-                class="p-2.5 bg-neutral border-b-2 rounded border-black" type="select" placeholder="e.g Julian Smith">
+        <div class="flex flex-col mb-5"><label for="select">Type of enquiry</label><select name="typeOf"
+                wire:model="typeOf" required id="select" class="p-2.5 bg-neutral border-b-2 rounded border-black"
+                type="select" placeholder="e.g Julian Smith">
                 <option value="" disabled selected>Please Select</option>
                 <option value="Co-Roasting">Co-Roasting</option>
                 <option value="Roaster-Hire">Roaster Hire</option>

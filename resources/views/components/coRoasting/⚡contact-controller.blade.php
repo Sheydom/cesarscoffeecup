@@ -14,6 +14,8 @@ new class extends Component {
     public $experience = '';
     public $date;
     public $message = '';
+    //honeypot input
+    public $website = '';
 
     public function mount()
     {
@@ -32,6 +34,7 @@ new class extends Component {
             'experience' => 'required|string',
             'date' => 'required|date',
             'message' => 'required|string|max:5000',
+            'website' => 'nullable|max:0',
         ]);
 
         Mail::to('info@cesarscoffeecup.com')->send(new ContactFormMail($data));
@@ -60,7 +63,12 @@ new class extends Component {
                     <p class="text-green-500 text-2xl">{{ session('success') }}</p>
                 @endif
             </div>
-            <h2  class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>
+            //honeypot safety
+            <div class="hidden">
+                <label for="website">Website</label><input id="website" type="text" wire:model="website"
+                    autocomplete="off">
+            </div>
+            <h2 class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>
             <div class="flex w-full gap-5">
                 <div class="flex w-full flex-col mb-5"><label for="firstName">First Name</label><input wire:model="name"
                         required id="firstName" name="name"
