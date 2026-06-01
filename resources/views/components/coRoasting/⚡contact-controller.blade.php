@@ -63,14 +63,7 @@ new class extends Component {
                     <p class="text-green-500 text-2xl">{{ session('success') }}</p>
                 @endif
             </div>
-            {{-- //honeypot div --}}
-            <div class="absolute hidden" aria-hidden="true">
-
-                <label for="website">Website</label>
-
-                <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
-
-            </div>
+           
             <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
 
                 <h2 class="text-4xl lg:text-7xl  text-black mb-10">Book your Co-Roasting</h2>

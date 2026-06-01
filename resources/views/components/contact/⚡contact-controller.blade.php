@@ -78,14 +78,7 @@ new class extends Component {
         @if (session('success'))
             <p class="text-green-500 text-2xl">{{ session('success') }}</p>
         @endif
-        {{-- //honeypot div --}}
-        <div class="absolute hidden" aria-hidden="true">
-
-            <label for="website">Website</label>
-
-            <input id="website" type="text" wire:model="website" tabindex="-1" autocomplete="off">
-
-        </div>
+       
         <div class="grid grid-cols-2 md:grid-cols-2 gap-6">
 
             <div class="flex w-full gap-5">
