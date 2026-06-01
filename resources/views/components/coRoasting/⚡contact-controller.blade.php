@@ -3,6 +3,7 @@
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\RateLimiter;
 
 new class extends Component {
     public $name = '';
@@ -24,6 +25,14 @@ new class extends Component {
 
     public function coRoastingSubmit()
     {
+        $key = 'contact-form:' . request()->ip();
+
+        if (RateLimiter::tooManyAttempts($key, 3)) {
+            $this->addError('spam', 'Too many submissions. Please wait 1 minute.');
+
+            return;
+        }
+
         $data = $this->validate([
             'name' => 'required|string|min:2|max:100',
             'lastName' => 'required|string|min:2|max:100',
@@ -56,6 +65,10 @@ new class extends Component {
                 @endforeach
             </ul>
         @endif
+
+        @error('spam')
+            <p class="text-red-500">{{ $message }}</p>
+        @enderror
 
         <div class="flex justify-between">
             <p class="text-primary mb-2">Ready to Roast?</p>

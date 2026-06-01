@@ -5,6 +5,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\RateLimiter;
 
 new class extends Component {
     public $first_name;
@@ -33,14 +34,24 @@ new class extends Component {
 
     public function register()
     {
+        $key = 'contact-form:' . request()->ip();
+
+        if (RateLimiter::tooManyAttempts($key, 3)) {
+            $this->addError('spam', 'Too many submissions. Please wait 1 minute.');
+
+            return;
+        }
+
+        RateLimiter::hit($key, 60);
+
         $validated = $this->validate([
             'website' => 'nullable|max:0',
-            'first_name' => ['required', 'string', 'max:100','min:2'],
-            'last_name' => ['required', 'string', 'max:100','min:2'],
+            'first_name' => ['required', 'string', 'max:100', 'min:2'],
+            'last_name' => ['required', 'string', 'max:100', 'min:2'],
             'email' => ['required', 'email:rfc,dns', 'unique:users,email'],
             'phone' => ['required', 'string', 'max:30'],
-            'company_name' => ['required', 'string', 'max:100','min:2'],
-            'business_name' => ['required', 'string', 'max:100','min:2'],
+            'company_name' => ['required', 'string', 'max:100', 'min:2'],
+            'business_name' => ['required', 'string', 'max:100', 'min:2'],
             'tax_number' => ['required', 'string', 'max:100', 'unique:users,tax_number'],
             'street_address' => ['required', 'string', 'max:100'],
             'state' => ['required', 'string', 'max:30'],
@@ -71,6 +82,10 @@ new class extends Component {
             @endforeach
         </ul>
     @endif
+
+    @error('spam')
+        <p class="text-red-500">{{ $message }}</p>
+    @enderror
     <div>
         <h2 class="text-3xl font-bold text-black mb-2">Register</h2>
         <p class="text-sm text-neutral-500">
