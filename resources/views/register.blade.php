@@ -8,7 +8,7 @@
 
     $ogDescription = $metaDescription;
 
-    $ogImage = asset('images/Cesars_Coffee_Cup_just_face.svg');
+    $ogImage = asset('images/Cesars_Coffee_Cup_just_face_black.png');
 
     $ogUrl = url()->current();
 @endphp
