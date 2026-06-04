@@ -47,5 +47,4 @@
     @livewireScripts
     @fluxScripts
 </body>
-
 </html>
