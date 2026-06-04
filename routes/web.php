@@ -1,12 +1,8 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisterUserController;
 use App\Http\Controllers\Auth\SessionsController;
-use App\Http\Controllers\Mail\ContactController;
-use App\Http\Controllers\User\UserSettingsController;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;
-
 
 // core-views
 
@@ -16,7 +12,6 @@ Route::view('wholesale', 'wholesale')->name('wholesale');
 Route::view('coRoasting', 'coRoasting')->name('coRoasting');
 Route::view('contact', 'contact')->name('contact');
 Route::view('aboutUs', 'aboutUs')->name('aboutUs');
-
 
 // legal-views
 Route::prefix('legal')->group(function () {
@@ -39,21 +34,18 @@ Route::middleware('auth')->group(function () {
 });
 
 // user-settings -  middleware to redirect non authenticated user to loginpage
-Route::view('settings','settings')->middleware('auth')->name('settings');
+Route::view('settings', 'settings')->middleware('auth')->name('settings');
 
-//-----------------------------
+// -----------------------------
 
 // forgot-password
 Route::get('/forgot-password', function () {
     return view('pages.auth.forgot-password');
 })->middleware('guest')->name('password.request');
 
-
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 });
 
-
-///KEEP COMMENTED OUT ITS THE STARTER KIT SETTINGS otherwise error if not dashboard and related views not updated
-//require __DIR__.'/settings.php';
+// /KEEP COMMENTED OUT ITS THE STARTER KIT SETTINGS otherwise error if not dashboard and related views not updated
+// require __DIR__.'/settings.php';
