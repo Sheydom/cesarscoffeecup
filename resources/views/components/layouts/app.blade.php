@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/Cesars_Coffee_Cup_just_face_black.png') }}">
 
     <meta property="og:type" content="website">
 
