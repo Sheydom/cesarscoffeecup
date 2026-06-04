@@ -25,7 +25,7 @@
 
     <meta property="og:title" content="{{ $ogTitle }}">
 
-    <meta property="og:description" content="{{ $ogDescription ? }}">
+    <meta property="og:description" content="{{ $ogDescription  }}">
 
     <meta property="og:image" content="{{ $ogImage }}">
 
