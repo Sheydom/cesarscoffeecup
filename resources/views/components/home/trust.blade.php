@@ -12,11 +12,11 @@
             <p class="text-xs mb-5 md:text-xl">OUR STORY</p>
             <h2 class="text-4xl font-bodoni italic mb-10 text-primary sm:text-4xl md:text-5xl lg:text-7xl md:mb-20 ">
                 Strong roots.<br> Direct from origin.</h2>
-            
+
             <p>Built on generations of coffee-growing tradition in Colombia, Cesar's Coffee Cup connects businesses with
                 exceptional coffee sourced directly from origin. Through trusted relationships with producers and
                 partners across the world's leading coffee-growing regions, we deliver traceable, high-quality coffees
-                with the consistency you can rely on all year round.<br>
+                with the consistency you can rely on all year round.<br><br>
 
                 Using industry-leading equipment, including Loring roasting technology and the Sanremo D8 Pro, we help
                 cafés and coffee businesses build coffee programs that align with their brand and create memorable
