@@ -16,7 +16,7 @@
             <p>Built on generations of coffee-growing tradition in Colombia, Cesar's Coffee Cup connects businesses with
                 exceptional coffee sourced directly from origin. Through trusted relationships with producers and
                 partners across the world's leading coffee-growing regions, we deliver traceable, high-quality coffees
-                with the consistency you can rely on all year round.
+                with the consistency you can rely on all year round.<br>
 
                 Using industry-leading equipment, including Loring roasting technology and the Sanremo D8 Pro, we help
                 cafés and coffee businesses build coffee programs that align with their brand and create memorable
