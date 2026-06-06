@@ -18,9 +18,14 @@
                 you build a profitable coffee program aligned with your brand
             </p>
             <br>
-            <p>Every bean we roast is sourced throrugh personal relationships, ensuring that the far,ers who grow oir
-                coffee
-                are compensated fairly and the land ist treated with the respect it deservers.</p>
+            <p>Built on generations of coffee-growing tradition in Colombia, Cesar’s Coffee Cup connects businesses with
+                exceptional coffee sourced directly from origin. Through trusted relationships with producers and
+                partners across the world’s leading coffee-growing regions, we deliver traceable, high-quality coffees
+                with the consistency you can rely on all year round.
+
+                Using industry-leading equipment, including Loring roasting technology and the Sanremo D8 Pro, we help
+                cafés and coffee businesses build coffee programs that align with their brand and create memorable
+                experiences for their customers.</p>
             <div class="flex gap-5 mt-5">
                 <div class="flex flex-col">
                     <p class="font-bodoni text-3xl italic text-coffeDark">40+</p>
