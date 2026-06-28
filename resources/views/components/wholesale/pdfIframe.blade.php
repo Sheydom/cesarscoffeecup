@@ -1,5 +1,5 @@
 <section class="flex justify-center px-4 my-20 flex-col items-center">
-    <div class="w-full max-w-4xl p-2 sm:p-6 md:p-6 bg-tertiary rounded-2xl">
+    <div class="w-full max-w-6xl p-2 sm:p-6 md:p-6 bg-tertiary rounded-2xl">
         <iframe
             class="w-full h-150 sm:h-200 rounded-2xl border-0"
             loading="lazy"
