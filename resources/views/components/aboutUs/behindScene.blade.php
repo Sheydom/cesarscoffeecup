@@ -4,7 +4,7 @@
         <h2 class="text-6xl mb-5">The Minds Behind the Roast</h2>
     </div>
     <div
-        class=" md:mx-auto sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 md:gap-6  lg:justify-center lg:max-w-6xl md:pb-15">
+        class=" md:mx-auto sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-6  lg:justify-center lg:max-w-6xl md:pb-15">
         <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">
             <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover" src="{{ asset('images/aboutUs/cesarProfilePhoto.webp') }}"
                     alt="cesar">
