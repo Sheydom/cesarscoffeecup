@@ -26,20 +26,20 @@
                 </p>
             </div>
         </div>
-        <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">
-            <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover"
-                    src="{{ asset('images/aboutUs/sheyla1.jpg') }}" alt="cesar">
-            </div>
-            <div class="text-center mb-auto">
-                <h2 class="text-3xl font-bodoni italic text-coffeDark">Sheyla Solis</h2>
-                <p class="text-xs mb-5">MARKETING & BRAND STRATEGY</p>
-                <p class="text-center">Helps grow your coffee brand and communicate your story.</p>
-            </div>
-        </div>
+{{--        <div class="  items-center  flex flex-col rounded justify-between h-full text-black p-5 mb-10  sm:mb-0  sm:p-5  ">--}}
+{{--            <div class=""><img class="rounded-full h-70 w-70 mb-5 object-cover"--}}
+{{--                    src="{{ asset('images/aboutUs/sheyla1.jpg') }}" alt="cesar">--}}
+{{--            </div>--}}
+{{--            <div class="text-center mb-auto">--}}
+{{--                <h2 class="text-3xl font-bodoni italic text-coffeDark">Sheyla Solis</h2>--}}
+{{--                <p class="text-xs mb-5">MARKETING & BRAND STRATEGY</p>--}}
+{{--                <p class="text-center">Helps grow your coffee brand and communicate your story.</p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
 
     </div>
 
-    </div>
+
 
 </section>
